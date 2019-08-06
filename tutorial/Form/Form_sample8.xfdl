@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Form_sample8" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Button id="Button00" taborder="0" text="OPEN" left="15" top="23" width="132" height="65"/>
+        <Grid id="Grid00" taborder="1" left="17" top="105" width="372" height="170"/>
+      </Layout>
+      <Layout name="Layout1" width="400" height="400" mobileorientation="landscape"/>
+    </Layouts>
+  </Form>
+</FDL>

@@ -15,6 +15,13 @@
       <File url="_resource_\_theme_\default\theme.xcss" checksum="20190806163022" errormsg=""/>
       <File url="App_Desktop.xadl" checksum="20190806163022" errormsg=""/>
       <File url="App_Phone.xadl" checksum="20190806163022" errormsg=""/>
+      <File url="Form\Form_sample4.xfdl" checksum="20190806164258" errormsg=""/>
+      <File url="Form\Form_sample4_sub.xfdl" checksum="20190806164431" errormsg=""/>
+      <File url="Form\Form_sample5.xfdl" checksum="20190806165320" errormsg=""/>
+      <File url="Base\Form_sample6.xfdl" checksum="20190806165823" errormsg=""/>
+      <File url="Form\Form_sample6.xfdl" checksum="20190806170653" errormsg=""/>
+      <File url="Form\Form_sample7.xfdl" checksum="20190806173201" errormsg=""/>
+      <File url="Form\Form_sample8.xfdl" checksum="20190806173757" errormsg=""/>
     </Info>
   </GenInfo>
 </root>

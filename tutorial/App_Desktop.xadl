@@ -2,7 +2,21 @@
 <ADL version="2.0">
   <Application id="App_Desktop" screenid="Desktop_screen">
     <Layout>
-      <MainFrame id="mainframe" showtitlebar="true" showstatusbar="true" width="1280" height="720"/>
+      <MainFrame id="mainframe" showtitlebar="true" showstatusbar="true" width="1280" height="720">
+        <VFrameSet id="VFrameSet00">
+          <Frames>
+            <ChildFrame id="" formurl=""/>
+            <HFrameSet id="HFrameSet00">
+              <Frames>
+                <ChildFrame id="LeftFrame" formurl=""/>
+                <ChildFrame id="WorkFrame" formurl=""/>
+                <ChildFrame id="RightFrame" formurl=""/>
+              </Frames>
+            </HFrameSet>
+            <ChildFrame id="BottomFrame" formurl=""/>
+          </Frames>
+        </VFrameSet>
+      </MainFrame>
     </Layout>
   </Application>
 </ADL>

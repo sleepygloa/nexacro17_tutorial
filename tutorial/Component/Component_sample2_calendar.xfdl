@@ -1,0 +1,665 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Component_sample2_calendar" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280" stepcount="2">
+        <Calendar id="Calendar00" taborder="0" left="8" top="20" width="145" height="43"/>
+        <Calendar id="Calendar01" taborder="1" left="170" top="20" width="145" height="160" type="monthonly"/>
+        <Calendar id="Calendar02" taborder="2" left="330" top="20" width="145" height="43" type="spin"/>
+        <Static id="Static00" taborder="3" text="locale:" left="30" top="209" width="98" height="21"/>
+        <Static id="Static01" taborder="4" text="dateformat:" left="30" top="239" width="98" height="21"/>
+        <Edit id="Edit00" taborder="5" left="146" top="198" width="149" height="36"/>
+        <Edit id="Edit01" taborder="6" left="146" top="238" width="149" height="36"/>
+        <Button id="Button00" taborder="7" text="Button00" left="325" top="235" width="131" height="41" onclick="Button00_onclick"/>
+        <Calendar id="Calendar03" taborder="8" left="146" top="282" width="150" height="28"/>
+        <Calendar id="Calendar04" taborder="9" left="26" top="339" width="221" height="34"/>
+        <Button id="Button01" taborder="10" text="Today" left="283" top="338" width="169" height="35" onclick="Button01_onclick"/>
+        <Calendar id="Calendar05" taborder="11" left="28" top="393" width="223" height="187" type="monthonly"/>
+        <Radio id="Radio00" taborder="12" left="284" top="399" width="168" height="77" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" onitemchanged="Radio00_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">true</Col>
+                <Col id="datacolumn">usetrailingday:true</Col>
+              </Row>
+              <Row>
+                <Col id="datacolumn">usetrailingday:false</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Static id="Static02" taborder="13" text="From" left="30" top="597" width="49" height="43"/>
+        <Static id="Static03" taborder="14" text="To" left="30" top="657" width="49" height="43"/>
+        <Calendar id="Calendar06" taborder="15" left="87" top="590" width="193" height="50"/>
+        <Calendar id="Calendar07" taborder="16" left="87" top="650" width="193" height="50"/>
+        <Button id="Button02" taborder="17" text="Calculate" left="296" top="622" width="97" height="50" onclick="Button02_onclick"/>
+        <Static id="Static04" taborder="18" text="day" left="418" top="622" width="34" height="54"/>
+        <Edit id="Edit02" taborder="19" left="461" top="613" width="123" height="69" onchanged="Edit02_onchanged"/>
+        <Static id="Static05" taborder="20" text="Year" left="555" top="22" width="69" height="28"/>
+        <Static id="Static06" taborder="21" text="Week" left="555" top="62" width="69" height="28"/>
+        <Edit id="Edit03" taborder="22" left="651" top="24" width="78" height="35"/>
+        <Edit id="Edit04" taborder="23" left="651" top="64" width="78" height="35"/>
+        <Button id="Button03" taborder="24" text="Calculate" left="748" top="62" width="92" height="37" onclick="Button03_onclick"/>
+        <Calendar id="Calendar08" taborder="25" left="547" top="114" width="213" height="184" type="monthonly"/>
+        <Button id="Button04" taborder="26" text="Public holiday" left="694" top="335" width="127" height="49" onclick="Button04_onclick"/>
+        <Calendar id="Calendar09" taborder="27" left="543" top="391" width="277" height="167" type="monthonly" innerdataset="dsHoliday" backgroundcolumn="backgroundcolumn" bordercolumn="bordercolumn" datecolumn="datecolumn" textcolorcolumn="textcolorcolumn"/>
+        <Calendar id="Calendar10" taborder="28" left="677" top="581" width="138" height="43" onchanged="Calendar10_onchanged"/>
+        <Calendar id="Calendar11" taborder="29" left="677" top="631" width="138" height="43"/>
+        <CheckBox id="CheckBox00" taborder="30" text="leap month" left="840" top="631" width="104" height="46"/>
+        <GroupBox id="GroupBox00" taborder="31" text="empty &gt;&gt; &quot;01&quot;" left="873" top="40" width="107" height="150"/>
+        <GroupBox id="GroupBox01" taborder="32" text="00 &gt;&gt; -1" left="1003" top="41" width="107" height="150" positionstep="0"/>
+        <GroupBox id="GroupBox02" taborder="33" text="over &gt;&gt; +x" left="1130" top="38" width="107" height="150" positionstep="0"/>
+        <Radio id="Radio01" taborder="34" left="891" top="77" width="78" height="100" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" onitemchanged="Radio01_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">2018</Col>
+                <Col id="datacolumn">2018</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">201802</Col>
+                <Col id="datacolumn">201802</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">0000</Col>
+                <Col id="datacolumn">0000</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Radio id="Radio02" taborder="35" left="1016" top="75" width="87" height="108" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" onitemchanged="Radio02_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">201800</Col>
+                <Col id="datacolumn">201800</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">201802</Col>
+                <Col id="datacolumn">201802</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">00000000</Col>
+                <Col id="datacolumn">00000000</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Radio id="Radio03" taborder="36" left="1146" top="74" width="82" height="107" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" onitemchanged="Radio03_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">20181238</Col>
+                <Col id="datacolumn">20181238</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">00001345</Col>
+                <Col id="datacolumn">00001345</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">99999999</Col>
+                <Col id="datacolumn">99999999</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Calendar id="Calendar12" taborder="37" left="876" top="213" width="103" height="44"/>
+        <Calendar id="Calendar13" taborder="38" left="1006" top="216" width="102" height="37"/>
+        <Calendar id="Calendar14" taborder="39" left="1135" top="216" width="110" height="36"/>
+        <Calendar id="Calendar15" taborder="40" left="874" top="301" width="176" height="34" type="normal" onchanged="Calendar15_onchanged"/>
+        <Calendar id="Calendar16" taborder="41" left="1062" top="301" width="176" height="34" type="normal"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    this.Calendar03.set_locale(this.Edit00.value);
+    this.Calendar03.set_dateformat(this.Edit01.value);
+};
+
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var currDate = new Date();
+    var year = currDate.getFullYear().toString().padLeft(4, "0");
+    var month = (currDate.getMonth()+1).toString().padLeft(2, "0");
+    var day = currDate.getDate().toString().padLeft(2, "0");
+
+    this.Calendar04.set_value(year+month+day);
+};
+
+this.Radio00_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.Calendar05.set_usetrailingday(Boolean(this.Radio00.value));
+};
+
+this.Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var fromDate = new Date();
+    var toDate = new Date();
+    var calDate;
+    var day = 1000*60*60*24;
+    
+    fromDate.setFullYear(this.Calendar06.getYear());
+    fromDate.setMonth(this.Calendar06.getMonth()-1);
+    fromDate.setDate(this.Calendar06.getDay());
+    
+    toDate.setFullYear(this.Calendar07.getYear());
+    toDate.setMonth(this.Calendar07.getMonth()-1);
+    toDate.setDate(this.Calendar07.getDay());
+    
+    calDate = toDate.getTime() - fromDate.getTime();
+    
+    this.Edit02.set_value(Math.abs(calDate/day));
+};
+
+
+
+this.Button03_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var dDate = new Date(parseInt(this.Edit03.value),0,1);
+    var nDay = dDate.getDay();
+    
+    if(nDay != 0) {
+        dDate.addDate(-nDay);
+    }
+    
+    dDate.addDate(7 * (parseInt(this.Edit04.value)-1));
+    
+    this.Calendar08.set_value(dDate.getFullYear()
+        +(dDate.getMonth()+1).toString().padLeft(2, "0")
+        +dDate.getDate().toString().padLeft(2, "0")
+    );
+};
+
+this.Button04_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    this.dsHoliday.clearData();
+    
+    var colorBordercolumn = "1px solid green";
+    var colorBackgroundcolumn = "yellow";
+    var colorTextcolorcolumn = "red";
+    
+    var currDate = new Date();
+    var year = currDate.getFullYear().toString().padLeft(4, "0");    
+    
+    for(var i=1;i<13;i++) {
+        var rIdx = this.dsHoliday.addRow();
+        this.dsHoliday.setColumn(rIdx, "backgroundcolumn", colorBackgroundcolumn);
+        this.dsHoliday.setColumn(rIdx, "textcolorcolumn", colorTextcolorcolumn);
+        this.dsHoliday.setColumn(rIdx, "bordercolumn", colorBordercolumn);
+        this.dsHoliday.setColumn(rIdx, "datecolumn", (year+i.toString().padLeft(2, "0"))+"01");    
+        
+    }
+};
+
+this.Calendar10_onchanged = function(obj:nexacro.Calendar,e:nexacro.ChangeEventInfo)
+{
+    var c = new String(obj.value);
+    var y = c.substr(0,4);
+    var m = c.substr(4,2);
+    var d = c.substr(6,2);
+    var lunar = this.lunarCalc(y, m, d, 1);
+    lunar.month = lunar.month < 10 ? "0"+lunar.month : lunar.month;
+    lunar.day = lunar.day   < 10 ? "0"+lunar.day   : lunar.day;
+    
+    this.Calendar11.set_value(String().concat(lunar.year, lunar.month, lunar.day));
+    this.CheckBox00.set_value(lunar.leapMonth);
+};
+
+this.myDate =	function (year, month, day, leapMonth)
+{
+	this.year = year;
+	this.month = month;
+	this.day = day;
+	this.leapMonth = leapMonth;
+};
+
+this.lunarCalc = function (year, month, day, type, leapmonth)
+{
+	var solYear, solMonth, solDay;
+	var lunYear, lunMonth, lunDay;
+	var lunLeapMonth, lunMonthDay;
+	var i, lunIndex;
+	
+	var solMonthDay = [31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+	
+	/* range check */
+	if (year < 1900 || year > 2040)
+	{
+		alert('This example supports solar to lunar from 1900 to 2040 only');
+		return;
+	}
+	
+	/* For increasing performance, date is divided compared in various conditions. */
+	if (year >= 2000)
+	{
+		/* Default date for solar calendar is used on year 2000 01 month , and 1 day. Defalut value for lunar is used year 1999 month 11, day 25 */
+		solYear = 2000;
+		solMonth = 1;
+		solDay = 1;
+		lunYear = 1999;
+		lunMonth = 11;
+		lunDay = 25;
+		lunLeapMonth = 0;
+		
+		solMonthDay[1] = 29;    /* 2000 Year 2 Month 28 Day */
+		lunMonthDay = 30;   /* 1999 Year 11 Month */
+	}
+	else if (year >= 1970)
+	{
+		/* Default date entered solar Year 1970, Month 1, Day 1, and lunar 1969 year, month 11, day 24. */
+		solYear = 1970;
+		solMonth = 1;
+		solDay = 1;
+		lunYear = 1969;
+		lunMonth = 11;
+		lunDay = 24;
+		lunLeapMonth = 0;
+		
+		solMonthDay[1] = 28;    /* Year 1970, Month 2, Day 28 */
+		lunMonthDay = 30;   /* Year 1969, Month 11 */
+	}
+	else if (year >= 1940)
+	{
+		/* Default date solar Year 1940,  Month 1,  Day 1 (Lunar Year 1939, Month 11, Day 22) */
+		solYear = 1940;
+		solMonth = 1;
+		solDay = 1;
+		lunYear = 1939;
+		lunMonth = 11;
+		lunDay = 22;
+		lunLeapMonth = 0;
+		
+		solMonthDay[1] = 29;    /* Year 1940, Month 2, Day 28 */
+		lunMonthDay = 29;   /* Year 1939 Month 11 */
+	}
+	else
+	{
+		/* Basic date solar Year 1900, Month 1, Day 1 (Lunar Year 1899, Month 12,  Day 1) */
+		solYear = 1900;
+		solMonth = 1;
+		solDay = 1;
+		lunYear = 1899;
+		lunMonth = 12;
+		lunDay = 1;
+		lunLeapMonth = 0;
+		
+		solMonthDay[1] = 28;    /* Year 1900, Month 2, Day 28 */
+		lunMonthDay = 30;   /* Year  1899, Month 12 */
+	}
+	
+	lunIndex = lunYear - 1899;
+	
+	while (true)
+	{
+		
+		if (type == 1 &&
+			year == solYear &&
+			month == solMonth &&
+			day == solDay)
+		{
+			return new this.myDate(lunYear, lunMonth, lunDay, lunLeapMonth);
+		}
+		else if (type == 2 &&
+			year == lunYear &&
+			month == lunMonth &&
+			day == lunDay &&
+			leapmonth == lunLeapMonth)
+		{
+			return new this.myDate(solYear, solMonth, solDay, 0);
+		}
+		
+		/* add a day of solar calendar */
+		if (solMonth == 12 && solDay == 31)
+		{
+			solYear++;
+			solMonth = 1;
+			solDay = 1;
+			
+			/* set monthDay of Feb */
+			if (solYear % 400 == 0)
+			solMonthDay[1] = 29;
+			else if (solYear % 100 == 0)
+			solMonthDay[1] = 28;
+			else if (solYear % 4 == 0)
+			solMonthDay[1] = 29;
+			else
+			solMonthDay[1] = 28;
+			
+		}
+		else if (solMonthDay[solMonth - 1] == solDay)
+		{
+			solMonth++;
+			solDay = 1;
+		}
+		else
+		solDay++;
+		
+		/* add a day of lunar calendar */
+		if (lunMonth == 12 &&
+			((lunarMonthTable[lunIndex][lunMonth - 1] == 1 && lunDay == 29) ||
+				(lunarMonthTable[lunIndex][lunMonth - 1] == 2 && lunDay == 30)))
+		{
+			lunYear++;
+			lunMonth = 1;
+			lunDay = 1;
+			
+			if (lunYear > 2043) {
+				alert("There is no input month."); 
+				break;
+			}
+			
+			lunIndex = lunYear - 1899;
+			
+			if (lunarMonthTable[lunIndex][lunMonth - 1] == 1)
+			lunMonthDay = 29;
+			else if (lunarMonthTable[lunIndex][lunMonth - 1] == 2)
+			lunMonthDay = 30;
+		}
+		else if (lunDay == lunMonthDay)
+		{
+			if (lunarMonthTable[lunIndex][lunMonth - 1] >= 3
+				&& lunLeapMonth == 0)
+			{
+				lunDay = 1;
+				lunLeapMonth = 1;
+			}
+			else
+			{
+				lunMonth++;
+				lunDay = 1;
+				lunLeapMonth = 0;
+			}
+			
+			if (lunarMonthTable[lunIndex][lunMonth - 1] == 1)
+			lunMonthDay = 29;
+			else if (lunarMonthTable[lunIndex][lunMonth - 1] == 2)
+			lunMonthDay = 30;
+			else if (lunarMonthTable[lunIndex][lunMonth - 1] == 3)
+			lunMonthDay = 29;
+			else if (lunarMonthTable[lunIndex][lunMonth - 1] == 4 &&
+				lunLeapMonth == 0)
+			lunMonthDay = 29;
+			else if (lunarMonthTable[lunIndex][lunMonth - 1] == 4 &&
+				lunLeapMonth == 1)
+			lunMonthDay = 30;
+			else if (lunarMonthTable[lunIndex][lunMonth - 1] == 5 &&
+				lunLeapMonth == 0)
+			lunMonthDay = 30;
+			else if (lunarMonthTable[lunIndex][lunMonth - 1] == 5 &&
+				lunLeapMonth == 1)
+			lunMonthDay = 29;
+			else if (lunarMonthTable[lunIndex][lunMonth - 1] == 6)
+			lunMonthDay = 30;
+		}
+		else
+		lunDay++;
+	}
+};
+
+var lunarMonthTable = [
+	[2, 1, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2],
+	[1, 2, 1, 1, 2, 1, 2, 5, 2, 2, 1, 2],
+	[1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 2, 1],   /* 1901 */
+	[2, 1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 2],
+	[1, 2, 1, 2, 3, 2, 1, 1, 2, 2, 1, 2],
+	[2, 2, 1, 2, 1, 1, 2, 1, 1, 2, 2, 1],
+	[2, 2, 1, 2, 2, 1, 1, 2, 1, 2, 1, 2],
+	[1, 2, 2, 4, 1, 2, 1, 2, 1, 2, 1, 2],
+	[1, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1],
+	[2, 1, 1, 2, 2, 1, 2, 1, 2, 2, 1, 2],
+	[1, 5, 1, 2, 1, 2, 1, 2, 2, 2, 1, 2],
+	[1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 2, 1],
+	[2, 1, 2, 1, 1, 5, 1, 2, 2, 1, 2, 2],   /* 1911 */
+	[2, 1, 2, 1, 1, 2, 1, 1, 2, 2, 1, 2],
+	[2, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2],
+	[2, 2, 1, 2, 5, 1, 2, 1, 2, 1, 1, 2],
+	[2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2],
+	[1, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1],
+	[2, 3, 2, 1, 2, 2, 1, 2, 2, 1, 2, 1],
+	[2, 1, 1, 2, 1, 2, 1, 2, 2, 2, 1, 2],
+	[1, 2, 1, 1, 2, 1, 5, 2, 2, 1, 2, 2],
+	[1, 2, 1, 1, 2, 1, 1, 2, 2, 1, 2, 2],
+	[2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2],   /* 1921 */
+	[2, 1, 2, 2, 3, 2, 1, 1, 2, 1, 2, 2],
+	[1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 1, 2],
+	[2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1],
+	[2, 1, 2, 5, 2, 1, 2, 2, 1, 2, 1, 2],
+	[1, 1, 2, 1, 2, 1, 2, 2, 1, 2, 2, 1],
+	[2, 1, 1, 2, 1, 2, 1, 2, 2, 1, 2, 2],
+	[1, 5, 1, 2, 1, 1, 2, 2, 1, 2, 2, 2],
+	[1, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 2],
+	[1, 2, 2, 1, 1, 5, 1, 2, 1, 2, 2, 1],
+	[2, 2, 2, 1, 1, 2, 1, 1, 2, 1, 2, 1],   /* 1931 */
+	[2, 2, 2, 1, 2, 1, 2, 1, 1, 2, 1, 2],
+	[1, 2, 2, 1, 6, 1, 2, 1, 2, 1, 1, 2],
+	[1, 2, 1, 2, 2, 1, 2, 2, 1, 2, 1, 2],
+	[1, 1, 2, 1, 2, 1, 2, 2, 1, 2, 2, 1],
+	[2, 1, 4, 1, 2, 1, 2, 1, 2, 2, 2, 1],
+	[2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 2, 1],
+	[2, 2, 1, 1, 2, 1, 4, 1, 2, 2, 1, 2],
+	[2, 2, 1, 1, 2, 1, 1, 2, 1, 2, 1, 2],
+	[2, 2, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1],
+	[2, 2, 1, 2, 2, 4, 1, 1, 2, 1, 2, 1],   /* 1941 */
+	[2, 1, 2, 2, 1, 2, 2, 1, 2, 1, 1, 2],
+	[1, 2, 1, 2, 1, 2, 2, 1, 2, 2, 1, 2],
+	[1, 1, 2, 4, 1, 2, 1, 2, 2, 1, 2, 2],
+	[1, 1, 2, 1, 1, 2, 1, 2, 2, 2, 1, 2],
+	[2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 1, 2],
+	[2, 5, 1, 2, 1, 1, 2, 1, 2, 1, 2, 2],
+	[2, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2],
+	[2, 2, 1, 2, 1, 2, 3, 2, 1, 2, 1, 2],
+	[2, 1, 2, 2, 1, 2, 1, 1, 2, 1, 2, 1],
+	[2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2],   /* 1951 */
+	[1, 2, 1, 2, 4, 2, 1, 2, 1, 2, 1, 2],
+	[1, 2, 1, 1, 2, 2, 1, 2, 2, 1, 2, 2],
+	[1, 1, 2, 1, 1, 2, 1, 2, 2, 1, 2, 2],
+	[2, 1, 4, 1, 1, 2, 1, 2, 1, 2, 2, 2],
+	[1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2, 2],
+	[2, 1, 2, 1, 2, 1, 1, 5, 2, 1, 2, 2],
+	[1, 2, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2],
+	[1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1],
+	[2, 1, 2, 1, 2, 5, 2, 1, 2, 1, 2, 1],
+	[2, 1, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2],   /* 1961 */
+	[1, 2, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1],
+	[2, 1, 2, 3, 2, 1, 2, 1, 2, 2, 2, 1],
+	[2, 1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 2],
+	[1, 2, 1, 2, 1, 1, 2, 1, 1, 2, 2, 2],
+	[1, 2, 5, 2, 1, 1, 2, 1, 1, 2, 2, 1],
+	[2, 2, 1, 2, 2, 1, 1, 2, 1, 2, 1, 2],
+	[1, 2, 2, 1, 2, 1, 5, 2, 1, 2, 1, 2],
+	[1, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1],
+	[2, 1, 1, 2, 2, 1, 2, 1, 2, 2, 1, 2],
+	[1, 2, 1, 1, 5, 2, 1, 2, 2, 2, 1, 2],   /* 1971 */
+	[1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 2, 1],
+	[2, 1, 2, 1, 1, 2, 1, 1, 2, 2, 2, 1],
+	[2, 2, 1, 5, 1, 2, 1, 1, 2, 2, 1, 2],
+	[2, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2],
+	[2, 2, 1, 2, 1, 2, 1, 5, 2, 1, 1, 2],
+	[2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 1],
+	[2, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1],
+	[2, 1, 1, 2, 1, 6, 1, 2, 2, 1, 2, 1],
+	[2, 1, 1, 2, 1, 2, 1, 2, 2, 1, 2, 2],
+	[1, 2, 1, 1, 2, 1, 1, 2, 2, 1, 2, 2],   /* 1981 */
+	[2, 1, 2, 3, 2, 1, 1, 2, 2, 1, 2, 2],
+	[2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2],
+	[2, 1, 2, 2, 1, 1, 2, 1, 1, 5, 2, 2],
+	[1, 2, 2, 1, 2, 1, 2, 1, 1, 2, 1, 2],
+	[1, 2, 2, 1, 2, 2, 1, 2, 1, 2, 1, 1],
+	[2, 1, 2, 2, 1, 5, 2, 2, 1, 2, 1, 2],
+	[1, 1, 2, 1, 2, 1, 2, 2, 1, 2, 2, 1],
+	[2, 1, 1, 2, 1, 2, 1, 2, 2, 1, 2, 2],
+	[1, 2, 1, 1, 5, 1, 2, 1, 2, 2, 2, 2],
+	[1, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 2],   /* 1991 */
+	[1, 2, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2],
+	[1, 2, 5, 2, 1, 2, 1, 1, 2, 1, 2, 1],
+	[2, 2, 2, 1, 2, 1, 2, 1, 1, 2, 1, 2],
+	[1, 2, 2, 1, 2, 2, 1, 5, 2, 1, 1, 2],
+	[1, 2, 1, 2, 2, 1, 2, 1, 2, 2, 1, 2],
+	[1, 1, 2, 1, 2, 1, 2, 2, 1, 2, 2, 1],
+	[2, 1, 1, 2, 3, 2, 2, 1, 2, 2, 2, 1],
+	[2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 2, 1],
+	[2, 2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 1],
+	[2, 2, 2, 3, 2, 1, 1, 2, 1, 2, 1, 2],   /* 2001 */
+	[2, 2, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1],
+	[2, 2, 1, 2, 2, 1, 2, 1, 1, 2, 1, 2],
+	[1, 5, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2],
+	[1, 2, 1, 2, 1, 2, 2, 1, 2, 2, 1, 1],
+	[2, 1, 2, 1, 2, 1, 5, 2, 2, 1, 2, 2],
+	[1, 1, 2, 1, 1, 2, 1, 2, 2, 2, 1, 2],
+	[2, 1, 1, 2, 1, 1, 2, 1, 2, 2, 1, 2],
+	[2, 2, 1, 1, 5, 1, 2, 1, 2, 1, 2, 2],
+	[2, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2],
+	[2, 1, 2, 2, 1, 2, 1, 1, 2, 1, 2, 1],   /* 2011 */
+	[2, 1, 6, 2, 1, 2, 1, 1, 2, 1, 2, 1],
+	[2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2],
+	[1, 2, 1, 2, 1, 2, 1, 2, 5, 2, 1, 2],
+	[1, 2, 1, 1, 2, 1, 2, 2, 2, 1, 2, 1],
+	[2, 1, 2, 1, 1, 2, 1, 2, 2, 1, 2, 2],
+	[2, 1, 1, 2, 3, 2, 1, 2, 1, 2, 2, 2],
+	[1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2, 2],
+	[2, 1, 2, 1, 2, 1, 1, 2, 1, 2, 1, 2],
+	[2, 1, 2, 5, 2, 1, 1, 2, 1, 2, 1, 2],
+	[1, 2, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1],   /* 2021 */
+	[2, 1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 2],
+	[1, 5, 2, 1, 2, 1, 2, 2, 1, 2, 1, 2],
+	[1, 2, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1],
+	[2, 1, 2, 1, 1, 5, 2, 1, 2, 2, 2, 1],
+	[2, 1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 2],
+	[1, 2, 1, 2, 1, 1, 2, 1, 1, 2, 2, 2],
+	[1, 2, 2, 1, 5, 1, 2, 1, 1, 2, 2, 1],
+	[2, 2, 1, 2, 2, 1, 1, 2, 1, 1, 2, 2],
+	[1, 2, 1, 2, 2, 1, 2, 1, 2, 1, 2, 1],
+	[2, 1, 5, 2, 1, 2, 2, 1, 2, 1, 2, 1],   /* 2031 */
+	[2, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1, 2],
+	[1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 5, 2],
+	[1, 2, 1, 1, 2, 1, 2, 1, 2, 2, 2, 1],
+	[2, 1, 2, 1, 1, 2, 1, 1, 2, 2, 1, 2],
+	[2, 2, 1, 2, 1, 4, 1, 1, 2, 2, 1, 2],
+	[2, 2, 1, 2, 1, 1, 2, 1, 1, 2, 1, 2],
+	[2, 2, 1, 2, 1, 2, 1, 2, 1, 1, 2, 1],
+	[2, 2, 1, 2, 5, 2, 1, 2, 1, 2, 1, 1],
+	[2, 1, 2, 2, 1, 2, 2, 1, 2, 1, 2, 1],
+	[2, 1, 1, 2, 1, 2, 2, 1, 2, 2, 1, 2],   /* 2041 */
+	[1, 5, 1, 2, 1, 2, 1, 2, 2, 2, 1, 2],
+	[1, 2, 1, 1, 2, 1, 1, 2, 2, 1, 2, 2]];
+	
+	
+this.Radio01_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this[obj.Calendar12].set_value(e.postvalue);
+};
+
+this.Radio02_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this[obj.Calendar13].set_value(e.postvalue);
+};
+
+this.Radio03_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this[obj.Calendar14].set_value(e.postvalue);
+};
+
+this.Calendar15_onchanged = function(obj:nexacro.Calendar,e:nexacro.ChangeEventInfo)
+{
+    var nWeek = obj.getDayOfWeek();
+    if(nWeek == 5)
+    {
+        this.Calendar16.set_value (this.AddDateOffset(e.postvalue, 3));
+    }
+    else if(nWeek == 6)
+    {
+        this.Calendar16.set_value (this.AddDateOffset(e.postvalue, 2));
+    }
+    else 
+    {
+        this.Calendar16.set_value (this.AddDateOffset(e.postvalue, 1));
+    }
+    this.setFocus(true, false);
+};
+
+
+this.AddDateOffset = function(sDate, nOffset)
+{
+    var nYear = parseInt(sDate.substr(0, 4));
+    var nMonth = parseInt(sDate.substr(4, 2));
+    var nDate = parseInt(sDate.substr(6, 2)) + nOffset;
+
+    return this.MakeDate(nYear, nMonth, nDate);
+}
+
+this.MakeDate = function(nYear, nMonth, nDate)
+{
+    var objDate = new Date(nYear, nMonth-1, nDate);
+
+    var sYear   = objDate.getFullYear().toString();
+    var sMonth  = (objDate.getMonth() + 1).toString().padLeft(2, "0");
+    var sDate   = (objDate.getDate()).toString().padLeft(2, "0");
+
+    return sYear + sMonth + sDate;
+}
+]]></Script>
+    <Objects>
+      <Dataset id="dsHoliday">
+        <ColumnInfo>
+          <Column id="datecolumn" type="STRING" size="256"/>
+          <Column id="textcolorcolumn" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="datecolumn">20190101</Col>
+          </Row>
+          <Row>
+            <Col id="datecolumn">20190201</Col>
+          </Row>
+          <Row>
+            <Col id="datecolumn">20190301</Col>
+          </Row>
+          <Row>
+            <Col id="datecolumn">20190401</Col>
+          </Row>
+          <Row>
+            <Col id="datecolumn">20190501</Col>
+          </Row>
+          <Row>
+            <Col id="datecolumn">20190601</Col>
+          </Row>
+          <Row>
+            <Col id="datecolumn">20190701</Col>
+          </Row>
+          <Row>
+            <Col id="datecolumn">20190801</Col>
+          </Row>
+          <Row>
+            <Col id="datecolumn">20190901</Col>
+          </Row>
+          <Row>
+            <Col id="datecolumn">20191001</Col>
+          </Row>
+          <Row>
+            <Col id="datecolumn">20191101</Col>
+          </Row>
+          <Row>
+            <Col id="datecolumn">20191201</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+  </Form>
+</FDL>

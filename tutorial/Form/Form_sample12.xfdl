@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Form_sample12" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Edit id="Edit00" taborder="0" left="61" top="41" width="174" height="74"/>
+        <Button id="Button00" taborder="1" text="Button00" left="256" top="44" width="152" height="72"/>
+        <Spin id="Spin00" taborder="2" left="443" top="44" width="202" height="74"/>
+        <Grid id="Grid00" taborder="3" left="64" top="135" width="234" height="85" binddataset="Dataset01">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Column0"/>
+                <Cell col="1" text="Column1"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0"/>
+                <Cell col="1" text="bind:Column1"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="Button01" taborder="4" text="Button01" left="315" top="138" width="165" height="82" onclick="Button01_onclick"/>
+        <TextArea id="TextArea00" taborder="5" left="60" top="240" width="241" height="70" value=""/>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">a</Col>
+            <Col id="Column1">1</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">b</Col>
+            <Col id="Column1">2</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">c</Col>
+            <Col id="Column1">3</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset01">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">a</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+            <Col id="Column1">b</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">3</Col>
+            <Col id="Column1">c</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="Edit00" propid="value" datasetid="Dataset00" columnid="Column0"/>
+      <BindItem id="item1" compid="Button00" propid="text" datasetid="Dataset00" columnid="Column1"/>
+      <BindItem id="item2" compid="Spin00" propid="value" datasetid="Dataset00" columnid="Column1"/>
+    </Bind>
+    <Script type="xscript5.1"><![CDATA[
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	for(var i = 0; i < this.binds.length; i++)
+    {
+        this.TextArea00.set_value(this.TextArea00.value+this.binds[i].compid+", "+ this.binds[i].propid+", "+ this.binds[i].datasetid + ", " + this.binds[i].columnid+"\n");
+    }
+};
+]]></Script>
+  </Form>
+</FDL>

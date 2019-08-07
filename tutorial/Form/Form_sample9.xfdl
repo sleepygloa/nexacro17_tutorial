@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Form_sample9" width="200" height="300" titletext="New Form" onload="Form_sample9_onload" ontimer="Form_sample9_ontimer">
+    <Layouts>
+      <Layout height="300" mobileorientation="landscape" width="200" stepcount="3">
+        <Static id="Static00" taborder="0" text="MANNERS&#13;&#10;&#13;&#10;" left="0" top="2" width="200" height="298" textAlign="center" background="black" color="white" font="15pt"/>
+        <Static id="Static01" taborder="1" text="MANNERS&#13;&#10;MAKETH&#13;&#10;" left="0" top="1" width="200" height="298" textAlign="center" background="black" color="white" font="15pt" positionstep="1" onclick="Static01_onclick"/>
+        <Static id="Static02" taborder="2" text="MANNERS&#13;&#10;MAKETH&#13;&#10;MAN" left="0" top="2" width="200" height="298" textAlign="center" background="black" color="white" font="15pt" positionstep="2" onclick="Static01_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Form_sample9_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	this.setTimer(1, 2000);
+};
+
+this.Form_sample9_ontimer = function(obj:nexacro.Form,e:nexacro.TimerEventInfo)
+{
+	if(e.timerid == 1){
+		this.stepselector.stepIt(true, true);
+	}
+};
+]]></Script>
+  </Form>
+</FDL>

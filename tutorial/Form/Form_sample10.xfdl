@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Form_sample10" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Button id="Button00" taborder="0" text="Check List" left="22" top="20" width="152" height="72" onclick="Button00_onclick"/>
+        <Button id="Button01" taborder="1" text="Check All List" left="194" top="20" width="152" height="72" onclick="Button01_onclick"/>
+        <Div id="Div00" taborder="2" text="Div00" left="26" top="106" width="319" height="135">
+          <Layouts>
+            <Layout>
+              <Static id="Static00" taborder="0" text="Static00" left="21" top="18" width="104" height="79"/>
+              <Div id="Div00" taborder="1" text="Div00" left="167" top="19" width="136" height="98">
+                <Layouts>
+                  <Layout>
+                    <CheckBox id="CheckBox00" taborder="0" text="CheckBox00" left="23" top="58" width="101" height="31"/>
+                  </Layout>
+                </Layouts>
+              </Div>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Tab id="Tab00" taborder="3" tabindex="0" left="380" top="95" width="335" height="152">
+          <Tabpages>
+            <Tabpage id="Tabpage1" text="Tabpage1">
+              <Layouts>
+                <Layout>
+                  <MaskEdit id="MaskEdit00" taborder="0" left="15" top="25" width="283" height="72"/>
+                </Layout>
+              </Layouts>
+            </Tabpage>
+            <Tabpage id="Tabpage2" text="Tabpage2"/>
+          </Tabpages>
+        </Tab>
+        <Grid id="Grid00" taborder="4" left="26" top="271" width="688" height="84">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="43"/>
+                <Column size="106"/>
+                <Column size="91"/>
+                <Column size="296"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="No"/>
+                <Cell col="1" text="Parent"/>
+                <Cell col="2" text="ID"/>
+                <Cell col="3" text="path"/>
+              </Band>
+              <Band id="body">
+                <Cell expr="expr:rowidx+1"/>
+                <Cell col="1"/>
+                <Cell col="2"/>
+                <Cell col="3"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00">
+        <ColumnInfo>
+          <Column id="Column2" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column0" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Dataset00.clearData();
+	this.get_com_info(this);
+};
+
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Dataset00.clearData();
+	this.get_com_info(this, true);
+};
+
+
+this.get_com_info = function(obj, bAll, bRecursive)
+{
+    var i;
+    var components = bAll?obj.all:obj.components;
+    this.Dataset00.set_enableevent(false);
+    
+    for( i = 0 ; i < components.length ; i++ )
+    {
+        var nRow = this.Dataset00.addRow();
+        this.Dataset00.setColumn(nRow,0,components[i].id);    
+        this.Dataset00.setColumn(nRow,1,bRecursive?obj.parent.valueOf():this.valueOf());
+        this.Dataset00.setColumn(nRow,2,this.get_url(components[i],""));
+        var strType = components[i].valueOf(); 
+        
+        if(strType == "[object Div]" || strType == "[object Tab]"){            
+            if (strType == "[object Tab]") {
+                for(var j = 0 ; j < components[i].tabpages.length ; j++ )
+                {
+                    var nRow = this.Dataset00.addRow();
+                    this.Dataset00.setColumn(nRow,0,components[i].tabpages[j].id);    
+                    this.Dataset00.setColumn(nRow,1,components[i].valueOf());
+                    this.Dataset00.setColumn(nRow,2,this.get_url(components[i].tabpages[j],""));                
+                    
+                    this.get_com_info(components[i].tabpages[j].form, bAll, true);                
+                }                
+            } else {
+                this.get_com_info(components[i].form, bAll, true);
+            }
+        }         
+    }
+    this.Dataset00.set_enableevent(true);
+};
+
+
+this.get_url = function(obj, str)
+{
+    if(obj == "[object Form]")
+    {
+        var s = "form";
+        if(obj.name == "sample_form_09")
+        {
+            return str;
+        }
+    }    else    {
+        var s = obj.name;
+    }
+    if(str != "")
+    {
+        s += "."+str;
+    }
+    return this.get_url(obj.parent, s);
+};]]></Script>
+    <Bind>
+      <BindItem id="item0" compid="Tab00.Tabpage1.form.MaskEdit00" propid="value" datasetid="Dataset00" columnid="Column2"/>
+    </Bind>
+  </Form>
+</FDL>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Frame_sample1" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Button id="Button00" taborder="0" text="Create Frame" left="43" top="33" width="140" height="67" onclick="Button00_onclick"/>
+        <Button id="Button01" taborder="1" text="Draw Border" left="210" top="33" width="140" height="67" onclick="Button01_onclick"/>
+        <Button id="Button02" taborder="2" text="dragmovetype:&#13;&#10;normal" left="380" top="33" width="140" height="67" onclick="Button02_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var objChildFrame = new ChildFrame();  
+    objChildFrame.init("childframeNew", "absolute", 30, 90, 200, 150);
+    this.addChild("childframeNew", objChildFrame);
+    objChildFrame.show();
+};
+
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	if(this.childframeNew) {
+        this.childframeNew.set_border("1px solid #999999");
+    } else {
+        trace("childframeNew undefined");
+    }
+};
+
+this.Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	if(this.childframeNew.dragmovetype == "normal") {
+        this.childframeNew.set_dragmovetype("none");
+        obj.set_text(obj.text.replace("normal","none"));
+    } else {
+        this.childframeNew.set_dragmovetype("normal");
+        obj.set_text(obj.text.replace("none","normal"));
+    }
+};
+]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Component_sample4_combo" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Combo id="Combo00" taborder="0" text="Combo00" left="22" top="18" width="186" height="42" innerdataset="Dataset00" codecolumn="CODE" datacolumn="DATA"/>
+        <Combo id="Combo01" taborder="1" text="apple" left="251" top="18" width="361" height="43" index="0" innerdataset="ds_combo" codecolumn="CODE" datacolumn="DATA" value="00"/>
+        <Radio id="Radio00" taborder="2" left="622" top="21" width="278" height="89" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" onitemchanged="Radio00_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">00</Col>
+                <Col id="datacolumn">DROPDOWN</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">01</Col>
+                <Col id="datacolumn">SEARCH</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">02</Col>
+                <Col id="datacolumn">FILTER</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">03</Col>
+                <Col id="datacolumn">FILTERLIKE</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="DATA" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">00</Col>
+            <Col id="DATA">apple</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="DATA">banana</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="DATA">orange</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="DATA">kiwi</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="DATA">peach</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="DATA">strawberry</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_combo">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="DATA" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">00</Col>
+            <Col id="DATA">apple</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="DATA">banana</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="DATA">orange</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="DATA">kiwi</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="DATA">peach</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="DATA">strawberry</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.Radio00_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+trace(e.postindex);
+	switch(e.postindex)
+    {
+        case 0:    /* DROPDOWN */
+            this.Combo01.set_type("dropdown");
+            break;
+        case 1:    /* SEARCH */
+            this.Combo01.set_type("search");
+            break;
+        case 2:    /* FILTER */
+            this.Combo01.set_type("filter");
+            break;
+        case 3: /* FILTERLIKE */
+            this.Combo01.set_type("filterlike");
+            break;
+        default:
+            trace("UNKNOWN TYPE");    
+    }
+};
+]]></Script>
+  </Form>
+</FDL>

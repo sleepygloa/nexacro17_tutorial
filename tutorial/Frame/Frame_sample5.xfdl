@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Frame_sample5" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Button id="Button00" taborder="0" text="Create Popup" left="17" top="12" width="139" height="78" onclick="Button00_onclick"/>
+        <Button id="Button01" taborder="1" text="show property" left="16" top="105" width="143" height="66" onclick="Button01_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	    nexacro.open("POPUP FRAME", "Frame::frame_sample5.xfdl", 
+        nexacro.getApplication().getActiveFrame(), 
+        {name:"POPUP FRAME RENAME", uname:"TEST"});
+};
+
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.alert(this.parent.name + "\n" + this.parent.uname);
+};
+]]></Script>
+  </Form>
+</FDL>

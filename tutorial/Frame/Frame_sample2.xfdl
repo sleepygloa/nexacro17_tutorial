@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Frame_sample2" width="1280" height="720" titletext="New Form" onload="Frame_sample2_onload">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Button id="Button00" taborder="0" text="Create Frame" left="39" top="29" width="148" height="51" onclick="Button00_onclick"/>
+        <Radio id="Radio00" taborder="1" left="210" top="30" width="206" height="50" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" positionstep="0" columncount="2" onitemchanged="Radio00_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">250,*,*</Col>
+                <Col id="datacolumn">250,*,*</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">160,*,160</Col>
+                <Col id="datacolumn">160,*,160</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">*,*,250</Col>
+                <Col id="datacolumn">*,*,250</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">*,250,*</Col>
+                <Col id="datacolumn">*,250,*</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Frame_sample2_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	var objHFrameset = new HFrameSet();  
+    objHFrameset.init("hframesetNew", 30, 90, 400, 200);
+    this.addChild("hframesetNew", objHFrameset);
+    objHFrameset.set_border("1px solid #999999");
+    objHFrameset.show();
+};
+
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.addChildFrame(this.hframesetNew, "childFrame00");
+    this.addChildFrame(this.hframesetNew, "childFrame01");
+    this.addChildFrame(this.hframesetNew, "childFrame02");
+};
+
+this.addChildFrame = function(obj, strId:String)
+{
+    var objChildFrame = new ChildFrame();  
+    objChildFrame.init(strId, "absolute", 0, 0, 0, 0);
+    obj.addChild(strId, objChildFrame);
+    objChildFrame.set_border("1px solid #999999");
+    objChildFrame.show();
+}
+this.Radio00_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.hframesetNew.set_separatesize(obj.value);
+};
+]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Component_sample5_edit" width="1280" height="720" titletext="New Form" onclick="Component_sample5_edit_onclick">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Edit id="edit_input" taborder="3" left="118" top="20" width="142" height="33" onkeyup="edit_input_onkeyup"/>
+        <Static id="Static00" taborder="4" text="String" left="28" top="20" width="69" height="32" onclick="Static00_onclick"/>
+        <Static id="Static01" taborder="5" text="Length" left="24" top="73" width="83" height="33"/>
+        <Edit id="edit_length" taborder="6" left="121" top="77" width="141" height="36"/>
+        <Edit id="edit_first" taborder="0" left="49" top="163" width="86" height="38" autoskip="true" maxlength="3"/>
+        <Edit id="edit_second" taborder="1" left="150" top="163" width="86" height="38" autoskip="true" maxlength="4"/>
+        <Edit id="edit_third" taborder="2" left="250" top="163" width="86" height="38" autoskip="true" maxlength="4"/>
+        <Static id="Static02" taborder="7" text="한국어" left="41" top="223" width="89" height="27"/>
+        <Static id="Static03" taborder="8" text="영어" left="40" top="260" width="89" height="27"/>
+        <Static id="Static04" taborder="9" text="일본어" left="36" top="300" width="89" height="27"/>
+        <Edit id="Edit00" taborder="10" left="135" top="225" width="115" height="30" imemode="hangul"/>
+        <Edit id="Edit01" taborder="11" left="135" top="265" width="115" height="30" imemode="alpha"/>
+        <Edit id="Edit02" taborder="12" left="134" top="305" width="115" height="30" imemode="hiragana"/>
+        <Static id="Static05" taborder="13" text="Password" left="35" top="357" width="89" height="27"/>
+        <Edit id="Edit03" taborder="14" left="142" top="353" width="129" height="40"/>
+        <CheckBox id="CheckBox00" taborder="15" text="Unmasking" left="292" top="358" width="133" height="38" onclick="CheckBox00_onclick" onchanged="CheckBox00_onchanged"/>
+        <Button id="Button00" taborder="16" text="confirm" left="164" top="408" width="103" height="42" onclick="Button00_onclick"/>
+        <Static id="Static06" taborder="17" text="Password iorrect" left="33" top="409" width="107" height="31" color="red"/>
+        <Grid id="Grid00" taborder="18" left="436" top="25" width="578" height="127" binddataset="Dataset00">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Name"/>
+                <Cell col="1" text="Address"/>
+                <Cell col="2" text="Company"/>
+                <Cell col="3" text="Department"/>
+                <Cell col="4" text="EMail"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Name"/>
+                <Cell col="1" text="bind:Address"/>
+                <Cell col="2" text="bind:Company"/>
+                <Cell col="3" text="bind:Department"/>
+                <Cell col="4" text="bind:EMail"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static07" taborder="19" text="Name" left="437" top="173" width="130" height="36"/>
+        <Edit id="edit_name" taborder="20" left="590" top="171" width="425" height="36"/>
+        <Static id="Static08" taborder="21" text="Address" left="437" top="213" width="120" height="36"/>
+        <Edit id="edit_addr" taborder="22" left="590" top="211" width="415" height="36"/>
+        <Static id="Static09" taborder="23" text="Company" left="437" top="253" width="130" height="36"/>
+        <Edit id="edit_company" taborder="24" left="590" top="251" width="425" height="36"/>
+        <Static id="Static10" taborder="25" text="E-mail" left="437" top="294" width="130" height="36"/>
+        <Edit id="edit_mail" taborder="26" left="590" top="292" width="425" height="36"/>
+        <Static id="Static11" taborder="27" text="Department" left="437" top="333" width="130" height="36"/>
+        <Edit id="Edit08" taborder="28" left="590" top="331" width="425" height="36"/>
+        <Edit id="Edit04" taborder="29" left="398" top="398" width="180" height="34" oninput="Edit04_oninput" onkeydown="Edit04_onkeydown"/>
+        <Button id="Button01" taborder="30" text="Button01" left="575" top="400" width="51" height="32" onclick="Button01_onclick"/>
+        <ListBox id="ListBox00" taborder="31" left="398" top="433" width="180" height="104" innerdataset="ds_data" codecolumn="CODE" datacolumn="DATA" onitemclick="ListBox00_onitemclick"/>
+        <Edit id="Edit05" taborder="32" left="665" top="394" width="95" height="38" oneditclick="Edit05_oneditclick"/>
+        <Edit id="Edit06" taborder="33" left="763" top="395" width="95" height="38"/>
+        <PopupDiv id="PopupDiv00" text="PopupDiv00" visible="false" left="667" top="444" width="190" height="86">
+          <Layouts>
+            <Layout>
+              <Grid id="Grid00" taborder="0" left="2" top="0" width="100.00%" height="158.14%" binddataset="popup_data" autofittype="col" oncellclick="PopupDiv00_Grid00_oncellclick">
+                <Formats>
+                  <Format id="default">
+                    <Columns>
+                      <Column size="80"/>
+                      <Column size="80"/>
+                    </Columns>
+                    <Rows>
+                      <Row band="head" size="24"/>
+                      <Row size="24"/>
+                    </Rows>
+                    <Band id="head">
+                      <Cell text="CODE"/>
+                      <Cell col="1" text="DATA"/>
+                    </Band>
+                    <Band id="body">
+                      <Cell text="bind:CODE"/>
+                      <Cell col="1" text="bind:DATA"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </Grid>
+            </Layout>
+          </Layouts>
+        </PopupDiv>
+        <Edit id="Edit07" taborder="34" left="754" top="560" width="117" height="34" onkeyup="Edit07_onkeyup"/>
+        <Grid id="Grid01" taborder="35" left="661" top="560" width="86" height="127" binddataset="Dataset05">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Column0"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.edit_input_onkeyup = function(obj:nexacro.Edit,e:nexacro.KeyEventInfo)
+{
+	this.edit_length.set_value(this.edit_input.value.length);
+};
+
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var sRtn = fn_checkPassword(this.Edit03.value);
+    
+    if(sRtn ==='Y')
+        this.Static06.set_text("Password correct");
+    else
+        this.Static06.set_text("Password incorrect");
+};
+
+
+this.CheckBox00_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
+{
+    if(e.postvalue == 1) 
+    {
+        this.Edit03.set_password("false");
+    }
+    else
+    {
+        this.Edit03.set_password("true");
+    }
+};
+
+function fn_checkPassword(sValue)
+{
+    var sRtn = "N";
+
+    //Regular expression pattern
+    var sRegExp = "[a-z0-9]{8,10}";
+
+    //Create regular expression object
+    var objRegExp = new RegExp(sRegExp, "i");
+
+    //Validate password
+    var objResult = objRegExp.exec(sValue);
+    
+    if (objResult == null)
+    {
+        sRtn = "N";
+    }
+    else
+    {
+        if ((objResult.index == 0) && (objResult == sValue))
+            sRtn = "Y";
+        else
+            sRtn = "N";
+    }
+
+    return sRtn;
+}
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    if(this.ListBox00.visible == false)
+    {
+        if(!this.Edit04.getLength())
+        {
+            this.ds_data.filter("");
+        }        
+
+        this.ListBox00.set_visible(true);    
+    }
+    else
+    {
+        this.ListBox00.set_visible(false);
+    }
+};
+
+this.Edit04_oninput = function(obj:nexacro.Edit,e:nexacro.InputEventInfo)
+{
+    var strLength = this.edit_input.getLength();
+
+    this.ListBox00.set_visible(true);
+        
+    if(strLength > 0)
+    {
+        this.ds_data.filter("DATA.toString().search('"+this.Edit04.value+"') >= 0");
+            
+        if(this.ds_data.rowcount == 0)
+        {
+            this.ListBox00.set_visible(false);
+        }
+        
+    }
+    else
+    {
+        this.ListBox00.set_visible(false);        
+    }
+};
+
+this.Edit04_onkeydown = function(obj:nexacro.Edit,e:nexacro.KeyEventInfo)
+{
+    this.ListBox00.set_visible(true);    
+    
+    switch(e.keycode)
+    {
+        case 13:    //ENTER
+            if (this.ListBox00.index != -1)
+            {            
+                this.Edit04.set_value(this.ListBox00.text)
+            }
+            
+            this.ListBox00.set_visible(false);
+            
+            break;
+            
+        case 27:    //ESC
+            this.ListBox00.set_visible(false);
+            
+            break;
+            
+        case 38:    //UP
+            if (this.ListBox00.index > 0)
+            {
+                this.ListBox00.set_index(this.ListBox00.index - 1);
+            }
+            
+            break;
+            
+        case 40:    //DOWN
+            this.ListBox00.set_index(this.ListBox00.index + 1);
+            
+            break;
+            
+        default:
+            trace("keycode = " + e.keycode);
+    }
+};
+
+this.ListBox00_onitemclick = function(obj:nexacro.ListBox,e:nexacro.ItemClickEventInfo)
+{
+    this.Edit04.set_value(obj.text);
+    this.ListBox00.set_visible(false);
+};
+
+this.Edit05_oneditclick = function(obj:nexacro.Edit,e:nexacro.EditClickEventInfo)
+{
+	this.PopupDiv00.trackPopupByComponent(this.Edit05, 0, parseInt(this.Edit05.height));
+};
+
+this.PopupDiv00_Grid00_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+    this.PopupDiv00.closePopup();
+    this.Edit05.set_value(this.popup_data.getColumn(e.row, "CODE"));
+    this.Edit06.set_value(this.popup_data.getColumn(e.row, "DATA"));
+};
+
+this.Edit07_onkeyup = function(obj:nexacro.Edit,e:nexacro.KeyEventInfo)
+{
+	this.Edit07.updateToDataset();
+};
+]]></Script>
+    <Objects>
+      <Dataset id="Dataset01">
+        <ColumnInfo>
+          <Column id="Name" type="STRING" size="256"/>
+          <Column id="Address" type="STRING" size="256"/>
+          <Column id="Company" type="STRING" size="256"/>
+          <Column id="Department" type="STRING" size="256"/>
+          <Column id="EMail" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Name">john</Col>
+            <Col id="Address">Califonia. USA</Col>
+            <Col id="Company">Tollbar</Col>
+            <Col id="Department">Pre-sales</Col>
+            <Col id="EMail">gre-sales@tolbar.com</Col>
+          </Row>
+          <Row>
+            <Col id="Name">james</Col>
+            <Col id="Address">Seoul, KOREA</Col>
+            <Col id="Company">Ebot</Col>
+            <Col id="Department">Consulting</Col>
+            <Col id="EMail">consulting@ebot.com</Col>
+          </Row>
+          <Row>
+            <Col id="Name">donald</Col>
+            <Col id="Address">Barcelona, Spain</Col>
+            <Col id="Company">Ebot</Col>
+            <Col id="Department">Research institute</Col>
+            <Col id="EMail">research@ebot.com</Col>
+          </Row>
+          <Row>
+            <Col id="Name">lisa</Col>
+            <Col id="Address">London, UK</Col>
+            <Col id="Company">Tollbar</Col>
+            <Col id="Department">Quality Assurance</Col>
+            <Col id="EMail">quailty@tolbar.com</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_data">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="DATA" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">00</Col>
+            <Col id="DATA">static</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="DATA">dataset</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="DATA">button</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="DATA">calendar</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="DATA">checkbox</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="DATA">combo</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">06</Col>
+            <Col id="DATA">radio</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">07</Col>
+            <Col id="DATA">listbox</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">08</Col>
+            <Col id="DATA">grid</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">09</Col>
+            <Col id="DATA">tabpage</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">10</Col>
+            <Col id="DATA">tab</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">11</Col>
+            <Col id="DATA">imageviewer</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">12</Col>
+            <Col id="DATA">groupbox</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="popup_data">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="DATA" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="DATA">apple</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="DATA">pear</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="DATA">walnut</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="DATA">acorn</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="DATA">strawberry</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset05">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">Mango</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">Bananas</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">Coconuts</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">Orange</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="edit_name" propid="value" datasetid="Dataset00" columnid="Name"/>
+      <BindItem id="item1" compid="edit_addr" propid="value" datasetid="Dataset00" columnid="Address"/>
+      <BindItem id="item2" compid="edit_company" propid="value" datasetid="Dataset00" columnid="Company"/>
+      <BindItem id="item3" compid="edit_mail" propid="value" datasetid="Dataset00" columnid="EMail"/>
+      <BindItem id="item4" compid="Edit08" propid="value" datasetid="Dataset00" columnid="Department"/>
+      <BindItem id="item5" compid="Edit07" propid="value" datasetid="Dataset05" columnid="Column0"/>
+    </Bind>
+  </Form>
+</FDL>

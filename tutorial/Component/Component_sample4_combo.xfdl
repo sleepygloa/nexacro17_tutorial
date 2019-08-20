@@ -3,8 +3,8 @@
   <Form id="Component_sample4_combo" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
-        <Combo id="Combo00" taborder="0" text="Combo00" left="22" top="18" width="186" height="42" innerdataset="Dataset00" codecolumn="CODE" datacolumn="DATA"/>
-        <Combo id="Combo01" taborder="1" text="apple" left="251" top="18" width="361" height="43" index="0" innerdataset="ds_combo" codecolumn="CODE" datacolumn="DATA" value="00"/>
+        <Combo id="Combo00" taborder="0" text="Combo00" left="22" top="18" width="186" height="42" innerdataset="Dataset00" codecolumn="CODE" datacolumn="DATA" onmouseenter="Combo00_onmouseenter"/>
+        <Combo id="Combo01" taborder="1" text="apple" left="251" top="18" width="361" height="43" index="0" innerdataset="ds_combo" codecolumn="CODE" datacolumn="DATA" value="00" onitemchanged="Combo01_onitemchanged"/>
         <Radio id="Radio00" taborder="2" left="622" top="21" width="278" height="89" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" onitemchanged="Radio00_onitemchanged">
           <Dataset id="innerdataset">
             <ColumnInfo>
@@ -69,6 +69,123 @@
             </Format>
           </Formats>
         </Grid>
+        <Radio id="Radio01" taborder="7" left="871" top="188" width="245" height="83" onitemchanged="Radio01_onitemchanged" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" positionstep="0" columncount="2">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">search</Col>
+                <Col id="datacolumn">search</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">caseisearch</Col>
+                <Col id="datacolumn">caseisearch</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">filter</Col>
+                <Col id="datacolumn">filter</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">caseifilter</Col>
+                <Col id="datacolumn">caseifilter</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">filterlike</Col>
+                <Col id="datacolumn">filterlike</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">caserfilterlike</Col>
+                <Col id="datacolumn">caseifilterlike</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Combo id="Combo04" taborder="8" text="Combo04" left="630" top="202" width="212" height="85" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" onitemchanged="Combo04_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">00</Col>
+                <Col id="datacolumn">apple</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">01</Col>
+                <Col id="datacolumn">banana</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">02</Col>
+                <Col id="datacolumn">orange</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">03</Col>
+                <Col id="datacolumn">kiwi</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">04</Col>
+                <Col id="datacolumn">peach</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">05</Col>
+                <Col id="datacolumn">strawberry</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">06</Col>
+                <Col id="datacolumn">AppleMango</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">07</Col>
+                <Col id="datacolumn">applemango</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">08</Col>
+                <Col id="datacolumn">SaturnPeach</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">09</Col>
+                <Col id="datacolumn">saturnpeach</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Combo id="Combo05" taborder="9" text="Combo05" left="80" top="402" width="166" height="36" onmouseenter="Combo05_onmouseenter" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" canitemchange="Combo05_canitemchange">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">1</Col>
+                <Col id="datacolumn">1</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">2</Col>
+                <Col id="datacolumn">2</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">3</Col>
+                <Col id="datacolumn">3</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">4</Col>
+                <Col id="datacolumn">4</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">5</Col>
+                <Col id="datacolumn">5</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Button id="Button00" taborder="10" text="Button00" left="260" top="404" width="137" height="34" onclick="Button00_onclick"/>
+        <Button id="Button01" taborder="11" text="Button00" left="256" top="453" width="137" height="34" onclick="Button01_onclick"/>
+        <TextArea id="TextArea00" taborder="12" left="84" top="506" width="306" height="94" onchanged="TextArea00_onchanged"/>
       </Layout>
     </Layouts>
     <Objects>
@@ -252,6 +369,55 @@ this.fn_comboEdit_set = function()
         }
     }    
     this.Combo03.set_text(str_txt.substr(0, str_txt.length-1));
-};]]></Script>
+};
+
+
+
+
+this.Radio01_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.Combo04.set_type(e.postvalue);
+};
+
+
+
+
+
+this.Combo00_onmouseenter = function(obj:nexacro.Combo,e:nexacro.MouseEventInfo)
+{
+	if(!obj.isDropdown()) {
+		obj.dropdown();
+    }
+};
+
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Combo05.set_index(3);
+    this.TextArea00.set_value("Button00_onclick");
+};
+
+
+
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var preindex = this.Combo05.index;
+    var pretext = this.Combo05.text;
+    var prevalue = "";
+    this.Combo05.set_index(3);
+    var postindex = this.Combo05.index;
+    var posttext = this.Combo05.text;
+    var postvalue = "";
+    this.TextArea00.set_value("Button01_onclick");
+    
+    var evt = new nexacro.ItemChangeEventInfo(this, "canitemchange", preindex, pretext, prevalue, postindex, posttext, postvalue);
+    this.Combo05.canitemchange.fireEvent(this.Combo05, evt, true);
+
+};
+
+this.Combo05_canitemchange = function(obj:nexacro.Combo,e:nexacro.ItemChangeEventInfo)
+{
+	this.TextArea00.insertText(" -> canitemchange");
+};
+]]></Script>
   </Form>
 </FDL>

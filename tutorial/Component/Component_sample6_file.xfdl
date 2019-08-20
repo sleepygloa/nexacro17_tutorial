@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Component_sample6_file" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Button id="Button00" taborder="0" text="open" left="17" top="37" width="104" height="26" onclick="Button00_onclick"/>
+        <Radio id="Radio00" taborder="1" left="16" top="76" width="152" height="80" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" onitemchanged="Radio00_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">0</Col>
+                <Col id="datacolumn">FileDialog.LOAD</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">1</Col>
+                <Col id="datacolumn">FileDialog.MULTILOAD</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Radio id="Radio01" taborder="2" left="18" top="200" width="152" height="80" onitemchanged="Radio01_onitemchanged" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="datacolumn">none</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">.docs, .doc, .xls, .xlsx</Col>
+                <Col id="datacolumn">.docs, .doc, .xls, .xlsx</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">image/*</Col>
+                <Col id="datacolumn">image/*</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">image/*, text/*</Col>
+                <Col id="datacolumn">image/*, text/*</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <TextArea id="TextArea00" taborder="3" left="197" top="55" width="136" height="206"/>
+        <Button id="Button01" taborder="4" text="open" left="27" top="363" width="127" height="61" onclick="Button01_onclick"/>
+        <Button id="Button02" taborder="5" text="upload" left="177" top="363" width="127" height="61" onclick="Button02_onclick"/>
+        <Grid id="Grid00" taborder="6" left="27" top="443" width="277" height="87" binddataset="Dataset00" ondragenter="Grid00_ondragenter" ondragleave="Grid00_ondragleave" ondrop="Grid00_ondrop">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="name"/>
+                <Cell col="1" text="size"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:name"/>
+                <Cell col="1" text="bind:size"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <TextArea id="TextArea01" taborder="7" left="26" top="549" width="281" height="118"/>
+        <Static id="Static00" taborder="8" text="Static00" left="58" top="446" width="278" height="86" onclick="Static00_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[var constOpenMode = FileDialog.LOAD;
+
+this.Radio00_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+    if(e.postvalue==0)
+    {
+        constOpenMode = FileDialog.LOAD;
+    }
+    else
+    {
+        constOpenMode = FileDialog.MULTILOAD;
+    }
+};
+this.Radio01_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.FileDialog00.set_accept(e.postvalue);
+};
+
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.FileDialog00.open('nexacro17', constOpenMode);
+};
+
+
+this.FileDialog00_onclose = function(obj:nexacro.FileDialog,e:nexacro.FileDialogEventInfo)
+{
+    this.TextArea00.set_value("selectfiles: "+e.virtualfiles.length+"\n");
+    for (var i = 0, len = e.virtualfiles.length, vFile; i < len; i++)
+    {
+        vFile = e.virtualfiles[i];
+        vFile.addEventHandler("onsuccess", this.FileDialog_VirtualFile_onsuccess, this);
+        
+        vFile.open(null, VirtualFile.openRead);
+    }
+    
+};
+
+this.FileDialog_VirtualFile_onsuccess = function(obj:nexacro.VirtualFile, e:nexacro.VirtualFileEventInfo)
+{
+    switch (e.reason)
+    {
+        case 1:
+            obj.getFileSize();
+            break;
+        case 9:
+            this.TextArea00.set_value(this.TextArea00.value+obj.filename+"("+e.filesize+")\n");
+            obj.close();
+            break;
+    }
+}
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.FileDialog00.open('nexacro17', FileDialog.MULTILOAD);
+};
+
+this.FileDialog01_onclose = function(obj:nexacro.FileDialog,e:nexacro.FileDialogEventInfo)
+{
+	this.addFileList(e.virtualfiles);
+};
+
+this.FileDialog00_onclose = function(obj:nexacro.FileDialog,e:nexacro.FileDialogEventInfo)
+{
+    this.addFileList(e.virtualfiles);
+};
+
+this.addFileList = function(filelist)
+{
+    for (var i = 0, len = filelist.length, vFile; i < len; i++)
+    {
+        vFile = filelist[i];
+        vFile.addEventHandler("onsuccess", this.FileList_onsuccess, this);
+        vFile.addEventHandler("onerror", this.FileList_onerror , this);
+        
+        vFile.open(null, 1);
+    }
+}
+
+
+this.Grid00_ondragenter = function(obj:nexacro.Grid,e:nexacro.DragEventInfo)
+{
+if(e.datatype == "file")
+{
+	this.Grid00.set_opacity(0.5);
+}
+};
+
+this.Grid00_ondragleave = function(obj:nexacro.Grid,e:nexacro.DragEventInfo)
+{
+	this.Grid00.set_opacity(1);
+};
+
+this.Grid00_ondrop = function(obj:nexacro.Grid,e:nexacro.GridDragEventInfo)
+{
+	this.Grid00.set_opacity(1);
+    if(e.datatype == "file")
+    {
+        this.addFileList(e.filelist);
+    }
+};
+this.FileList_onsuccess = function(obj:nexacro.VirtualFile, e:nexacro.VirtualFileEventInfo)
+{
+    switch (e.reason)
+    {
+        case 1:
+            obj.getFileSize();
+            break;
+        case 9:
+            var nRowIdx = this.Dataset00.addRow();
+            this.Dataset00.setColumn(nRowIdx, 0, obj.filename);
+            this.Dataset00.setColumn(nRowIdx, 1, this.cutFileSize(e.filesize));
+            this.FileUploadTransfer00.addFile(obj.filename, obj);
+            break;
+    }
+}
+
+this.FileList_onerror = function(obj:nexacro.VirtualFile, e:nexacro.VirtualFileErrorEventInfo)
+{
+    trace("errortype: "+e.errortype);
+    trace("errormsg: "+e.errormsg);
+    trace("statuscode: "+e.statuscode);
+}
+this.cutFileSize = function(filesize)
+{
+    var sOutput = filesize + " bytes";
+    for (var aMultiples = ["KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"], nMultiple = 0, nApprox = filesize / 1024; nApprox > 1; nApprox /= 1024, nMultiple++) 
+    {
+        sOutput = nApprox.toFixed(3) + " " + aMultiples[nMultiple];
+    }
+    return sOutput;
+};
+this.Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    this.TextArea01.set_value("");
+    this.FileUpTransfer01.upload('http://demo.nexacro.com/developer_guide/17/Service/fileupload.jsp');
+};
+
+
+this.FileUpTransfer00_onprogress = function(obj:nexacro.FileUpTransfer,e:nexacro.FileUpTransferProgressEventInfo)
+{
+    this.fn_addlog(e.loaded+"/"+e.total);
+};
+
+this.FileUpTransfer00_onsuccess = function(obj:nexacro.FileUpTransfer,e:nexacro.FileUpTransferEventinfo)
+{
+    this.fn_addlog(e.code);
+    this.fn_addlog(e.message);
+};
+
+this.FileUpTransfer00_onerror = function(obj:nexacro.FileUpTransfer,e:nexacro.FileUpTransferErrorEventInfo)
+{
+    this.fn_addlog(e.errormsg);
+    this.fn_addlog(e.statuscode);
+};
+
+this.fn_addlog = function(strMessage)
+{
+    this.TextArea00.insertText(strMessage + '\n');
+}
+]]></Script>
+    <Objects>
+      <FileDialog id="FileDialog00" onclose="FileDialog00_onclose"/>
+      <Dataset id="Dataset00">
+        <ColumnInfo>
+          <Column id="name" type="STRING" size="256"/>
+          <Column id="size" type="STRING" size="256"/>
+        </ColumnInfo>
+      </Dataset>
+      <FileUpTransfer id="FileUpTransfer00" onerror="FileUpTransfer00_onerror" onprogress="FileUpTransfer00_onprogress" onsuccess="FileUpTransfer00_onsuccess"/>
+      <FileDialog id="FileDialog01" onclose="FileDialog01_onclose"/>
+    </Objects>
+  </Form>
+</FDL>

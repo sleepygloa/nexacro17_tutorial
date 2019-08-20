@@ -1,0 +1,780 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Component_sample8_grid_cell" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Grid id="Grid00" taborder="0" left="15" top="19" width="375" height="270" binddataset="Dataset00">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Name"/>
+                <Cell col="1" text="Address"/>
+                <Cell col="2" text="Company"/>
+                <Cell col="3" text="Department"/>
+                <Cell col="4" text="Salary"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Name"/>
+                <Cell col="1" text="bind:Address"/>
+                <Cell col="2" text="bind:Company"/>
+                <Cell col="3" text="bind:Department"/>
+                <Cell col="4" text="bind:Salary"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static00" taborder="1" text="Select Dataset" left="13" top="302" width="107" height="28" onclick="Static00_onclick"/>
+        <Combo id="Combo00" taborder="2" text="Combo00" left="143" top="300" width="150" height="30" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" onitemchanged="Combo00_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">0</Col>
+                <Col id="datacolumn">Dataset00</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">1</Col>
+                <Col id="datacolumn">Dataset01</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Grid id="Grid01" taborder="3" left="15" top="335" width="375" height="270" binddataset="Dataset02">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="normal"/>
+                <Cell col="1" text="none"/>
+                <Cell col="2" text="bar"/>
+                <Cell col="3" text="button"/>
+                <Cell col="4" text="checkbox"/>
+                <Cell col="5" text="combo"/>
+                <Cell col="6" text="currency"/>
+                <Cell col="7" text="date"/>
+                <Cell col="8" text="image"/>
+                <Cell col="9" text="number"/>
+                <Cell col="10" text="text"/>
+                <Cell col="11" text="tree"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:normal"/>
+                <Cell col="1" text="bind:none" displaytype="none"/>
+                <Cell col="2" text="bind:bar" displaytype="progressbarcontrol"/>
+                <Cell col="3" text="bind:button" displaytype="buttoncontrol"/>
+                <Cell col="4" text="bind:checkbox" displaytype="checkboxcontrol"/>
+                <Cell col="5" text="bind:combo" displaytype="combocontrol" combodataset="ds_combo" combocodecol="CODE" combodatacol="VALUE"/>
+                <Cell col="6" text="bind:currency" displaytype="currency"/>
+                <Cell col="7" text="bind:date" displaytype="date"/>
+                <Cell col="8" text="bind:image" displaytype="imagecontrol"/>
+                <Cell col="9" text="bind:number" displaytype="number"/>
+                <Cell col="10" text="bind:text" displaytype="text"/>
+                <Cell col="11" text="bind:tree" displaytype="treeitemcontrol" treelevel="bind:tree" treecheck="bind:checkbox" treestate="1"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid01_00" taborder="4" left="410" top="335" width="375" height="270" binddataset="Dataset02">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="normal"/>
+                <Cell col="1" text="none"/>
+                <Cell col="2" text="bar"/>
+                <Cell col="3" text="button"/>
+                <Cell col="4" text="checkbox"/>
+                <Cell col="5" text="combo"/>
+                <Cell col="6" text="currency"/>
+                <Cell col="7" text="date"/>
+                <Cell col="8" text="mask"/>
+                <Cell col="9" text="readonly"/>
+                <Cell col="10" text="image"/>
+                <Cell col="11" text="number"/>
+                <Cell col="12" text="text"/>
+                <Cell col="13" text="tree"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:normal" edittype="normal"/>
+                <Cell col="1" text="bind:none" edittype="none" displaytype="none"/>
+                <Cell col="2" text="bind:bar" displaytype="progressbarcontrol"/>
+                <Cell col="3" text="bind:button" displaytype="buttoncontrol" edittype="button"/>
+                <Cell col="4" text="bind:checkbox" displaytype="checkboxcontrol" edittype="checkbox"/>
+                <Cell col="5" text="bind:combo" edittype="combo" displaytype="combocontrol" combodataset="ds_combo" combocodecol="CODE" combodatacol="VALUE"/>
+                <Cell col="6" text="bind:currency" displaytype="currency"/>
+                <Cell col="7" text="bind:date" displaytype="date" edittype="date" calendarpopupsize="250 250"/>
+                <Cell col="8" text="bind:mask" displaytype="mask" edittype="mask" maskeditformat="AA-###"/>
+                <Cell col="9" text="bind:readonly" edittype="readonly"/>
+                <Cell col="10" text="bind:image" displaytype="imagecontrol"/>
+                <Cell col="11" text="bind:number" displaytype="number"/>
+                <Cell col="12" text="bind:text" displaytype="text" edittype="text"/>
+                <Cell col="13" text="bind:tree" displaytype="treeitemcontrol" edittype="tree" treelevel="bind:tree" treecheck="bind:checkbox" treestate="1"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="Button00" taborder="5" text="Group" left="399" top="18" width="120" height="50" onclick="Button00_onclick"/>
+        <Button id="Button01" taborder="6" text="Sort" left="399" top="78" width="120" height="50" onclick="Button01_onclick"/>
+        <Button id="Button02" taborder="7" text="Suppress" left="399" top="138" width="120" height="50" onclick="Button02_onclick"/>
+        <Button id="Button03" taborder="8" text="SetCellProperty" left="399" top="198" width="120" height="50" onclick="Button03_onclick"/>
+        <Button id="Button04" taborder="9" text="GetCellProperty" left="399" top="258" width="120" height="50" onclick="Button04_onclick"/>
+        <Grid id="Grid02" taborder="10" left="553" top="19" width="375" height="270" binddataset="Dataset03">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="115"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24" band="head"/>
+                <Row size="24" band="head"/>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+                <Row size="24"/>
+                <Row size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell colspan="2" text="ID"/>
+                <Cell col="2" rowspan="4" text="Contact"/>
+                <Cell col="3" rowspan="2" text="Mail"/>
+                <Cell col="4" rowspan="2">
+                  <Cell text="Primary"/>
+                  <Cell row="1" text="Secondary"/>
+                </Cell>
+                <Cell row="1" rowspan="3" text="Name"/>
+                <Cell row="1" col="1" rowspan="3">
+                  <Cell text="First"/>
+                  <Cell row="1" text="Middle"/>
+                  <Cell row="2" text="Last"/>
+                </Cell>
+                <Cell row="2" col="3" rowspan="2" text="Tel."/>
+                <Cell row="2" col="4" rowspan="2">
+                  <Cell text="Mobile"/>
+                  <Cell row="1" text="Office"/>
+                </Cell>
+              </Band>
+              <Band id="body">
+                <Cell colspan="2" text="bind:ID"/>
+                <Cell col="2" rowspan="4" text="Contact"/>
+                <Cell col="3" rowspan="2" text="Mail"/>
+                <Cell col="4" rowspan="2">
+                  <Cell text="bind:Mail_P"/>
+                  <Cell row="1" text="bind:Mail_S"/>
+                </Cell>
+                <Cell row="1" rowspan="3" text="Name"/>
+                <Cell row="1" col="1" rowspan="3">
+                  <Cell text="bind:First"/>
+                  <Cell row="1" text="bind:Middle"/>
+                  <Cell row="2" text="bind:Last"/>
+                </Cell>
+                <Cell row="2" col="3" rowspan="2" text="Tel."/>
+                <Cell row="2" col="4" rowspan="2">
+                  <Cell text="bind:Tel_M"/>
+                  <Cell row="1" text="bind:Tel_O"/>
+                </Cell>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="Button05" taborder="11" text="GetCellProperty" left="941" top="24" width="120" height="50" onclick="Button05_onclick"/>
+        <Button id="Button06" taborder="12" text="SetCellProperty" left="943" top="84" width="120" height="50" onclick="Button06_onclick"/>
+        <Grid id="Grid03" taborder="13" left="842" top="328" width="192" height="81" binddataset="Dataset04">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Name"/>
+                <Cell col="1" text="Tel"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Name"/>
+                <Cell col="1" text="bind:Tel" maskeditformat="###-{####}" maskedittype="string" displaytype="mask"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid04" taborder="14" left="839" top="433" width="375" height="270" binddataset="Dataset05">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Name"/>
+                <Cell col="1" text="Department"/>
+                <Cell col="2" text="Vacation"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Name" displaytype="expr:comp.parent.iCurrow==currow?'editcontrol':'normal'" edittype="normal"/>
+                <Cell col="1" text="bind:Department" displaytype="expr:comp.parent.iCurrow == currow ? 'combocontrol' : 'combotext'" edittype="combo" combodataset="Dataset06" combocodecol="code" combodatacol="text"/>
+                <Cell col="2" text="bind:Vacation" displaytype="expr:comp.parent.iCurrow == currow ? 'checkboxcontrol' : 'normal'" edittype="checkbox"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00">
+        <ColumnInfo>
+          <Column id="Name" type="STRING" size="256"/>
+          <Column id="Address" type="STRING" size="256"/>
+          <Column id="Company" type="STRING" size="256"/>
+          <Column id="Department" type="STRING" size="256"/>
+          <Column id="Salary" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Name">John</Col>
+            <Col id="Address">Seoul, KOREA</Col>
+            <Col id="Company">Idoller</Col>
+            <Col id="Department">Sales</Col>
+            <Col id="Salary">15000</Col>
+          </Row>
+          <Row>
+            <Col id="Name">James</Col>
+            <Col id="Address">Barcelona, Spain</Col>
+            <Col id="Company">hangul</Col>
+            <Col id="Department">Research</Col>
+            <Col id="Salary">25000</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Donald</Col>
+            <Col id="Address">Califonia, USA</Col>
+            <Col id="Company">hangul</Col>
+            <Col id="Department">Sales</Col>
+            <Col id="Salary">100000</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Lisa</Col>
+            <Col id="Address">London, UK</Col>
+            <Col id="Company">Idoller</Col>
+            <Col id="Department">Research</Col>
+            <Col id="Salary">3000</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Joe</Col>
+            <Col id="Address">Seoul, KOREA</Col>
+            <Col id="Company">hangul</Col>
+            <Col id="Department">Sales</Col>
+            <Col id="Salary">86000</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Michael</Col>
+            <Col id="Address">Barcelona, Spain</Col>
+            <Col id="Company">Idoller</Col>
+            <Col id="Department">Personel</Col>
+            <Col id="Salary">1300</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Lilli</Col>
+            <Col id="Address">Califonia, USA</Col>
+            <Col id="Company">hangul</Col>
+            <Col id="Department">Personel</Col>
+            <Col id="Salary">4400</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Colt</Col>
+            <Col id="Address">London, UK</Col>
+            <Col id="Company">Idoller</Col>
+            <Col id="Department">Personel</Col>
+            <Col id="Salary">62000</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset01">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="DATA" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">00</Col>
+            <Col id="DATA">apple</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">01</Col>
+            <Col id="DATA">banana</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">02</Col>
+            <Col id="DATA">orange</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">03</Col>
+            <Col id="DATA">kiwi</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">04</Col>
+            <Col id="DATA">peach</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">05</Col>
+            <Col id="DATA">strawberry</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset02">
+        <ColumnInfo>
+          <Column id="normal" type="STRING" size="256"/>
+          <Column id="none" type="STRING" size="256"/>
+          <Column id="bar" type="STRING" size="256"/>
+          <Column id="button" type="STRING" size="256"/>
+          <Column id="checkbox" type="STRING" size="256"/>
+          <Column id="combo" type="STRING" size="256"/>
+          <Column id="currency" type="STRING" size="256"/>
+          <Column id="date" type="STRING" size="256"/>
+          <Column id="mask" type="STRING" size="256"/>
+          <Column id="readonly" type="STRING" size="256"/>
+          <Column id="image" type="STRING" size="256"/>
+          <Column id="number" type="STRING" size="256"/>
+          <Column id="text" type="STRING" size="256"/>
+          <Column id="tree" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="normal">John</Col>
+            <Col id="none">Korea</Col>
+            <Col id="bar">20</Col>
+            <Col id="button">Profile</Col>
+            <Col id="checkbox">1</Col>
+            <Col id="combo">M</Col>
+            <Col id="currency">15000</Col>
+            <Col id="date">20160105</Col>
+            <Col id="mask">AA105</Col>
+            <Col id="readonly">secret</Col>
+            <Col id="image">Image::component_Button.png</Col>
+            <Col id="number">15000</Col>
+            <Col id="text">Chin</Col>
+            <Col id="tree">1</Col>
+          </Row>
+          <Row>
+            <Col id="normal">James</Col>
+            <Col id="none">Spain</Col>
+            <Col id="bar">40</Col>
+            <Col id="button">Profile</Col>
+            <Col id="checkbox">0</Col>
+            <Col id="combo">W</Col>
+            <Col id="currency">25000</Col>
+            <Col id="date">20100826</Col>
+            <Col id="mask">CA826</Col>
+            <Col id="readonly">secret</Col>
+            <Col id="image">Image::component_Grid.png</Col>
+            <Col id="number">25000</Col>
+            <Col id="text">hangul</Col>
+            <Col id="tree">1</Col>
+          </Row>
+          <Row>
+            <Col id="normal">Donald</Col>
+            <Col id="none">USA</Col>
+            <Col id="bar">50</Col>
+            <Col id="button">Profile</Col>
+            <Col id="checkbox">1</Col>
+            <Col id="combo">M</Col>
+            <Col id="currency">1000000</Col>
+            <Col id="date">20120321</Col>
+            <Col id="mask">CA321</Col>
+            <Col id="readonly">secret</Col>
+            <Col id="image">Image::component_MaskEdit.png</Col>
+            <Col id="number">1000000</Col>
+            <Col id="text">hangul</Col>
+            <Col id="tree">2</Col>
+          </Row>
+          <Row>
+            <Col id="normal">Lisa</Col>
+            <Col id="none">UK</Col>
+            <Col id="bar">60</Col>
+            <Col id="button">Profile</Col>
+            <Col id="checkbox">0</Col>
+            <Col id="combo">W</Col>
+            <Col id="currency">3000</Col>
+            <Col id="date">20101225</Col>
+            <Col id="mask">AA225</Col>
+            <Col id="readonly">secret</Col>
+            <Col id="image">Image::component_Static.png</Col>
+            <Col id="number">3000</Col>
+            <Col id="text">Chin</Col>
+            <Col id="tree">2</Col>
+          </Row>
+          <Row>
+            <Col id="normal">Joe</Col>
+            <Col id="none">Brazil</Col>
+            <Col id="bar">80</Col>
+            <Col id="button">Profile</Col>
+            <Col id="checkbox">0</Col>
+            <Col id="combo">M</Col>
+            <Col id="currency">8600</Col>
+            <Col id="date">19190301</Col>
+            <Col id="mask">AA301</Col>
+            <Col id="readonly">secret</Col>
+            <Col id="image">Image::component_Tab.png</Col>
+            <Col id="number">8600</Col>
+            <Col id="text">hangul</Col>
+            <Col id="tree">0</Col>
+          </Row>
+          <Row>
+            <Col id="normal">Michael</Col>
+            <Col id="none">India</Col>
+            <Col id="bar">100</Col>
+            <Col id="button">Profile</Col>
+            <Col id="checkbox">1</Col>
+            <Col id="combo">W</Col>
+            <Col id="currency">1300</Col>
+            <Col id="date">20140416</Col>
+            <Col id="mask">CA416</Col>
+            <Col id="readonly">secret</Col>
+            <Col id="image">Image::icon_play.png</Col>
+            <Col id="number">1300</Col>
+            <Col id="text">hangul</Col>
+            <Col id="tree">1</Col>
+          </Row>
+          <Row>
+            <Col id="normal">Lili</Col>
+            <Col id="none">Turkey</Col>
+            <Col id="bar">44</Col>
+            <Col id="button">Profile</Col>
+            <Col id="checkbox">1</Col>
+            <Col id="combo">M</Col>
+            <Col id="currency">4400</Col>
+            <Col id="date">20200101</Col>
+            <Col id="mask">AA101</Col>
+            <Col id="readonly">secret</Col>
+            <Col id="image">Image::launch.png</Col>
+            <Col id="number">4400</Col>
+            <Col id="text">Chin</Col>
+            <Col id="tree">2</Col>
+          </Row>
+          <Row>
+            <Col id="normal">Colt</Col>
+            <Col id="none">Australia</Col>
+            <Col id="bar">80</Col>
+            <Col id="button">Profile</Col>
+            <Col id="checkbox">1</Col>
+            <Col id="combo">W</Col>
+            <Col id="currency">628000</Col>
+            <Col id="date">19911221</Col>
+            <Col id="mask">CA221</Col>
+            <Col id="readonly">secret</Col>
+            <Col id="image">Image::launch_2.png</Col>
+            <Col id="number">628000</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_combo">
+        <ColumnInfo>
+          <Column id="CODE" type="STRING" size="256"/>
+          <Column id="VALUE" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="CODE">M</Col>
+            <Col id="VALUE">Male</Col>
+          </Row>
+          <Row>
+            <Col id="CODE">W</Col>
+            <Col id="VALUE">Female</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset03">
+        <ColumnInfo>
+          <Column id="ID" type="STRING" size="256"/>
+          <Column id="First" type="STRING" size="256"/>
+          <Column id="Middle" type="STRING" size="256"/>
+          <Column id="Last" type="STRING" size="256"/>
+          <Column id="Mail_P" type="STRING" size="256"/>
+          <Column id="Mail_S" type="STRING" size="256"/>
+          <Column id="Tel_M" type="STRING" size="256"/>
+          <Column id="Tel_O" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="ID">JOHNSON</Col>
+            <Col id="First">John</Col>
+            <Col id="Last">Doe</Col>
+            <Col id="Mail_P">john@email.com</Col>
+            <Col id="Mail_S">john@email.org</Col>
+            <Col id="Tel_M">1012345678</Col>
+          </Row>
+          <Row>
+            <Col id="ID">JJ</Col>
+            <Col id="First">Jane</Col>
+            <Col id="Last">Roe</Col>
+            <Col id="Mail_P">jane@email.com</Col>
+            <Col id="Tel_M">10567812345</Col>
+            <Col id="Tel_O">256781234</Col>
+          </Row>
+          <Row>
+            <Col id="ID">jaspers</Col>
+            <Col id="First">Dick</Col>
+            <Col id="Middle">Fizgerald</Col>
+            <Col id="Last">Public</Col>
+            <Col id="Mail_P">dick@email.com</Col>
+            <Col id="Mail_S">dick@email.org</Col>
+            <Col id="Tel_M">1012345678</Col>
+            <Col id="Tel_O">212345678</Col>
+          </Row>
+          <Row>
+            <Col id="ID">son</Col>
+            <Col id="First">Robert</Col>
+            <Col id="Middle">Walker</Col>
+            <Col id="Last">Smith</Col>
+            <Col id="Mail_P">robert@email.com</Col>
+            <Col id="Mail_S">robert@email.org</Col>
+            <Col id="Tel_O">256781234</Col>
+          </Row>
+          <Row>
+            <Col id="ID">daniels</Col>
+            <Col id="First">Jack</Col>
+            <Col id="Last">Robertson</Col>
+            <Col id="Mail_P">jack@email.com</Col>
+            <Col id="Tel_M">1012345678</Col>
+            <Col id="Tel_O">212345678</Col>
+          </Row>
+          <Row>
+            <Col id="ID">BILLBILL</Col>
+            <Col id="First">Billy</Col>
+            <Col id="Last">Cook</Col>
+            <Col id="Mail_P">bill@email.com</Col>
+            <Col id="Mail_S">bill@email.org</Col>
+            <Col id="Tel_M">1056781234</Col>
+          </Row>
+          <Row>
+            <Col id="ID">mixnut</Col>
+            <Col id="First">Elizabeth</Col>
+            <Col id="Last">Soap</Col>
+            <Col id="Mail_P">elizabeth@email.com</Col>
+            <Col id="Mail_S">elizabeth@email.org</Col>
+            <Col id="Tel_M">1012345678</Col>
+          </Row>
+          <Row>
+            <Col id="ID">sync</Col>
+            <Col id="First">Harry</Col>
+            <Col id="Middle">Hussein</Col>
+            <Col id="Last">Blow</Col>
+            <Col id="Mail_P">harry@email.com</Col>
+            <Col id="Tel_M">1056781234</Col>
+            <Col id="Tel_O">256781234</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset04">
+        <ColumnInfo>
+          <Column id="Name" type="STRING" size="256"/>
+          <Column id="Tel" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Name">John</Col>
+            <Col id="Tel">233-2742</Col>
+          </Row>
+          <Row>
+            <Col id="Name">James</Col>
+            <Col id="Tel">748-2483</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Donald</Col>
+            <Col id="Tel">331-3256</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Lisa</Col>
+            <Col id="Tel">744-3223</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset05" onrowposchanged="Dataset05_onrowposchanged">
+        <ColumnInfo>
+          <Column id="Name" type="STRING" size="256"/>
+          <Column id="Department" type="STRING" size="256"/>
+          <Column id="Vacation" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Name">John</Col>
+            <Col id="Department">01</Col>
+            <Col id="Vacation">1</Col>
+          </Row>
+          <Row>
+            <Col id="Name">James</Col>
+            <Col id="Department">02</Col>
+            <Col id="Vacation">0</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Donald</Col>
+            <Col id="Department">03</Col>
+            <Col id="Vacation">0</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Lisa</Col>
+            <Col id="Department">04</Col>
+            <Col id="Vacation">1</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset06">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="text" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code">01</Col>
+            <Col id="text">Sales</Col>
+          </Row>
+          <Row>
+            <Col id="code">02</Col>
+            <Col id="text">IT</Col>
+          </Row>
+          <Row>
+            <Col id="code">03</Col>
+            <Col id="text">Education</Col>
+          </Row>
+          <Row>
+            <Col id="code">04</Col>
+            <Col id="text">Marketing</Col>
+          </Row>
+          <Row>
+            <Col id="code">05</Col>
+            <Col id="text">HR</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+
+this.Combo00_onitemchanged = function(obj:nexacro.Combo,e:nexacro.ItemChangeEventInfo)
+{
+    //Binding selected dataset
+    this.Grid00.set_binddataset(e.posttext);
+
+    //Creating new format for bound dataset
+    this.Grid00.createFormat(); 
+};
+
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Dataset00.set_keystring("G:Company"); 
+};
+
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Dataset00.set_keystring("S:Name");
+};
+
+this.Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+//Sorting records
+    this.Dataset00.set_keystring("S:Company+Department");
+
+    //Suppressing cells
+    var retVal = this.Grid00.setCellProperty("body", 2, "suppress", "1");
+    var retVal = this.Grid00.setCellProperty("body", 3, "suppress", "2");
+};
+
+this.Button03_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    //Getting index of selected cell
+    var nCellIdx = this.Grid00.currentcell;
+
+    //Setting displaytype property of selected cell
+    var bRet = this.Grid00.setCellProperty("body", nCellIdx, "displaytype", "buttoncontrol");
+};
+
+this.Button04_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    //Getting index of selected cell
+    var nCellIdx = this.Grid00.currentcell;
+
+    //Getting displaytype property of selected cell
+    var varCellProp = this.Grid00.getCellProperty("body", nCellIdx, "displaytype");
+    
+    alert("displaytype of selected cell is " + varCellProp);
+};
+
+this.Button05_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var varProperty = this.Grid02.getSubCellProperty("body", 5, 0, "background");    
+    
+    alert("Background value of first name sub cell: " + varProperty);
+};
+
+this.Button06_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var bRet = this.Grid02.setSubCellProperty("body", 5, 0, "background", "khaki");  
+};
+
+this.Dataset05_onrowposchanged = function(obj:nexacro.NormalDataset,e:nexacro.DSRowPosChangeEventInfo)
+{
+	this.iCurrow = e.newrow;
+};
+]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Component_sample7_googlemap" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Button id="Button00" taborder="0" text="Show Map" left="12" top="17" width="112" height="53" onclick="Button00_onclick"/>
+        <Button id="Button00_00" taborder="1" text="Del Maker" left="12" top="143" width="112" height="53" onclick="Button00_00_onclick"/>
+        <Button id="Button00_01" taborder="2" text="Add Maker" left="12" top="80" width="112" height="53" onclick="Button00_01_onclick"/>
+        <GoogleMap id="GoogleMap00" taborder="3" left="130" top="15" width="350" height="315" onload="GoogleMap00_onload"/>
+        <Button id="Button03" taborder="4" text="Add Circle" left="12" top="207" width="112" height="53" onclick="Button00_00_00_onclick"/>
+        <Button id="Button04" taborder="5" text="Del Circle" left="14" top="270" width="112" height="53" onclick="Button04_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    this.GoogleMap00.set_showzoom(true);
+    this.GoogleMap00.set_apikey(nexacro.getApplication().googleMapAPIKey);    
+    this.GoogleMap00.load(false, 11.96832946, 121.922996308, 0, 13);
+};
+
+this.Button00_01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var objGoogleMapMaker = new nexacro.GoogleMapMarker();
+    
+    objGoogleMapMaker.set_latitude(11.96832946);
+    objGoogleMapMaker.set_longitude(121.922996308);
+    objGoogleMapMaker.set_text("Default Marker");
+    objGoogleMapMaker.set_draggable(true);
+    objGoogleMapMaker.set_visible(true);
+    
+    this.GoogleMap00.addItem("MapMarker", objGoogleMapMaker);
+    
+    this.Button01.set_enable(false);
+    this.Button02.set_enable(true);
+};
+
+this.Button00_00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+
+    this.GoogleMap00.removeItem("MapMarker");
+
+    this.Button01.set_enable(true);
+    this.Button02.set_enable(false);
+};
+
+this.GoogleMap00_onload = function(obj:nexacro.GoogleMap,e:nexacro.GoogleMapEventInfo)
+{
+    trace("loading succeed");
+    
+    if(this.GoogleMap00.items[0])
+    {
+        this.GoogleMap00.removeItem(this.GoogleMap00.items[0]);
+    }
+    
+    this.Button01.set_enable(true);
+    this.Button02.set_enable(false);
+    this.Button03.set_enable(true);
+    this.Button04.set_enable(false);
+};
+
+this.Button03_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var objGoogleMapCircle = new nexacro.GoogleMapCircle();
+    
+    objGoogleMapCircle.set_latitude(11.96832946);
+    objGoogleMapCircle.set_longitude(121.922996308);
+    objGoogleMapCircle.set_radius(1000);
+    objGoogleMapCircle.set_visible(true);    
+    
+    this.GoogleMap00.addItem("MapCircle", objGoogleMapCircle);
+    
+    this.Button03.set_enable(false);
+    this.Button04.set_enable(true); 
+};
+
+this.Button04_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    this.GoogleMap00.removeItem("MapCircle");
+    
+    this.Button03.set_enable(true);
+    this.Button04.set_enable(false);   
+};
+]]></Script>
+  </Form>
+</FDL>

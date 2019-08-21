@@ -1,0 +1,416 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Component_sample9_grid_example" width="1280" height="720" titletext="New Form" onload="Form_onload">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Grid id="Grid00" taborder="0" left="15" top="15" width="405" height="230" binddataset="Dataset00" selecttype="multirow">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Name"/>
+                <Cell col="1" text="Address"/>
+                <Cell col="2" text="Company"/>
+                <Cell col="3" text="Department"/>
+                <Cell col="4" text="Salary"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Name"/>
+                <Cell col="1" text="bind:Address"/>
+                <Cell col="2" text="bind:Company"/>
+                <Cell col="3" text="bind:Department"/>
+                <Cell col="4" text="bind:Salary"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid01" taborder="1" left="438" top="14" width="415" height="310" binddataset="Dataset00">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+                <Row size="24" band="summ"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Name"/>
+                <Cell col="1" text="Address"/>
+                <Cell col="2" text="Company"/>
+                <Cell col="3" text="Department"/>
+                <Cell col="4" text="Salary"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Name" cssclass="expr:dataset.getRowLevel(currow)==1?'subtotal':''"/>
+                <Cell col="1" text="bind:Address" cssclass="expr:dataset.getRowLevel(currow)==1?'subtotal':''"/>
+                <Cell col="2" text="bind:Company" expr="dataset.getRowLevel(currow)==1?'SUBTOTAL':'Company'" cssclass="expr:dataset.getRowLevel(currow)==1?'subtotal':''"/>
+                <Cell col="3" text="bind:Department" cssclass="expr:dataset.getRowLevel(currow)==1?'subtotal':''"/>
+                <Cell col="4" text="bind:Salary" displaytype="currency" cssclass="expr:dataset.getRowLevel(currow)==1?'subtotal':''"/>
+              </Band>
+              <Band id="summary">
+                <Cell colspan="4"/>
+                <Cell col="4" displaytype="currency" expr="dataset.getSum('parseInt(Salary)')"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid02" taborder="2" left="862" top="16" width="375" height="464" binddataset="dsTree" treeusecheckbox="false" treeinitstatus="expand,all">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="214"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Label"/>
+                <Cell col="1" text="Level"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Label" displaytype="treeitemcontrol" edittype="tree" treelevel="bind:Level"/>
+                <Cell col="1" text="bind:Level"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00" keystring="G:+Company">
+        <ColumnInfo>
+          <Column id="Name" type="STRING" size="256"/>
+          <Column id="Address" type="STRING" size="256"/>
+          <Column id="Company" type="STRING" size="256"/>
+          <Column id="Department" type="STRING" size="256"/>
+          <Column id="Salary" type="INT" size="256" prop="SUM"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Name">John</Col>
+            <Col id="Address">Seoul, KOREA</Col>
+            <Col id="Company">Idoller</Col>
+            <Col id="Department">Sales</Col>
+            <Col id="Salary">15000</Col>
+          </Row>
+          <Row>
+            <Col id="Name">James</Col>
+            <Col id="Address">Barcelona, Spain</Col>
+            <Col id="Company">hangul</Col>
+            <Col id="Department">Research</Col>
+            <Col id="Salary">25000</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Donald</Col>
+            <Col id="Address">Califonia, USA</Col>
+            <Col id="Company">hangul</Col>
+            <Col id="Department">Sales</Col>
+            <Col id="Salary">100000</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Lisa</Col>
+            <Col id="Address">London, UK</Col>
+            <Col id="Company">Idoller</Col>
+            <Col id="Department">Research</Col>
+            <Col id="Salary">3000</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Joe</Col>
+            <Col id="Address">Seoul, KOREA</Col>
+            <Col id="Company">hangul</Col>
+            <Col id="Department">Sales</Col>
+            <Col id="Salary">86000</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Michael</Col>
+            <Col id="Address">Barcelona, Spain</Col>
+            <Col id="Company">Idoller</Col>
+            <Col id="Department">Personel</Col>
+            <Col id="Salary">1300</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Lilli</Col>
+            <Col id="Address">Califonia, USA</Col>
+            <Col id="Company">hangul</Col>
+            <Col id="Department">Personel</Col>
+            <Col id="Salary">4400</Col>
+          </Row>
+          <Row>
+            <Col id="Name">Colt</Col>
+            <Col id="Address">London, UK</Col>
+            <Col id="Company">Idoller</Col>
+            <Col id="Department">Personel</Col>
+            <Col id="Salary">62000</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="dsTree">
+        <ColumnInfo>
+          <Column id="Label" type="STRING" size="256"/>
+          <Column id="Level" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Label">1dollar</Col>
+            <Col id="Level">0</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Sales</Col>
+            <Col id="Level">1</Col>
+          </Row>
+          <Row>
+            <Col id="Label">James</Col>
+            <Col id="Level">2</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Donald</Col>
+            <Col id="Level">2</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Lisa</Col>
+            <Col id="Level">2</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Consulting</Col>
+            <Col id="Level">1</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Joe</Col>
+            <Col id="Level">2</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Michael</Col>
+            <Col id="Level">2</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Research Institute</Col>
+            <Col id="Level">1</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Lilli</Col>
+            <Col id="Level">2</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Colt</Col>
+            <Col id="Level">2</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Hangul</Col>
+            <Col id="Level">0</Col>
+          </Row>
+          <Row>
+            <Col id="Label">R&amp;D</Col>
+            <Col id="Level">1</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Joe</Col>
+            <Col id="Level">2</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Michael</Col>
+            <Col id="Level">2</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Quailty Asurance</Col>
+            <Col id="Level">1</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Colt</Col>
+            <Col id="Level">2</Col>
+          </Row>
+          <Row>
+            <Col id="Label">James</Col>
+            <Col id="Level">2</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Lilli</Col>
+            <Col id="Level">2</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Sales</Col>
+            <Col id="Level">1</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Donald</Col>
+            <Col id="Level">2</Col>
+          </Row>
+          <Row>
+            <Col id="Label">EBOT</Col>
+            <Col id="Level">0</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Personel</Col>
+            <Col id="Level">1</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Donald</Col>
+            <Col id="Level">2</Col>
+          </Row>
+          <Row>
+            <Col id="Label">James</Col>
+            <Col id="Level">2</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Lilli</Col>
+            <Col id="Level">1</Col>
+          </Row>
+          <Row>
+            <Col id="Label">Lisa</Col>
+            <Col id="Level">2</Col>
+          </Row>
+          <Row>
+            <Col id="Level">2</Col>
+            <Col id="Label">John</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[this.Form_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+    this.copyPaste.addGrid(this.Grid00);    
+};
+
+this.copyPaste = {    
+    
+    //브라우저를 체크하여 브라우저에 맞는 onkeydown 이벤트 함수를 설정합니다.
+    //브라우저에 따라 클립보드를 이용할지(copyGridCellData1) Textarea를 이용할지(copyGridCellData2) 결정합니다.
+    addGrid: function(grid)
+    {
+        //브라우저가 넥사크로플랫폼 Runtime 혹은 IE인 경우
+        if (system.navigatorname == "nexacro" || system.navigatorname == "IE" ) 
+        {
+            //grid에 onkeydown 이벤트 함수 등록
+            grid.setEventHandler("onkeydown", this.copyGridCellData1(this), this);
+        }
+        //그 이외의 브라우저인 경우
+        else
+        {
+            //HTML DOM의 Textarea 요소를 생성하고 body 요소에 추가합니다.
+            var objTA = document.createElement("textarea");
+            document.body.appendChild(objTA);
+            
+            //grid에 onkeydown 이벤트 함수 등록
+            grid.setEventHandler("onkeydown", this.copyGridCellData2(this, objTA), this);
+        }
+
+    },
+    
+    //Grid에서 선택된 영역의 데이터를 변수에 저장합니다.
+    makeData: function(obj)
+    {    
+        var sBody = "";
+        var sSpr = "    ";    //Tab 값 입력
+        var nStartrow = obj.selectstartrow;
+        var nEndrow = obj.selectendrow;
+        var nStartCol = obj.selectstartcol;
+        var nEndCol = obj.selectendcol;
+                        
+        //selecttype이 row나 multirow인 경우
+        //selectstartcol, selectendcol 값은 -1이 된다.
+        //따라서 컬럼의 갯수를 계산하여 nStartCol과 nEndCol을 설정한다.
+        var nLoop = nStartrow.length;
+        
+        if(nStartCol == -1 && nEndCol == -1)
+        {
+            nStartCol = 0;
+            nEndCol = obj.getFormatColCount()-1;
+        }
+                    
+        //copy cell data from selected cell
+        for(var k=0; k < nLoop; k++)
+        {
+        
+            for (var i = nStartrow[k]; i <= nEndrow[k]; i++) 
+            {            
+                for (var j = nStartCol; j <= nEndCol; j++) 
+                {
+                    if (j < nEndCol) 
+                    {
+                        sBody += obj.getCellText(i, j) + sSpr;
+                    } 
+                    else 
+                    {
+                        sBody += obj.getCellText(i, j) + "\r\n";
+                    }
+                }
+            }        
+            
+        }
+
+        return sBody;
+    },
+    
+    //IE 혹은 Runtime인 경우
+    //Ctrl + c가 입력되면 클립보드로 Grid의 선택된 데이터를 복사합니다.
+    //키 값은 ctrl=17, shift=16, alt=18, c=67 입니다.
+    copyGridCellData1: function(pThis)
+    {    
+        return function(obj, e) 
+        {
+            //Ctrl 키가 눌린 경우
+            if (e.ctrlkey && !e.shiftkey && !e.altkey)
+            {
+                //c 키가 눌린 경우
+                if (e.keycode == 67)    //'c'
+                {                    
+                    var rtnStr = pThis.makeData(obj);
+                    
+                    system.clearClipboard();                        
+                    system.setClipboard("CF_TEXT", rtnStr);
+                } 
+            }
+        }
+        
+    },
+
+
+    //IE 혹은 Runtime 이외의 브라우저인 경우
+    //Ctrl + c가 입력되면 Textarea로 Grid의 선택된 데이터를 복사합니다.
+    //키 값은 ctrl=17, shift=16, alt=18, c=67 입니다.
+    copyGridCellData2: function(pThis, objTA)
+    {
+        return function(obj, e) 
+        {
+            //Ctrl 키가 눌린 경우
+            if (e.ctrlkey && !e.shiftkey && !e.altkey)
+            {
+                //c 키가 눌린 경우
+                if (e.keycode == 67)    
+                {
+                    var rtnStr = pThis.makeData(obj);
+
+                    objTA.value = rtnStr;
+                    objTA.select();
+                } 
+            }
+            
+        }
+
+    }//end of copyGridCellData2: function(pThis, objTA)    
+
+}//end of this.copyPaste
+this.Component_sample9_grid_example_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	
+};
+]]></Script>
+  </Form>
+</FDL>

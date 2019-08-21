@@ -1,0 +1,661 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Component_sample8_grid_cell3" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Grid id="Grid00" taborder="0" left="10" top="11" width="215" height="150" binddataset="Dataset00" treeinitstatus="expand,all" autofittype="col" treeusecheckbox="false">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="48"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="No"/>
+                <Cell col="1" text="Column0"/>
+                <Cell col="2" text="Column1"/>
+              </Band>
+              <Band id="body">
+                <Cell expr="currow+1"/>
+                <Cell col="1" text="bind:Column0"/>
+                <Cell col="2" text="bind:Column1"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid01" taborder="1" left="238" top="10" width="235" height="280" binddataset="Dataset01" treeinitstatus="expand,all" autofittype="col" treeusecheckbox="false">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="150"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="label"/>
+                <Cell col="1" text="level"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:label" displaytype="treeitemcontrol" treelevel="bind:level" edittype="tree" cssclass="expr:level == 0?'sample_grid_60_font_red':level==1?'sample_grid_60_font_blue':'sample_grid_60_font_lightgreen'"/>
+                <Cell col="1" text="bind:level"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="Button00" taborder="2" text="Button00" left="475" top="13" width="80" height="30" onclick="Button00_onclick"/>
+        <Grid id="Grid01_00" taborder="3" left="565" top="13" width="235" height="280" binddataset="Dataset01" treeinitstatus="expand,all" autofittype="col" treeusecheckbox="false">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="150"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="label"/>
+                <Cell col="1" text="level"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:label" displaytype="treeitemcontrol" treelevel="bind:level" edittype="tree" cssclass="sample_grid_61"/>
+                <Cell col="1" text="bind:level"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid02" taborder="4" left="811" top="15" width="305" height="270" binddataset="Dataset02" onlbuttondown="Grid02_onlbuttondown">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="48"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+                <Row size="24"/>
+                <Row size="24" band="summ"/>
+              </Rows>
+              <Band id="head">
+                <Cell rowspan="2" text="LEFT"/>
+                <Cell col="1" rowspan="2" text="A"/>
+                <Cell col="2" rowspan="2" text="B"/>
+                <Cell col="3" text="C"/>
+                <Cell row="1" col="3" text="D"/>
+              </Band>
+              <Band id="body">
+                <Cell/>
+                <Cell col="1" text="bind:A"/>
+                <Cell col="2" text="bind:B"/>
+                <Cell col="3" text="bind:C"/>
+                <Cell row="1"/>
+                <Cell row="1" col="1"/>
+                <Cell row="1" col="2"/>
+                <Cell row="1" col="3"/>
+              </Band>
+              <Band id="summary">
+                <Cell/>
+                <Cell col="1"/>
+                <Cell col="2"/>
+                <Cell col="3"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <TextArea id="TextArea00" taborder="5" left="812" top="302" width="300" height="60"/>
+        <Grid id="Grid03" taborder="6" left="1128" top="19" width="145" height="270" binddataset="Dataset03">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="67"/>
+                <Column size="67"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Column0"/>
+                <Cell col="1" text="Column1"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0" displaytype="combocontrol" edittype="combo" combodataset="Dataset04" combodatacol="data" combocodecol="code" cssclass="sample_grid_71"/>
+                <Cell col="1" text="bind:Column0" displaytype="combocontrol" edittype="combo" combodataset="Dataset04" combodatacol="data" combocodecol="code"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid04" taborder="7" left="18" top="305" width="185" height="110" binddataset="Dataset05" oninput="Grid04_oninput">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Column0"/>
+                <Cell col="1" text="Column1"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0"/>
+                <Cell col="1" text="bind:Column1" edittype="normal"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid05" taborder="8" left="243" top="305" width="445" height="200" binddataset="Dataset06" suppresshorzcell="left">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="48" band="left"/>
+                <Column size="48" band="left"/>
+                <Column size="48" band="left"/>
+                <Column size="49"/>
+                <Column size="48"/>
+                <Column size="48"/>
+                <Column size="48"/>
+                <Column size="48"/>
+                <Column size="48"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="L1"/>
+                <Cell col="1" text="L2"/>
+                <Cell col="2" text="L3"/>
+                <Cell col="3" text="B1"/>
+                <Cell col="4" text="B2"/>
+                <Cell col="5" text="B3"/>
+                <Cell col="6" text="1"/>
+                <Cell col="7" text="2"/>
+                <Cell col="8" text="3"/>
+              </Band>
+              <Band id="body">
+                <Cell suppress="1"/>
+                <Cell col="1" suppress="1"/>
+                <Cell col="2" suppress="1"/>
+                <Cell col="3" text="bind:Column0" suppress="1"/>
+                <Cell col="4" text="bind:Column1" suppress="1"/>
+                <Cell col="5" text="bind:Column2" suppress="1"/>
+                <Cell col="6"/>
+                <Cell col="7"/>
+                <Cell col="8"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="Button01" taborder="9" text="Button01" left="698" top="308" width="80" height="30" onclick="Button01_onclick"/>
+        <Grid id="Grid06" taborder="10" left="814" top="386" width="345" height="120" binddataset="Dataset07" selecttype="area">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="48" band="left"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="type"/>
+                <Cell col="1" text="lunch"/>
+                <Cell col="2" text="dinner"/>
+                <Cell col="3" text="weekend"/>
+              </Band>
+              <Band id="body">
+                <Cell font="bold 12px/normal &quot;Gulim&quot;" textAlign="center"/>
+                <Cell col="1" text="bind:lunch" textAlign="center"/>
+                <Cell col="2" text="bind:dinner" textAlign="center"/>
+                <Cell col="3" text="bind:weekend" textAlign="center"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="Button02" taborder="11" text="mergeCell" left="819" top="518" width="100" height="20" onclick="Button_onclick"/>
+        <Button id="Button03" taborder="12" text="splitCell" left="956" top="518" width="100" height="20" onclick="Button_onclick"/>
+        <Grid id="Grid07" taborder="13" left="25" top="515" width="185" height="130" binddataset="Dataset08" oncellclick="Grid07_oncellclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Column0"/>
+                <Cell col="1" text="Column1"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0" displaytype="expr:Column1"/>
+                <Cell col="1" text="bind:Column1"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <TextArea id="TextArea01" taborder="14" left="26" top="656" width="180" height="50"/>
+        <Grid id="Grid08" taborder="15" left="243" top="518" width="285" height="190" binddataset="Dataset09">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Column0"/>
+                <Cell col="1" text="Column1"/>
+                <Cell col="2" text="Column2"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0" cssclass="sample_grid_84_background, sample_grid_84_font_a"/>
+                <Cell col="1" text="bind:Column1" cssclass="sample_grid_84_background, sample_grid_84_font_a"/>
+                <Cell col="2" text="bind:Column2"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">apple</Col>
+            <Col id="Column1">A</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">car</Col>
+            <Col id="Column1">A</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">water</Col>
+            <Col id="Column1">B</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">computer</Col>
+            <Col id="Column1">C</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">mouse</Col>
+            <Col id="Column1">A</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset01">
+        <ColumnInfo>
+          <Column id="label" type="STRING" size="256"/>
+          <Column id="level" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="label">A</Col>
+            <Col id="level">0</Col>
+          </Row>
+          <Row>
+            <Col id="label">B</Col>
+            <Col id="level">1</Col>
+          </Row>
+          <Row>
+            <Col id="label">C</Col>
+            <Col id="level">2</Col>
+          </Row>
+          <Row>
+            <Col id="label">D</Col>
+            <Col id="level">2</Col>
+          </Row>
+          <Row>
+            <Col id="label">E</Col>
+            <Col id="level">2</Col>
+          </Row>
+          <Row>
+            <Col id="label">F</Col>
+            <Col id="level">1</Col>
+          </Row>
+          <Row>
+            <Col id="label">G</Col>
+            <Col id="level">2</Col>
+          </Row>
+          <Row>
+            <Col id="label">H</Col>
+            <Col id="level">2</Col>
+          </Row>
+          <Row>
+            <Col id="label">I</Col>
+            <Col id="level">0</Col>
+          </Row>
+          <Row>
+            <Col id="label">J</Col>
+            <Col id="level">0</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset02">
+        <ColumnInfo>
+          <Column id="A" type="STRING" size="256"/>
+          <Column id="B" type="STRING" size="256"/>
+          <Column id="C" type="STRING" size="256"/>
+          <Column id="D" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="A">1</Col>
+            <Col id="B">1</Col>
+            <Col id="C">1</Col>
+            <Col id="D">1</Col>
+          </Row>
+          <Row>
+            <Col id="A">2</Col>
+            <Col id="B">2</Col>
+            <Col id="C">2</Col>
+            <Col id="D">2</Col>
+          </Row>
+          <Row>
+            <Col id="A">3</Col>
+            <Col id="B">3</Col>
+            <Col id="C">3</Col>
+            <Col id="D">3</Col>
+          </Row>
+          <Row>
+            <Col id="A">4</Col>
+            <Col id="B">4</Col>
+            <Col id="C">4</Col>
+            <Col id="D">4</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset04">
+        <ColumnInfo>
+          <Column id="code" type="STRING" size="256"/>
+          <Column id="data" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="code">1</Col>
+            <Col id="data">1</Col>
+          </Row>
+          <Row>
+            <Col id="code">2</Col>
+            <Col id="data">2</Col>
+          </Row>
+          <Row>
+            <Col id="code">3</Col>
+            <Col id="data">3</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset03">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">1</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">3</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset05">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">apple</Col>
+            <Col id="Column1">사과</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">car</Col>
+            <Col id="Column1">자동차</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">water</Col>
+            <Col id="Column1">물</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset06">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">a</Col>
+            <Col id="Column1">a</Col>
+            <Col id="Column2">a</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">a</Col>
+            <Col id="Column1">b</Col>
+            <Col id="Column2">b</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">a</Col>
+            <Col id="Column1">a</Col>
+            <Col id="Column2">a</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">b</Col>
+            <Col id="Column1">b</Col>
+            <Col id="Column2">b</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">b</Col>
+            <Col id="Column1">b</Col>
+            <Col id="Column2">a</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">b</Col>
+            <Col id="Column1">a</Col>
+            <Col id="Column2">a</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset07">
+        <ColumnInfo>
+          <Column id="type" type="STRING" size="256"/>
+          <Column id="lunch" type="INT" size="256"/>
+          <Column id="dinner" type="INT" size="256"/>
+          <Column id="weekend" type="INT" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="type">adult</Col>
+            <Col id="lunch">14900</Col>
+            <Col id="dinner">23900</Col>
+            <Col id="weekend">23900</Col>
+          </Row>
+          <Row>
+            <Col id="type">student</Col>
+            <Col id="lunch">10900</Col>
+            <Col id="dinner">10900</Col>
+            <Col id="weekend">20000</Col>
+          </Row>
+          <Row>
+            <Col id="type">infant</Col>
+            <Col id="lunch">7500</Col>
+            <Col id="dinner">7500</Col>
+            <Col id="weekend">20000</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset08">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column1">buttoncontrol</Col>
+          </Row>
+          <Row>
+            <Col id="Column1">checkboxcontrol</Col>
+          </Row>
+          <Row>
+            <Col id="Column1">combocontrol</Col>
+          </Row>
+          <Row>
+            <Col id="Column1">calendarcontrol</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset09">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">one</Col>
+            <Col id="Column2">1</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+            <Col id="Column1">two</Col>
+            <Col id="Column2">2</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">3</Col>
+            <Col id="Column1">three</Col>
+            <Col id="Column2">3</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">4</Col>
+            <Col id="Column1">four</Col>
+            <Col id="Column2">4</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">5</Col>
+            <Col id="Column1">five</Col>
+            <Col id="Column2">5</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	 this.Grid01.setCellProperty("body", 0, "cssclass", 
+        "expr:level == 0?'sample_grid_60_font_lightgreen':level==1?'sample_grid_60_font_red':'sample_grid_60_font_blue'");
+};
+
+this.Grid02_onlbuttondown = function(obj:nexacro.Grid,e:nexacro.GridMouseEventInfo)
+{
+var strRow;
+    switch(e.row) {
+        case -1:
+            strRow = 'Head Band';
+            break;
+        case -2:
+            strRow = 'Summary Band';
+            break;
+        case -9:
+            strRow = 'Blank Body';
+            break;        
+        default:
+            strRow = 'Body Band';
+    }
+    this.TextArea00.set_value(strRow+'\n'+'row: '+e.row+'\n'+'subrow: '+e.subrow)
+};
+
+this.Grid04_oninput = function(obj:nexacro.Grid,e:nexacro.InputEventInfo)
+{
+    var strControlValue  = obj.getEditValue();
+    if(strControlValue)
+    {
+        obj.setEditValue(strControlValue.replace(/[^\ㄱ-ㅎㅏ-ㅣ가-힣]/g, ""));
+    }
+};
+
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    this.Grid05.setCellProperty("body", 1, "suppress", "0");
+    this.Grid05.setCellProperty("body", 2, "suppress", "0");
+};
+
+
+this.Button_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    if(obj.text == 'mergeCell')
+    {
+        this.Grid06.mergeCell(2, 3, 0, 0); // 23900
+        this.Grid06.mergeCell(1, 2, 1, 1); // 10900
+        this.Grid06.mergeCell(1, 2, 2, 2); // 7500
+        trace(this.Grid06.mergeCell(0, 1, 0, 0)); // adult, 14900
+    }
+    else if(obj.text == 'splitCell')
+    {
+        this.Grid06.splitCell(2, 3, 0, 0);
+    }
+// 선택한영역 병합
+//     if(obj.text == 'mergeCell')
+//     {
+//         this.Grid00.mergeCell(this.Grid00.selectstartcol[0], 
+//             this.Grid00.selectendcol[0],
+//             this.Grid00.selectstartrow[0],
+//             this.Grid00.selectendrow[0]);
+//     }
+//     else if(obj.text == 'splitCell')
+//     {
+//         this.Grid00.splitCell(this.Grid00.selectstartcol[0], 
+//             this.Grid00.selectendcol[0],
+//             this.Grid00.selectstartrow[0],
+//             this.Grid00.selectendrow[0]);
+//     }
+	
+};
+this.Grid07_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+    this.TextArea01.set_value(obj.getCellPropertyValue(e.row, e.cell, "displaytype")+"\n"
+        +obj.getCellProperty("body", e.cell, "displaytype"));
+};
+]]></Script>
+  </Form>
+</FDL>

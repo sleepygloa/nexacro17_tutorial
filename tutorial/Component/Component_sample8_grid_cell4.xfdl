@@ -1,0 +1,267 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Component_sample8_grid_cell4" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Grid id="Grid00" taborder="0" left="11" top="37" width="285" height="140" binddataset="Dataset00" oninput="Grid00_oninput">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="72"/>
+                <Column size="69"/>
+                <Column size="132"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="text"/>
+                <Cell col="1" text="mask"/>
+                <Cell col="2" text="date"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:text" edittype="text" displaytype="text"/>
+                <Cell col="1" text="bind:mask" displaytype="mask" edittype="mask" maskeditformat="@@@@-@@" maskedittype="string"/>
+                <Cell col="2" text="bind:date" displaytype="calendarcontrol" edittype="date" calendartype="spin"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <TextArea id="TextArea00" taborder="1" left="15" top="196" width="280" height="80"/>
+        <Grid id="Grid01" taborder="2" left="314" top="35" width="426" height="260" binddataset="Dataset01" treeinitstatus="expand,all" oncellclick="Grid01_oncellclick" treeusecheckbox="false" treeuseline="false">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="172"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Level"/>
+                <Cell col="1" text="MenuName"/>
+                <Cell col="2" text="MenuID"/>
+                <Cell col="3" text="Status"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:MenuName" displaytype="treeitemcontrol" edittype="tree" treelevel="bind:Level" treestate="bind:Status"/>
+                <Cell col="1" text="bind:MenuName"/>
+                <Cell col="2" text="bind:MenuID"/>
+                <Cell col="3" text="bind:Status"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="Button00" taborder="3" text="tree padding" left="315" top="10" width="120" height="20" onclick="Button00_onclick"/>
+        <Grid id="Grid02" taborder="4" left="753" top="35" width="285" height="270" binddataset="Dataset02">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="79"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Column0"/>
+                <Cell col="1" text="Column1"/>
+                <Cell col="2" text="CheckBox"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0" displaytype="checkboxcontrol" edittype="checkbox" suppress="2"/>
+                <Cell col="1" text="bind:Column1" suppress="1"/>
+                <Cell col="2" text="bind:Column0"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00">
+        <ColumnInfo>
+          <Column id="text" type="STRING" size="256"/>
+          <Column id="mask" type="STRING" size="256"/>
+          <Column id="date" type="DATE" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="text">TEST</Col>
+            <Col id="date">20190218</Col>
+          </Row>
+          <Row/>
+          <Row/>
+          <Row/>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset01">
+        <ColumnInfo>
+          <Column id="Level" type="STRING" size="256"/>
+          <Column id="MenuName" type="STRING" size="256"/>
+          <Column id="MenuID" type="STRING" size="256"/>
+          <Column id="Status" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Level">0</Col>
+            <Col id="MenuName">Menu 1</Col>
+            <Col id="MenuID">1</Col>
+          </Row>
+          <Row>
+            <Col id="Level">1</Col>
+            <Col id="MenuName">Menu 1-1</Col>
+            <Col id="MenuID">2</Col>
+          </Row>
+          <Row>
+            <Col id="Level">2</Col>
+            <Col id="MenuName">Menu 1-1-1</Col>
+            <Col id="MenuID">3</Col>
+          </Row>
+          <Row>
+            <Col id="Level">0</Col>
+            <Col id="MenuName">Menu 2</Col>
+            <Col id="MenuID">5</Col>
+          </Row>
+          <Row>
+            <Col id="Level">1</Col>
+            <Col id="MenuName">Menu 2-1</Col>
+            <Col id="MenuID">6</Col>
+          </Row>
+          <Row>
+            <Col id="Level">2</Col>
+            <Col id="MenuName">Menu 2-1-1</Col>
+            <Col id="MenuID">7</Col>
+          </Row>
+          <Row>
+            <Col id="Level">0</Col>
+            <Col id="MenuName">Menu 3</Col>
+            <Col id="MenuID">8</Col>
+          </Row>
+          <Row>
+            <Col id="Level">1</Col>
+            <Col id="MenuName">Menu 3-1</Col>
+            <Col id="MenuID">9</Col>
+          </Row>
+          <Row>
+            <Col id="Level">2</Col>
+            <Col id="MenuName">Menu 3-1-1</Col>
+            <Col id="MenuID">10</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset02" oncolumnchanged="Dataset02_oncolumnchanged">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">0</Col>
+            <Col id="Column1">Banana</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">0</Col>
+            <Col id="Column1">Banana</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">0</Col>
+            <Col id="Column1">Banana</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">0</Col>
+            <Col id="Column1">Banana</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">0</Col>
+            <Col id="Column1">Banana</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">Orange</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">Orange</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">Orange</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">Orange</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.Grid00_oninput = function(obj:nexacro.Grid,e:nexacro.InputEventInfo)
+{
+    this.TextArea00.set_value("getCurEditType: "+obj.getCurEditType()+"\n"
+        +"getEditValue: "+obj.getEditValue()+"\n"
+        +"getEditText: "+obj.getEditText()+"\n"
+        +"getEditingValue: "+obj.getEditingValue()+"\n"
+        +"getEditingText: "+obj.getEditingText());
+};
+
+this.Grid01_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+    if(e.fromreferenceobject == "[object TreeItemIconControl]" && e.fromreferenceobject.id == "treeitembutton")
+    {
+        this.Dataset01.set_enableevent(false);
+        if(this.Dataset01.getColumn(e.row,"Status") == null)
+        {
+            this.Dataset01.setColumn(e.row,"Status",1);
+            for(var i=1; i < this.Dataset01.rowcount; i++)
+            {
+                if(obj.isTreeLeafRow(e.row+i) == false)
+                {
+                    this.Dataset01.setColumn(e.row+i,"Status",1);
+                } else {
+                    break;
+                }
+            }
+        } else {
+            this.Dataset01.setColumn(e.row,"Status",null);
+            for(var i=1; i < this.Dataset01.rowcount; i++)
+            {
+                if(obj.isTreeRootRow(e.row+i) == false)
+                {
+                    this.Dataset01.setColumn(e.row+i,"Status",null);
+                } else {
+                    break;
+                }
+            }
+        }
+        this.Dataset01.set_enableevent(true);
+    }
+};
+
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Grid01.setCellProperty("body", 0, "cssclass", "expr:level==1?'sample_grid_91_padding1':level==2?'sample_grid_91_padding2':''");
+};
+
+this.Dataset02_oncolumnchanged = function(obj:nexacro.NormalDataset,e:nexacro.DSColChangeEventInfo)
+{
+    if( e.columnid == "Column0" ){
+        obj.set_enableevent(false);
+        for(var i=0; i<obj.rowcount; i++)
+        {
+            if( obj.getColumn(e.row,"Column1") == obj.getColumn(i,"Column1"))
+                obj.setColumn(i,e.columnid, e.newvalue);
+        }    
+        obj.set_enableevent(true);
+    }
+};
+]]></Script>
+  </Form>
+</FDL>

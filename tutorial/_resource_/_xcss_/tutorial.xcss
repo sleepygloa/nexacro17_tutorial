@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XCSS version="1.0"><![CDATA[.Grid
+{
+}
+.Grid .body .row .cell.sample_grid_64_changevalue
+{
+    color : red;
+}
+
+.GridCellControl .celltreeitem .treeitemtext  /** O **/
+{
+    color : red;
+}
+
+.GridCellControl.sample_grid_60_font_red .celltreeitem .treeitemtext  /** X **/
+{
+    color : red;
+}
+
+.Grid .body .row .cell.sample_grid_60_font_red .celltreeitem .treeitemtext
+{        
+    color : red;
+}
+
+.Grid .body .row .cell.sample_grid_60_font_blue .celltreeitem .treeitemtext
+{        
+    color : blue;
+}
+
+.Grid .body .row .cell.sample_grid_60_font_lightgreen .celltreeitem .treeitemtext
+{        
+    color : lightgreen;
+}.Grid .body .row .cell.sample_grid_62_blink1
+{        
+    background : gold;
+}
+
+.Grid .body .row .cell.sample_grid_61 .celltreeitem .treeitemimage
+{
+    -nexa-icon : URL("theme://images/img_WF_Grdimg.png");
+}
+
+.Grid .body .row .cell.sample_grid_61 .celltreeitem .treeitemimage[userstatus=expand]
+{
+    -nexa-icon : URL("theme://images/btn_WF_Popmenunext_D.png");
+}.Grid .body .row .cell.sample_grid_62_blink2
+{        
+    background : white;
+}
+
+.Grid .body .row .cell.sample_grid_62_blinkcell[userstatus=blinked]
+{        
+    background : gold;
+    color : #666666;
+}
+
+.Grid .body .row .cell.sample_grid_71 .cellcombo .combolist .listboxitem[userstatus=selected]
+{        
+    color : red;
+}
+
+
+.Grid .body .row .cell.sample_grid_84_background
+{
+    -nexa-background-odd : silver;
+    background : silver;    
+    color : white;
+    -nexa-color-odd : white;    
+}
+.Grid .body .row .cell.sample_grid_84_font_a
+{
+    background : blue;    
+    color : red;
+}
+.Grid .body .row .cell.sample_grid_84_font_b
+{
+    background : red;    
+    color : pink;
+}
+
+.Grid .body .row .cell.sample_grid_91_padding1
+{
+    -nexa-padding : 4px 4px 4px 40px;
+}
+
+.Grid .body .row .cell.sample_grid_91_padding2
+{
+    -nexa-padding : 4px 4px 4px 80px;
+}
+]]></XCSS>

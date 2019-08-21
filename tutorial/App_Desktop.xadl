@@ -18,5 +18,7 @@
         </VFrameSet>
       </MainFrame>
     </Layout>
+    <Style url="xcssrc::tutorial.xcss"/>
+    <Style url="xcssrc::grid_subtotal.xcss"/>
   </Application>
 </ADL>

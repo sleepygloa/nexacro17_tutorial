@@ -3,7 +3,7 @@
   <Form id="Component_sample8_grid_cel2" width="1280" height="720" titletext="New Form">
     <Layouts>
       <Layout height="720" mobileorientation="landscape" width="1280">
-        <Grid id="Grid00" taborder="0" left="25" top="30" width="295" height="305" binddataset="Dataset00" onexpandup="Grid00_onexpandup">
+        <Grid id="Grid00" taborder="0" left="8" top="15" width="202" height="195" binddataset="Dataset00" onexpandup="Grid00_onexpandup">
           <Formats>
             <Format id="default">
               <Columns>
@@ -25,7 +25,7 @@
             </Format>
           </Formats>
         </Grid>
-        <PopupDiv id="PopupDiv00" text="PopupDiv00" visible="false" left="210" top="230" width="375" height="360">
+        <PopupDiv id="PopupDiv00" text="PopupDiv00" visible="false" left="3" top="730" width="375" height="360">
           <Layouts>
             <Layout>
               <Grid id="Grid00" taborder="0" left="5" top="10" width="335" height="310" oncelldblclick="PopupDiv00_Grid00_oncelldblclick" binddataset="Dataset01">
@@ -53,6 +53,280 @@
             </Layout>
           </Layouts>
         </PopupDiv>
+        <Grid id="Grid01" taborder="1" left="223" top="14" width="247" height="196" binddataset="Dataset02">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="150"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="text"/>
+                <Cell col="1" text="date"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:text"/>
+                <Cell col="1" text="bind:date" displaytype="date" edittype="date"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid01_00" taborder="2" left="480" top="15" width="247" height="196" binddataset="Dataset02">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="150"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="text"/>
+                <Cell col="1" text="date"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:text"/>
+                <Cell col="1" text="bind:date" displaytype="date" edittype="date" calendardisplaynulltext="NULL" calendardisplaynulltype="nulltext"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid02" taborder="3" left="733" top="15" width="305" height="200" binddataset="Dataset03">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Column0"/>
+                <Cell col="1" text="Column1"/>
+                <Cell col="2" text="Column2"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0"/>
+                <Cell col="1" text="bind:Column1"/>
+                <Cell col="2" text="bind:Column2"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="Button00" taborder="4" text="SetCellProperty" left="1052" top="16" width="100" height="20" onclick="Button00_onclick"/>
+        <Grid id="Grid03" taborder="5" left="11" top="220" width="195" height="150" binddataset="Dataset04">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="86"/>
+                <Column size="116"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Checkbox"/>
+                <Cell col="1" text="Original Data"/>
+              </Band>
+              <Band id="body">
+                <Cell suppressalign="middle" displaytype="checkboxcontrol" edittype="checkbox" expr="expr:Column0=='Y'?'1':'0'" text="bind:Column0"/>
+                <Cell col="1" text="bind:Column0"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid04" taborder="6" left="228" top="218" width="235" height="150" binddataset="Dataset05" oncellclick="Grid04_oncellclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="site"/>
+                <Cell col="1" text="url"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:site"/>
+                <Cell col="1" text="bind:url" displaytype="decoratetext" expr="bLink=='Y'?&quot;&lt;u v='true'&gt;&quot;+url+&quot;&lt;/u&gt;&quot;:url"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid05" taborder="7" left="481" top="221" width="245" height="140" binddataset="Dataset06" autofittype="col" autosizingtype="row" selecttype="cell">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Column0"/>
+                <Cell col="1" text="Column1"/>
+                <Cell col="2" text="Column2"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0" expr="expr:&quot;this.col: &quot;+this.col+&quot;\n&quot;+&quot;dataset.rowcount: &quot;+dataset.rowcount+&quot;\n&quot;+&quot;dataset.rowposition: &quot;+dataset.rowposition+&quot;\n&quot;+&quot;comp.currentcell: &quot;+comp.currentcell+&quot;\n&quot;+&quot;currow: &quot;+currow"/>
+                <Cell col="1" text="bind:Column1" expr="expr:&quot;this.col: &quot;+this.col+&quot;\n&quot;+&quot;dataset.rowcount: &quot;+dataset.rowcount+&quot;\n&quot;+&quot;dataset.rowposition: &quot;+dataset.rowposition+&quot;\n&quot;+&quot;comp.currentcell: &quot;+comp.currentcell+&quot;\n&quot;+&quot;currow: &quot;+currow"/>
+                <Cell col="2" text="bind:Column2" expr="expr:&quot;this.col: &quot;+this.col+&quot;\n&quot;+&quot;dataset.rowcount: &quot;+dataset.rowcount+&quot;\n&quot;+&quot;dataset.rowposition: &quot;+dataset.rowposition+&quot;\n&quot;+&quot;comp.currentcell: &quot;+comp.currentcell+&quot;\n&quot;+&quot;currow: &quot;+currow"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid06" taborder="8" left="733" top="225" width="305" height="140" binddataset="Dataset07" onheadclick="Grid06_onheadclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Column0"/>
+                <Cell col="1" text="Column1"/>
+                <Cell col="2" text="Column2"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0"/>
+                <Cell col="1" text="bind:Column1"/>
+                <Cell col="2" text="bind:Column2"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="Button01" taborder="9" text="Suppress" left="1056" top="222" width="90" height="20" onclick="Button01_onclick"/>
+        <Grid id="Grid07" taborder="10" left="9" top="388" width="215" height="250" binddataset="Dataset08">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="48"/>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="index"/>
+                <Cell col="1" text="Column0"/>
+                <Cell col="2" text="Column1"/>
+                <Cell col="3" text="Column2"/>
+              </Band>
+              <Band id="body">
+                <Cell text="TEST"/>
+                <Cell col="1" text="bind:Column0" displaytype="checkboxcontrol"/>
+                <Cell col="2" text="bind:Column1" displaytype="none"/>
+                <Cell col="3" text="bind:Column2" displaytype="none"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Combo id="Combo00" taborder="11" text="Combo00" left="245" top="389" width="110" height="20" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" onitemchanged="Combo00_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">none</Col>
+                <Col id="datacolumn">none</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">linerow</Col>
+                <Col id="datacolumn">linerow</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">datarow</Col>
+                <Col id="datacolumn">datarow</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">controlrow</Col>
+                <Col id="datacolumn">controlrow</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">allrow</Col>
+                <Col id="datacolumn">allrow</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Grid id="Grid08" taborder="12" left="385" top="386" width="275" height="250" binddataset="Dataset09" cellexprupdatecondition="none">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="label"/>
+                <Cell col="1" text="level"/>
+                <Cell col="2" text="falg"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:label" cssclass="expr:comp.parent.setblink(currow)"/>
+                <Cell col="1" text="bind:level" cssclass="expr:comp.parent.setblink(currow)"/>
+                <Cell col="2" text="bind:falg" cssclass="expr:comp.parent.setblink(currow)"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="Button02" taborder="13" text="blink" left="669" top="387" width="70" height="30" onclick="Button02_onclick"/>
+        <Grid id="Grid09" taborder="14" left="750" top="389" width="285" height="170" binddataset="Dataset10">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Column0"/>
+                <Cell col="1" text="Column1"/>
+                <Cell col="2" text="Column2"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0" cssclass="expr:Column2==dataset.getOrgColumn(currow,'Column2')?'':'sample_grid_64_changevalue'"/>
+                <Cell col="1" text="bind:Column1"/>
+                <Cell col="2" text="bind:Column2" displaytype="checkboxcontrol" edittype="checkbox"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
       </Layout>
     </Layouts>
     <Objects>
@@ -111,6 +385,282 @@
           </Row>
         </Rows>
       </Dataset>
+      <Dataset id="Dataset02">
+        <ColumnInfo>
+          <Column id="text" type="STRING" size="256"/>
+          <Column id="date" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="text">TEST</Col>
+            <Col id="date">20180301</Col>
+          </Row>
+          <Row>
+            <Col id="text">NULL TEST</Col>
+          </Row>
+          <Row>
+            <Col id="text">EMPTY TEST</Col>
+            <Col id="date"></Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset03">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">test1</Col>
+            <Col id="Column2">Y</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">test2</Col>
+            <Col id="Column2">Y</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">test3</Col>
+            <Col id="Column2">N</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">test4</Col>
+            <Col id="Column2">Y</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">test5</Col>
+            <Col id="Column2">N</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">test6</Col>
+            <Col id="Column2">N</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">test7</Col>
+            <Col id="Column2">Y</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset04" oncolumnchanged="Dataset04_oncolumnchanged">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">Y</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">N</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">Y</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset05">
+        <ColumnInfo>
+          <Column id="site" type="STRING" size="256"/>
+          <Column id="url" type="STRING" size="256"/>
+          <Column id="bLink" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="site">naver</Col>
+            <Col id="url">http://www.naver.com</Col>
+            <Col id="bLink">Y</Col>
+          </Row>
+          <Row>
+            <Col id="site">google</Col>
+            <Col id="url">http://www.google.com</Col>
+            <Col id="bLink">Y</Col>
+          </Row>
+          <Row>
+            <Col id="site">khanacademy</Col>
+            <Col id="url">-</Col>
+            <Col id="bLink">N</Col>
+          </Row>
+          <Row>
+            <Col id="site">naver blog</Col>
+            <Col id="url">http://blog.naver.com</Col>
+            <Col id="bLink">Y</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset06">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset07">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">1-1</Col>
+            <Col id="Column2">A</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">1-1</Col>
+            <Col id="Column2">B</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">1-2</Col>
+            <Col id="Column2">C</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">1-3</Col>
+            <Col id="Column2">D</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+            <Col id="Column1">2-1</Col>
+            <Col id="Column2">E</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+            <Col id="Column1">2-1</Col>
+            <Col id="Column2">F</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+            <Col id="Column1">2-2</Col>
+            <Col id="Column2">G</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+            <Col id="Column1">2-3</Col>
+            <Col id="Column2">H</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+            <Col id="Column1">2-3</Col>
+            <Col id="Column2">I</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+            <Col id="Column1">2-3</Col>
+            <Col id="Column2">J</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset08">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">0</Col>
+            <Col id="Column1">1</Col>
+            <Col id="Column2">1</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">2</Col>
+            <Col id="Column2">2</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">3</Col>
+            <Col id="Column2">3</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">0</Col>
+            <Col id="Column1">4</Col>
+            <Col id="Column2">4</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">0</Col>
+            <Col id="Column1">5</Col>
+            <Col id="Column2">5</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">6</Col>
+            <Col id="Column2">6</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset09">
+        <ColumnInfo>
+          <Column id="label" type="STRING" size="256"/>
+          <Column id="level" type="STRING" size="256"/>
+          <Column id="falg" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="label">A</Col>
+            <Col id="level">0</Col>
+            <Col id="falg">0</Col>
+          </Row>
+          <Row>
+            <Col id="label">B</Col>
+            <Col id="level">1</Col>
+            <Col id="falg">0</Col>
+          </Row>
+          <Row>
+            <Col id="label">C</Col>
+            <Col id="level">2</Col>
+            <Col id="falg">0</Col>
+          </Row>
+          <Row>
+            <Col id="label">D</Col>
+            <Col id="level">2</Col>
+            <Col id="falg">0</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="Dataset10">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">A</Col>
+            <Col id="Column1">TEST</Col>
+            <Col id="Column2">0</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">B</Col>
+            <Col id="Column1">TEST</Col>
+            <Col id="Column2">1</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">C</Col>
+            <Col id="Column1">TEST</Col>
+            <Col id="Column2">0</Col>
+          </Row>
+        </Rows>
+      </Dataset>
     </Objects>
     <Script type="xscript5.1"><![CDATA[this.col;
 this.row;
@@ -126,16 +676,109 @@ this.Grid00_onexpandup = function(obj:nexacro.Grid,e:nexacro.GridMouseEventInfo)
 
 this.PopupDiv00_Grid00_oncelldblclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
 {
-    var value = this.Dataset00.getColumn(e.row , 1);
+    var value = this.Dataset01.getColumn(e.row , 1);
     this.PopupDiv00.closePopup(value);
 };
 this.call_back = function (strId,str)
 {
-
-    this.Dataset01.setColumn( this.row, this.col , str)
+    this.Dataset00.setColumn( this.row, this.col , str)
 };
 
 
+
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    this.Grid02.setCellProperty("body", 0, "displaytype", 
+        "expr:Column2=='Y'?'checkboxcontrol':'normal'");
+    this.Grid02.setCellProperty("body", 0, "edittype", 
+        "expr:Column2=='Y'?'checkbox':'none'")
+};
+
+this.Dataset04_oncolumnchanged = function(obj:nexacro.NormalDataset,e:nexacro.DSColChangeEventInfo)
+{
+    if(e.columnid == "Column0")
+    {
+        obj.set_enableevent(false);
+        if(e.newvalue == '1')
+        {
+            obj.setColumn(e.row,"Column0",'Y');
+        } else if(e.newvalue == '0')
+        {
+            
+            obj.setColumn(e.row,"Column0",'N');  
+        }
+        obj.set_enableevent(true);
+    }
+};
+
+this.Grid04_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	if(e.cell == 1){
+		if(this.Dataset05.getColumn(e.row, "bLink") == "Y")
+			system.execBrowser(this.Dataset05.getColumn(e.row, 1));
+	}
+};
+
+this.Grid06_onheadclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+    var sCol = e.col;
+    if(sCol==0)
+    {
+        this.Grid06.setCellProperty("Body", 0, "suppress", 1);
+    } else if(sCol==1)    {
+        this.Grid06.setCellProperty("Body", 0, "suppress", 1);
+        this.Grid06.setCellProperty("Body", 1, "suppress", 2);
+    }
+};
+
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+        this.Grid06.setCellProperty("Body", 0, "suppress", 0);
+        this.Grid06.setCellProperty("Body", 1, "suppress", 0);
+};
+
+this.Combo00_onitemchanged = function(obj:nexacro.Combo,e:nexacro.ItemChangeEventInfo)
+{
+	this.Grid07.set_fillareatype(e.posttext);
+};
+
+
+this.styleArr = ["sample_grid_62_blink2", "sample_grid_62_blink1", "sample_grid_62_blinkcell"];
+this.idx = 0 ;
+this.blinkRow = 0 ;
+
+this.sample_grid_62_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+    this.setTimer(1, 1000);
+};
+
+this.sample_grid_62_ontimer = function(obj:nexacro.Form,e:nexacro.TimerEventInfo)
+{
+    var v = this.Dataset09.getColumn(e.timerid,2)^1;
+    this.Dataset09.setColumn(e.timerid, 2, v);
+    
+    this.idx = v;
+    this.blinkRow = e.timerid;
+};
+
+
+this.setblink = function (nRow)
+{
+    if(nRow >= 2)
+    {
+        return this.styleArr[2];
+    }
+    else if(this.blinkRow == nRow)
+    {
+        return this.styleArr[this.idx ];
+    }
+    return "";
+};
+this.Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Grid08.blinkCell(2, "label, level, flag", 5000, 5);
+    this.Grid08.blinkCellByInterval(3, "label, level, flag", 500, 5);
+};
 ]]></Script>
   </Form>
 </FDL>

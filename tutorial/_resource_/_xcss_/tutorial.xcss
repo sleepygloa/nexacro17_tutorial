@@ -87,4 +87,8 @@
 {
     -nexa-padding : 4px 4px 4px 80px;
 }
-]]></XCSS>
+.Grid .body .row .cell.sample_grid_99_cellclick[userstatus=selected]
+{
+    -nexa-background-odd : lawngreen;
+    background : lawngreen; 
+}]]></XCSS>

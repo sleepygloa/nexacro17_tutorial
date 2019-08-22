@@ -1,0 +1,736 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Component_sample9_grid_example3" width="1280" height="720" titletext="New Form" onload="sample_grid_80_onload" ontimer="sample_grid_80_ontimer">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Button id="Button00" taborder="1" text="Make Grid" left="16" top="11" width="110" height="30" onclick="Button00_onclick"/>
+        <Grid id="Grid00" taborder="0" left="340" top="21" width="215" height="150" binddataset="dsDAD" ondrag="Grid00_ondrag" ondragmove="DragTextMove">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Column0"/>
+                <Cell col="1" text="Column1"/>
+                <Cell col="2" text="Column2"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0"/>
+                <Cell col="1" text="bind:Column1"/>
+                <Cell col="2" text="bind:Column2"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Edit id="Edit00" taborder="2" left="568" top="24" width="140" height="30" ondrop="Edit_ondrop"/>
+        <Edit id="Edit01" taborder="3" left="568" top="63" width="140" height="30" ondrop="Edit_ondrop"/>
+        <Edit id="Edit02" taborder="4" left="568" top="102" width="140" height="30" ondrop="Edit_ondrop"/>
+        <Edit id="Edit02_00" taborder="5" left="568" top="142" width="140" height="30" ondrop="Edit_ondrop"/>
+        <Static id="Static00" taborder="6" text="Static00" left="340" top="185" width="120" height="30" visible="false"/>
+        <Static id="Static01" taborder="7" text="do not allowed" left="340" top="235" width="120" height="30" visible="false"/>
+        <Grid id="Grid01" taborder="8" left="19" top="296" width="85" height="270" scrollbartype="none" binddataset="dsDualScroll">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Name"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Name"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid02" taborder="9" left="106" top="296" width="85" height="270" binddataset="dsDualScroll" onvscroll="Grid02_onvscroll">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Name"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Name"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid03" taborder="10" left="239" top="295" width="255" height="150" binddataset="dsRowCnt" oncellclick="Grid00_oncellclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Column0"/>
+                <Cell col="1" text="Column1"/>
+                <Cell col="2" text="Column2"/>
+              </Band>
+              <Band id="body">
+                <Cell text="expr:comp.parent.ck_func(currow)" displaytype="checkboxcontrol" edittype="checkbox"/>
+                <Cell col="1" text="bind:Column1"/>
+                <Cell col="2" text="bind:Column2"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="Button01" taborder="11" text="Button01" left="504" top="293" width="120" height="50" onclick="Button01_onclick"/>
+        <TextArea id="TextArea00" taborder="12" left="243" top="456" width="250" height="50"/>
+        <Grid id="Grid04" taborder="13" left="746" top="27" width="115" height="270" binddataset="dsDualScroll">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Name"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Name"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Edit id="Edit03" taborder="14" left="879" top="26" width="80" height="30"/>
+        <Button id="Button02" taborder="15" text="%Like%" left="879" top="64" width="80" height="40" onclick="Button02_onclick"/>
+        <Button id="Button03" taborder="16" text="Like%" left="879" top="113" width="80" height="40" onclick="Button03_onclick"/>
+        <Button id="Button04" taborder="17" text="init" left="879" top="164" width="80" height="40" onclick="Button04_onclick"/>
+        <Grid id="Grid05" taborder="18" left="976" top="27" width="265" height="270" binddataset="dsDualDataRemove">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Column0"/>
+                <Cell col="1" text="Column1"/>
+                <Cell col="2" text="Column2"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0"/>
+                <Cell col="1" text="bind:Column1"/>
+                <Cell col="2" text="bind:Column2"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Button id="Button05" taborder="19" text="Column0" left="983" top="305" width="70" height="30" onclick="Button05_onclick"/>
+        <Button id="Button06" taborder="20" text="Column1 &amp; Column2" left="1060" top="305" width="120" height="30" onclick="Button06_onclick"/>
+        <Button id="Button07" taborder="21" text="Init" left="1190" top="305" width="50" height="30" onclick="Button07_onclick"/>
+        <Grid id="Grid06" taborder="22" left="643" top="308" width="205" height="200" binddataset="dsRadio" oncellclick="Grid06_oncellclick">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="30"/>
+                <Column size="80"/>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell/>
+                <Cell col="1" text="Column1"/>
+                <Cell col="2" text="Column2"/>
+              </Band>
+              <Band id="body">
+                <Cell text="expr:Column0==1?&quot;theme://images/rdo_WF_Radio_S.png&quot;:&quot;theme://images/rdo_WF_Radio_O.png&quot;" displaytype="imagecontrol"/>
+                <Cell col="1" text="bind:Column1"/>
+                <Cell col="2" text="bind:Column2"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Grid id="Grid07" taborder="23" left="871" top="368" width="315" height="270" binddataset="dsTimeZone">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="141"/>
+                <Column size="172"/>
+              </Columns>
+              <Rows>
+                <Row size="24" band="head"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="timezone"/>
+                <Cell col="1" text="timevalue"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:timezone"/>
+                <Cell col="1" text="bind:timevalue"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="Dataset00"/>
+      <Dataset id="dsDAD" onload="dsDAD_onload">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">apple</Col>
+            <Col id="Column1">John</Col>
+            <Col id="Column2">1</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">pear</Col>
+            <Col id="Column1">Donald</Col>
+            <Col id="Column2">2</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">walnut</Col>
+            <Col id="Column1">Leo</Col>
+            <Col id="Column2">3</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="dsDualScroll">
+        <ColumnInfo>
+          <Column id="Name" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Name">john</Col>
+          </Row>
+          <Row>
+            <Col id="Name">james</Col>
+          </Row>
+          <Row>
+            <Col id="Name">donald</Col>
+          </Row>
+          <Row>
+            <Col id="Name">lisa</Col>
+          </Row>
+          <Row>
+            <Col id="Name">joe</Col>
+          </Row>
+          <Row>
+            <Col id="Name">michael</Col>
+          </Row>
+          <Row>
+            <Col id="Name">lilli</Col>
+          </Row>
+          <Row>
+            <Col id="Name">colt</Col>
+          </Row>
+          <Row>
+            <Col id="Name">johnson</Col>
+          </Row>
+          <Row>
+            <Col id="Name">team</Col>
+          </Row>
+          <Row>
+            <Col id="Name">paragon</Col>
+          </Row>
+          <Row>
+            <Col id="Name">sol</Col>
+          </Row>
+          <Row>
+            <Col id="Name">fight</Col>
+          </Row>
+          <Row>
+            <Col id="Name">good</Col>
+          </Row>
+          <Row/>
+        </Rows>
+      </Dataset>
+      <Dataset id="dsRowCnt">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+          <Row/>
+        </Rows>
+      </Dataset>
+      <Dataset id="dsDualDataRemove">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">1</Col>
+            <Col id="Column2">a</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">2</Col>
+            <Col id="Column1">1</Col>
+            <Col id="Column2">b</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">4</Col>
+            <Col id="Column1">2</Col>
+            <Col id="Column2">c</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">5</Col>
+            <Col id="Column1">2</Col>
+            <Col id="Column2">d</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">6</Col>
+            <Col id="Column1">3</Col>
+            <Col id="Column2">e</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">7</Col>
+            <Col id="Column1">3</Col>
+            <Col id="Column2">e</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">5</Col>
+            <Col id="Column1">4</Col>
+            <Col id="Column2">g</Col>
+          </Row>
+          <Row>
+            <Col id="Column2">h</Col>
+            <Col id="Column0">8</Col>
+            <Col id="Column1">2</Col>
+          </Row>
+          <Row>
+            <Col id="Column2">i</Col>
+            <Col id="Column0">1</Col>
+            <Col id="Column1">3</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="dsRadio">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+          <Column id="Column2" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">0</Col>
+            <Col id="Column1">A</Col>
+            <Col id="Column2">1</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">0</Col>
+            <Col id="Column1">B</Col>
+            <Col id="Column2">2</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">0</Col>
+            <Col id="Column1">C</Col>
+            <Col id="Column2">3</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">0</Col>
+            <Col id="Column1">D</Col>
+            <Col id="Column2">4</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="dsTimeZone">
+        <ColumnInfo>
+          <Column id="timezone" type="STRING" size="256"/>
+          <Column id="timevalue" type="STRING" size="256"/>
+          <Column id="offset" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="timezone">KST (한국 표준시)</Col>
+            <Col id="offset">9</Col>
+          </Row>
+          <Row>
+            <Col id="timezone">PST (태평양 표준시)</Col>
+            <Col id="offset">-8</Col>
+          </Row>
+          <Row>
+            <Col id="timezone">PDT (태평양 표준시/)</Col>
+            <Col id="offset">-7</Col>
+          </Row>
+          <Row>
+            <Col id="timezone">EST (동부 표준시)</Col>
+            <Col id="offset">-5</Col>
+          </Row>
+          <Row>
+            <Col id="timezone">EDT (동부 표준시/)</Col>
+            <Col id="offset">-4</Col>
+          </Row>
+          <Row>
+            <Col id="timezone">CET (중앙유럽 표준시)</Col>
+            <Col id="offset">1</Col>
+          </Row>
+          <Row>
+            <Col id="timezone">CEST (중앙유럽 표준시/)</Col>
+            <Col id="offset">2</Col>
+          </Row>
+          <Row>
+            <Col id="timezone">CST (중국 표준시)</Col>
+            <Col id="offset">8</Col>
+          </Row>
+          <Row>
+            <Col id="timezone">UTC(협정 세계시)</Col>
+            <Col id="offset">0</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	//그리드 생성
+    var objGrid = new Grid();
+    objGrid.init("GridNm", 30, 80, 350, 200,null,null);
+    this.addChild("Grid00", objGrid);    
+    objGrid.show();
+	
+	//속성 생성
+	var objDs = new Dataset();
+	objDs.set_name("ds_test");
+	objDs.addColumn("no", "string");
+	objDs.addColumn("name", "string");
+	objDs.addColumn("age", "int");
+    
+	for (var i = 0; i < 5; i++) 
+	{
+		var nRow = objDs.addRow();
+		
+		objDs.setColumn(nRow, "no", i);
+		objDs.setColumn(nRow, "name", 'employ_' + i);
+		objDs.setColumn(nRow, "age", (10 + i));
+	}
+	
+	//바인딩 정보 설정
+	objGrid.set_binddataset(objDs)
+	
+	objGrid.appendContentsRow("head");
+	objGrid.appendContentsRow("body");
+	objGrid.appendContentsRow("summ");
+    
+	objGrid.appendContentsCol();
+	objGrid.appendContentsCol();
+    
+	objGrid.setFormatColProperty(0, "size", 100);
+	objGrid.setFormatColProperty(1, "size", 100);
+	objGrid.setFormatColProperty(2, "size", 100);
+	
+	
+	for (var r = 0; r < objDs.getColCount(); r++) 
+	{
+		var colinfo = objDs.getColumnInfo(r);
+		objGrid.setCellProperty("head", r, "text", colinfo.name);
+		objGrid.setCellProperty("body", r, "text", "bind:" + colinfo.name);
+		if (r == 2) 
+		{
+			objGrid.setCellProperty("summ", r, "text", "expr:dataset.getSum('"+colinfo.name+"')");
+		}
+		else if(r == 1)
+		{
+			objGrid.setCellProperty("summ", r, "text", "total");
+		}
+	}
+	
+};
+
+var arr1 = [];
+var arr2 = [];
+this.dsDAD_onload = function(obj:nexacro.NormalDataset,e:nexacro.DSLoadEventInfo)
+{
+	// Drop unavailable
+    arr1[0] = this.Edit00;
+    arr1[1] = this.Edit02;
+	
+    // Drop possible
+    arr2[0] = this.Edit01;
+    arr2[1] = this.Edit03;
+};
+
+this.Grid00_ondrag = function(obj:nexacro.Grid,e:nexacro.GridDragEventInfo)
+{
+    if(e.row == -1 || e.row == -2)
+    {
+        return false;
+    }    
+    
+    sTextDragData = obj.getCellValue(e.row, e.cell);
+	
+    var cell_rect = obj.getCellRect(e.row, e.cell);
+    this.Static00.set_left(cell_rect.left);
+    this.Static00.set_top(cell_rect.top);
+    this.Static00.set_width(cell_rect.width);
+    this.Static00.set_height(cell_rect.height);
+    this.Static00.set_text(sTextDragData);
+    this.Static00.set_visible(true);
+    return true;
+};
+
+this.DragTextMove = function(obj, e)
+{
+    if( this.Static00.visible == true )
+    {    
+        for(var i = 0; i < arr1.length; i++)
+        {
+            if(arr1[i].name == e.fromobject.name)
+            {
+                this.equal_Obj(obj, e);
+                break;
+            }    else    {
+                this.different_Obj(obj, e);
+            }
+        }
+        this.Static00.move(e.clientx, e.clienty);
+    }
+};
+
+this.equal_Obj = function(obj, e)
+{
+    this.Static01.set_visible(true);
+    this.Static01.move(e.clientx-10, e.clienty+5);
+};
+
+this.different_Obj = function(obj, e)
+{
+    this.Static01.set_visible(false);
+};
+
+this.Grid00_ondrop = function(obj:nexacro.Grid,e:nexacro.GridDragEventInfo)
+{
+    for(var i = 0; i < arr1.length; i++ )
+    {
+        if(e.fromobject != undefined && e.fromobject.name == arr1[i].name)
+        {
+            this.Static00.set_visible(false);
+            this.Static01.set_visible(false);
+            return false;
+        }
+    }
+	
+	for(var i = 0; i < arr2.length; i++ )
+    {
+        if(e.fromobject != undefined && e.fromobject.name == arr2[i].name)
+        {
+            e.fromobject.set_value(sTextDragData);
+            this.Static00.set_visible(false);
+        }
+    }
+    this.Static00.set_visible(false);
+};
+
+this.Edit_ondrop = function(obj:nexacro.Edit,e:nexacro.DragEventInfo)
+{
+	for(var i = 0; i < arr1.length; i++ )
+    {
+        if(e.fromobject != undefined && e.fromobject.name == arr1[i].name)
+        {
+            this.Static00.set_visible(false);
+            this.Static01.set_visible(false);
+            return false;
+        }
+    }
+	
+	for(var i = 0; i < arr2.length; i++ )
+    {
+        if(e.fromobject != undefined && e.fromobject.name == arr2[i].name)
+        {
+            e.fromobject.set_value(sTextDragData);
+            this.Static00.set_visible(false);
+        }
+    }
+    this.Static00.set_visible(false);
+};
+
+this.Grid02_onvscroll = function(obj:nexacro.Grid,e:nexacro.ScrollEventInfo)
+{
+	this.Grid01.scrollTo(0,e.pos);
+};
+
+
+this.ck_arr = [];
+this.ck_func = function(nRow)
+{    
+    return this.ck_arr[nRow] == null ? 0 :  this.ck_arr[nRow];
+}
+
+this.Grid00_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+    if(e.cell == 0 )
+    {
+        this.ck_arr[e.row] = this.ck_arr[e.row] == null ? 1 : this.ck_arr[e.row]^1;
+        this.Grid03.redrawExprCell('body');
+    }
+    
+};
+
+
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var cnt = 0;
+    for(var i = 0 ; i < this.ck_arr.length ; i++)
+    {
+        if(this.ck_arr[i])
+        {
+            cnt = cnt + 1;
+        }    
+    }
+    
+    this.TextArea00.set_value("No. of selected rows : " + cnt);
+    
+    if(cnt == 0){
+        this.TextArea00.set_value("There is no selected row " );
+    }
+};
+
+this.Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.dsDualScroll.filter("String(Name).indexOf('"+this.Edit03.value+"')>=0");
+};
+
+this.Button03_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.dsDualScroll.filter("String(Name).indexOf('"+this.Edit03.value+"')==0");
+};
+
+this.Button04_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.dsDualScroll.set_filterstr();
+    this.dsDualScroll.filter();
+};
+
+this.Button05_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+    var sExpr    = "rowidx==dataset.findRowExpr(\"Column0=='\" + Column0 + \"'\")";        
+    this.dsDualDataRemove.filter(sExpr);  
+};
+
+this.Button06_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.gf_distincDsFilter(this.dsDualDataRemove, "Column1,Column2");
+};
+this.gf_distincDsFilter = function(objDs, sColID)
+{
+    var arrArgs    = sColID.split(",");
+    var sFilterExpr        = "";
+    var sFindRowExpr    = "";
+    
+    for (var i=0; i<arrArgs.length; i++)
+    {
+        if (objDs.getColumnInfo(arrArgs[i]) == null) continue;
+        
+        sFindRowExpr    += (sFindRowExpr) ? " && " : "";
+        sFindRowExpr    += "" + arrArgs[i] + "=='\" + " + arrArgs[i] + " + \"'";
+    }
+    
+    if (sFindRowExpr) {
+        sFilterExpr    = "rowidx==dataset.findRowExpr(\"" + sFindRowExpr + "\")";
+    }
+    objDs.filter(sFilterExpr);
+};
+this.Button07_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.dsDualDataRemove.filter("");
+};
+
+this.Grid06_oncellclick = function(obj:nexacro.Grid,e:nexacro.GridClickEventInfo)
+{
+	if (e.cell == 0)
+    {
+        this.dsRadio.set_enableevent(false);
+        for(var i=0; i<this.dsRadio.rowcount; i++)
+        {
+            if (e.row == i)
+            {
+                this.dsRadio.setColumn(e.row,"Column0","1");
+            }else{
+                this.dsRadio.setColumn(i,"Column0","0");
+            }    
+        }
+        this.dsRadio.set_enableevent(true);
+    }
+};
+this.sample_grid_80_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+    this.setTimer(0, 1000);
+};
+
+this.sample_grid_80_ontimer = function(obj:nexacro.Form,e:nexacro.TimerEventInfo)
+{
+    for(var i=0;i<this.dsTimeZone.getRowCount();i++)
+    {
+        this.dsTimeZone.setColumn(i, 1, 
+            this.getWorldTime(this.dsTimeZone.getColumn(i, 2)));
+    }
+};
+this.getWorldTime = function(offSet)
+{
+    var objDate = new Date();
+    var nTime = objDate.getTime() + (objDate.getTimezoneOffset() * 60000) + (offSet * 3600000);
+    objDate.setTime(nTime);
+    
+      var s =
+    this.fn_getDate(objDate.getFullYear(), 4) + '-' +
+    this.fn_getDate(objDate.getMonth() + 1, 2) + '-' +
+    this.fn_getDate(objDate.getDate(), 2) + ' ' +
+
+    this.fn_getDate(objDate.getHours(), 2) + ':' +
+    this.fn_getDate(objDate.getMinutes(), 2) + ':' +
+    this.fn_getDate(objDate.getSeconds(), 2);
+    
+  return s;
+}
+this.fn_getDate = function(n, digits) 
+{
+  var zero = '';
+  n = n.toString();
+
+  if (n.length < digits) {
+    for (i = 0; i < digits - n.length; i++)
+      zero += '0';
+  }
+  return zero + n;
+}]]></Script>
+  </Form>
+</FDL>

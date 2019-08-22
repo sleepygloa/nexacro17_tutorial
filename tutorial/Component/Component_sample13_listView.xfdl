@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Component_sample13_listView" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <ListView id="ListView00" taborder="0" left="19" top="38" width="231" height="256" binddataset="dsData">
+          <Formats>
+            <Format id="default">
+              <Band id="body" width="100%" height="92" expandbartype="true">
+                <Cell id="Cell01" left="5" top="5" width="70" height="84" text="bind:No" font="40px/normal &quot;Gulim&quot;" textAlign="center"/>
+                <Cell id="Cell03" left="75" top="4" width="210" height="84" text="bind:Title" font="25px/normal &quot;Gulim&quot;" color="brown"/>
+              </Band>
+              <Band id="detail" width="100%" height="24">
+                <Cell id="Cell00" left="-1" top="1" width="294" height="23" text="bind:Detail"/>
+              </Band>
+            </Format>
+          </Formats>
+        </ListView>
+        <ListView id="ListView01" taborder="1" left="261" top="69" width="376" height="359" binddataset="dsMusic" bandinitstatus="collapse">
+          <Formats>
+            <Format id="default">
+              <Band id="body" width="100%" height="121" expandbartype="true">
+                <Cell id="Cell01" left="130" top="11" width="220" height="59" text="bind:title" border="0px none" font="bold 20px/normal &quot;Gulim&quot;"/>
+                <Cell id="Cell03" left="130" top="74" width="220" height="36" text="bind:release" font="30px Gulim" border="0px none"/>
+                <Cell id="Cell05" left="0" top="0" width="125" height="120" text="bind:cover" displaytype="imagecontrol"/>
+              </Band>
+              <Band id="detail" width="100%" height="24">
+                <Cell id="Cell00" left="0" top="-1" width="100%" height="100%" text="bind:songs" displaytype="text"/>
+              </Band>
+            </Format>
+          </Formats>
+        </ListView>
+        <Radio id="Radio00" taborder="2" left="258" top="11" width="379" height="18" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" columncount="3" onitemchanged="Radio00_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">expand</Col>
+                <Col id="datacolumn">expand</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">accordion</Col>
+                <Col id="datacolumn">accordion</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">popup</Col>
+                <Col id="datacolumn">popup</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Spin id="Spin00" taborder="3" left="261" top="39" width="160" height="30" onchanged="Spin00_onchanged"/>
+        <Radio id="Radio01" taborder="4" left="673" top="12" width="280" height="50"/>
+        <Div id="Div00" taborder="5" text="Div00" left="660" top="83" width="320" height="320">
+          <Layouts>
+            <Layout>
+              <ListView id="ListView00" taborder="0" left="0" top="0" width="100%" height="100%" binddataset="dsListView">
+                <Formats>
+                  <Format id="default">
+                    <Band id="body" width="100%" height="63">
+                      <Cell id="Cell01" left="5" top="5" width="150" height="150" text="bind:cover" displaytype="imagecontrol" border="0px none" padding="0px"/>
+                      <Cell id="Cell03" left="Cell01:-5" top="3" width="160" height="54" text="bind:title" border="0px none" wordWrap="english"/>
+                    </Band>
+                  </Format>
+                </Formats>
+              </ListView>
+            </Layout>
+          </Layouts>
+        </Div>
+      </Layout>
+    </Layouts>
+    <Objects>
+      <Dataset id="dsData">
+        <ColumnInfo>
+          <Column id="No" type="STRING" size="256"/>
+          <Column id="Title" type="STRING" size="256"/>
+          <Column id="Detail" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="No">1</Col>
+            <Col id="Title">ABC</Col>
+            <Col id="Detail">ABCDEFG</Col>
+          </Row>
+          <Row>
+            <Col id="No">2</Col>
+            <Col id="Title">DEF</Col>
+            <Col id="Detail">DEFABCD</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="dsMusic">
+        <ColumnInfo>
+          <Column id="title" type="STRING" size="256"/>
+          <Column id="release" type="STRING" size="256"/>
+          <Column id="cover" type="STRING" size="256"/>
+          <Column id="songs" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="title">The Freewheelin ' Box</Col>
+            <Col id="release">1963</Col>
+            <Col id="songs">벌써일년</Col>
+          </Row>
+          <Row>
+            <Col id="title">Highway 61 Revisited</Col>
+            <Col id="release">1965</Col>
+            <Col id="songs">벌써이년</Col>
+          </Row>
+          <Row>
+            <Col id="title">Blood on the Track</Col>
+            <Col id="release">1975</Col>
+            <Col id="songs">벌써삼년</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="dsListView">
+        <ColumnInfo>
+          <Column id="title" type="STRING" size="256"/>
+          <Column id="cover" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="title">The Freewheel Box</Col>
+            <Col id="cover">imagerc::Bob_Dylan_-_The_Freewheelin'_Bob_Dylan[1].jpg</Col>
+          </Row>
+          <Row>
+            <Col id="title">Hightway 61revisited</Col>
+            <Col id="cover">imagerc::Bob_Dylan_-_Highway_61_Revisited[1].jpg</Col>
+          </Row>
+          <Row>
+            <Col id="title">Blood on the tracks</Col>
+            <Col id="cover">imagerc::Bob_Dylan_-_Blood_on_the_Tracks[1].jpg</Col>
+          </Row>
+          <Row>
+            <Col id="title">Blonde on Blonde</Col>
+            <Col id="cover">imagerc::320px-Bob_Dylan_1978[1].jpg</Col>
+          </Row>
+          <Row>
+            <Col id="title">Bringin it all back home</Col>
+            <Col id="cover">imagerc::love_300x300.png</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Script type="xscript5.1"><![CDATA[
+this.Radio00_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.ListView01.set_bandexpandtype(e.postvalue);
+};
+
+this.Spin00_onchanged = function(obj:nexacro.Spin,e:nexacro.ChangeEventInfo)
+{
+	this.ListView01.set_bandindentsize(e.postvalue);
+};
+]]></Script>
+  </Form>
+</FDL>

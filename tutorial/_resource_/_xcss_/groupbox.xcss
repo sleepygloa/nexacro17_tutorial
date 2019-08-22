@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XCSS version="1.0"><![CDATA[.GroupBox.sample_groupbox_03 .groupboxcontents
+{
+    background : greenyellow;
+    -nexa-border : 3px solid violet;
+}
+
+.GroupBox.sample_groupbox_03 .groupboxtitle
+{
+    background : greenyellow;
+    -nexa-icon : URL("theme://images/rdo_WF_Radio.png");
+}]]></XCSS>

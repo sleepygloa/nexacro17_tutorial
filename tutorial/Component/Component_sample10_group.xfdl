@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Component_sample10_group" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <GroupBox id="GroupBox00" taborder="0" text="GroupBox" left="43" top="43" width="497" height="317" color="#ffffff" font="bold 24px/normal &quot;Gulim&quot;" letterSpacing="5px"/>
+        <Static id="Static00" taborder="1" text="Static00" left="70" top="80" width="120" height="60"/>
+        <Edit id="Edit00" taborder="2" left="220" top="80" width="140" height="60"/>
+        <CheckBox id="CheckBox00" taborder="3" text="CheckBox00" left="374" top="82" width="146" height="58"/>
+        <Radio id="Radio00" taborder="4" left="71" top="165" width="280" height="50"/>
+        <TextArea id="TextArea00" taborder="5" left="70" top="230" width="260" height="110"/>
+      </Layout>
+    </Layouts>
+  </Form>
+</FDL>

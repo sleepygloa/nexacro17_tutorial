@@ -20,5 +20,6 @@
     </Layout>
     <Style url="xcssrc::tutorial.xcss"/>
     <Style url="xcssrc::grid_subtotal.xcss"/>
+    <Style url="xcssrc::groupbox.xcss"/>
   </Application>
 </ADL>

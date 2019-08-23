@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Component_sample15_div" width="1280" height="720" titletext="New Form" onload="Component_sample15_div_onload">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Div id="Div00" taborder="0" text="divMain" left="10" top="85" width="300" height="300" background="#5b21b9">
+          <Layouts>
+            <Layout>
+              <Button id="Button00" taborder="0" text="Button00" left="13" top="7" width="120" height="50" onclick="Div00_Button00_onclick"/>
+              <Static id="Static00" taborder="1" text="Static00" left="83" top="133" width="120" height="60"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Button id="Button00" taborder="1" text="left top red" left="13" top="9" width="100" height="40"/>
+        <Button id="Button01" taborder="2" text="right bottom blue" left="123" top="8" width="100" height="40" onclick="Button01_onclick"/>
+        <Button id="Button02" taborder="3" text="Init" left="237" top="10" width="100" height="40" onclick="Button02_onclick"/>
+        <Div id="Div01" taborder="4" text="Div01" left="330" top="100" width="300" height="230">
+          <Layouts>
+            <Layout>
+              <Div id="Div00" taborder="0" text="Div00" left="0" top="0" width="130" height="100.00%" background="#8f1919"/>
+              <Div id="Div01" taborder="1" text="Div01" left="124" top="0" height="100.00%" ondrag="Div01_Div01_ondrag" ondragmove="Div01_Div01_ondragmove" background="#663da2" right="0">
+                <Layouts>
+                  <Layout/>
+                </Layouts>
+              </Div>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="Div02" taborder="5" text="Div02" left="669" top="56" width="250" height="220" ondrag="Div00_ondrag" ondragmove="Div00_ondragmove" ondrop="Div00_ondrop">
+          <Layouts>
+            <Layout>
+              <Button id="Button00" taborder="0" text="Button00" left="16" top="12" width="120" height="50" onlbuttondown="Div02_Button00_onlbuttondown"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <ListBox id="ListBox00" taborder="6" left="944" top="56" width="170" height="100" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" onitemchanged="ListBox00_onitemchanged" onkillfocus="ListBox00_onkillfocus">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows/>
+          </Dataset>
+        </ListBox>
+        <Div id="Div03" taborder="7" text="Div03" left="16" top="406" width="290" height="250" onvscroll="Div03_onvscroll">
+          <Layouts>
+            <Layout>
+              <Edit id="Edit00" taborder="0" left="11" top="6" width="140" height="20"/>
+              <Button id="Button00" taborder="1" text="Button00" left="170" top="616" width="90" height="50" onclick="Div03_Button00_onclick"/>
+              <Edit id="Edit00_00" taborder="2" left="11" top="110" width="140" height="50"/>
+              <Edit id="Edit00_01" taborder="3" left="11" top="646" width="140" height="20"/>
+              <Edit id="Edit00_02" taborder="4" left="10" top="370" width="140" height="20"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="Div04" taborder="8" text="Div04" left="340" top="376" width="270" height="210">
+          <Layouts>
+            <Layout>
+              <Div id="Div00" taborder="0" text="Div00" left="8" top="11" width="70" height="40" background="red" ondrag="Div_ondrag" ondragmove="form_ondragmove" ondrop="form_ondrop"/>
+              <Div id="Div01" taborder="1" text="Div01" left="11" top="64" width="70" height="30" background="blue" ondrag="Div_ondrag"/>
+              <Div id="Div02" taborder="2" text="Div02" left="11" top="110" width="70" height="30" background="green" ondrag="Div_ondrag"/>
+              <Div id="Div03" taborder="3" text="Div03" left="11" top="156" width="70" height="40" background="yellow" ondrag="Div_ondrag"/>
+              <Div id="divMove" taborder="4" text="Div04" left="138" top="18" width="70" height="30"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Div id="Div03_00333" taborder="9" text="Div03" left="565" top="518" width="70" height="40" background="yellow" ondrag="Div_ondrag"/>
+        <Div id="Div00_00" taborder="10" text="Div00" left="562" top="373" width="70" height="40" background="red" ondrag="Div_ondrag" ondragmove="form_ondragmove" ondrop="form_ondrop"/>
+        <Div id="Div01_00" taborder="11" text="Div01" left="565" top="426" width="70" height="30" background="blue" ondrag="Div_ondrag"/>
+        <Div id="Div02_00" taborder="12" text="Div02" left="565" top="472" width="70" height="30" background="green" ondrag="Div_ondrag"/>
+        <Div id="divMove441" taborder="13" text="Div04" left="692" top="360" width="70" height="30"/>
+        <Div id="Div4400_00_00" taborder="14" text="Div00" left="561" top="376" width="70" height="40" background="red" ondrag="Div_ondrag" ondragmove="form_ondragmove" ondrop="form_ondrop"/>
+        <Div id="Div01_00_0044" taborder="15" text="Div01" left="564" top="430" width="70" height="30" background="blue" ondrag="Div_ondrag"/>
+        <Div id="Div02_00_00222" taborder="16" text="Div02" left="564" top="475" width="70" height="30" background="green" ondrag="Div_ondrag">
+          <Layouts>
+            <Layout/>
+          </Layouts>
+        </Div>
+        <Button id="Button03" taborder="17" text="open popup" left="880" top="324" width="104" height="37" onclick="Button03_onclick"/>
+        <PopupDiv id="PopupDiv00" text="PopupDiv00" visible="false" left="1012" top="325" width="220" height="100"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Div00_Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	
+};
+
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	
+};
+
+this.Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Div00.form.Static00.set_text("가나다라");
+};
+
+this.Div01_Div01_ondrag = function(obj:nexacro.Div,e:nexacro.DragEventInfo)
+{
+	return true;
+};
+
+this.Div01_Div01_ondragmove = function(obj:nexacro.Div,e:nexacro.DragEventInfo)
+{
+	this.Div01.form.Div01.set_left(e.clientx);
+    this.Div01.form.resetScroll();
+};
+var btnOrgW;
+var btnOrgH;
+this.Component_sample15_div_onload = function(obj:nexacro.Form,e:nexacro.LoadEventInfo)
+{
+	var btnOrgW = this.Div02.form.Button00.getOffsetWidth();
+    var btnOrgH = this.Div02.form.Button00.getOffsetHeight();
+};
+var nButtonX;
+var nButtonY;
+this.Div02_Button00_onlbuttondown = function(obj:nexacro.Button,e:nexacro.MouseEventInfo)
+{
+	nButtonX = e.clientx;
+    nButtonY = e.clienty;
+};
+this.Div00_ondrag = function(obj:nexacro.Div,e:nexacro.DragEventInfo)
+{
+    return true;
+};
+
+this.Div00_ondragmove = function(obj:nexacro.Div,e:nexacro.DragEventInfo)
+{
+    var nLeft = e.clientx-nButtonX;
+    var nTop = e.clienty-nButtonY;
+    this.Div02.form.Button00.move(nLeft,nTop, btnOrgW, btnOrgH);
+};
+
+this.Div00_ondrop = function(obj:nexacro.Div,e:nexacro.DragEventInfo)
+{
+    var tempDS = this.ListBox00.getInnerDataset();
+    var nIndex = tempDS.rowcount;
+    tempDS.insertRow(nIndex);
+    tempDS.setColumn(nIndex, "codecolumn", (e.clientx-nButtonX)+","+(e.clienty-nButtonY));
+    tempDS.setColumn(nIndex, "datacolumn", "Left >> " + (e.clientx-nButtonX) + "  Top >>> " + (e.clienty-nButtonY));
+    this.resetScroll();
+};
+
+this.ListBox00_onitemchanged = function(obj:nexacro.ListBox,e:nexacro.ItemChangeEventInfo)
+{
+	if(e.postindex!=-1)
+    {
+        var tempArray = e.postvalue.split(',');
+        var nLeft = tempArray[0];
+        var nTop = tempArray[1];
+        this.Div02.form.Button00.move(nLeft,nTop, btnOrgW, btnOrgH);
+    }
+};
+
+this.ListBox00_onkillfocus = function(obj:nexacro.ListBox,e:nexacro.KillFocusEventInfo)
+{
+	obj.setSelect(-1);
+};
+var nTop = this.Div03.form.Button00.top;
+this.Div03_Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Div03.form.vscrollbar.set_pos(0);
+};
+
+this.Div03_onvscroll = function(obj:nexacro.Div,e:nexacro.ScrollEventInfo)
+{
+	if( e.pos > 0 ) {
+        this.Div03.form.Button00.set_visible(true);
+        this.Div03.form.Button00.set_top(nexacro.toNumber(nTop)+ nexacro.toNumber(e.pos));
+    } else {
+        this.Div03.form.Button00.set_visible(false);
+    }
+};
+this.Div_ondrag = function(obj:nexacro.Div,e:nexacro.DragEventInfo)
+{
+        e.userdata = obj;
+        this.fn_makeDragObj(obj);
+        return true;
+};
+
+this.fn_makeDragObj = function (obj)
+{    
+    this.divMove.set_background(obj.background);
+    this.divMove.set_visible(true);
+};
+this.form_ondragmove = function(obj:nexacro.Form,e:nexacro.DragEventInfo)
+{
+    this.divMove.move(e.clientx + 10, e.clienty + 10);
+};
+
+this.fv_objFrom;
+this.fv_objTo;
+
+var aniObj = new nexacro.Animation("Ani00", this);
+this.addChild("Ani00", aniObj);
+
+this.form_ondrop = function(obj:nexacro.Form,e:nexacro.DragEventInfo)
+{
+    this.divMove.set_visible(false);
+    this.fv_objFrom = e.userdata;
+    this.fv_objTo = e.fromobject.parent;                            
+    if (this.fv_objTo != "[object Div]") 
+    {
+        
+        return;
+    }
+    this.Ani00.addTarget("AniItem00", this.fv_objFrom, "left:"+this.fv_objTo.left+", top:"+this.fv_objTo.top);
+    this.Ani00.addTarget("AniItem01", this.fv_objTo, "left:"+this.fv_objFrom.left+", top:"+this.fv_objFrom.top);
+    this.Ani00.play();
+    this.Ani00.removeTarget("AniItem00");
+    this.Ani00.removeTarget("AniItem01");
+};
+
+this.Div04_Div00_ondragmove = function(obj:nexacro.Div,e:nexacro.DragEventInfo)
+{
+	
+};
+
+this.Button03_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.PopupDiv00.trackPopupByComponent(obj, obj.getOffsetWidth(), obj.getOffsetHeight(), 160, 240);
+};
+]]></Script>
+  </Form>
+</FDL>

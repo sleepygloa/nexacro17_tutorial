@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Component_sample14_maskedit" width="1280" height="720" titletext="New Form" onrbuttondown="Component_sample14_maskedit_onrbuttondown" ontimer="Component_sample14_maskedit_ontimer" onclick="Component_sample14_maskedit_onclick">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <MaskEdit id="MaskEdit00" taborder="0" left="94" top="12" width="120" height="30" onchanged="MaskEdit00_onchanged" type="string" format="aaaa-#####"/>
+        <Static id="Static00" taborder="1" text="String" left="9" top="16" width="70" height="20"/>
+        <Static id="Static00_00" taborder="2" text="Number" left="9" top="46" width="70" height="20"/>
+        <MaskEdit id="MaskEdit00_00" taborder="3" left="94" top="42" width="120" height="30" onchanged="MaskEdit00_onchanged" type="number" format="#,#.###"/>
+        <Static id="Static00_00_00" taborder="4" text="주민번호" left="9" top="76" width="70" height="20"/>
+        <MaskEdit id="MaskEdit00_00_00" taborder="5" left="94" top="72" width="120" height="30" onchanged="MaskEdit00_onchanged" type="string" format="######-#{######}"/>
+        <Menu id="Menu00" taborder="6" left="24" top="132" width="685" height="28" innerdataset="innerdataset" captioncolumn="captioncolumn" checkboxcolumn="checkboxcolumn" enablecolumn="enablecolumn" hotkeycolumn="hotkeycolumn" iconcolumn="iconcolumn" idcolumn="idcolumn" levelcolumn="levelcolumn" userdatacolumn="userdatacolumn">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="captioncolumn" size="256"/>
+              <Column id="checkboxcolumn" size="256"/>
+              <Column id="enablecolumn" size="256"/>
+              <Column id="hotkeycolumn" size="256"/>
+              <Column id="iconcolumn" size="256"/>
+              <Column id="idcolumn" size="256"/>
+              <Column id="levelcolumn" size="256"/>
+              <Column id="userdatacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="captioncolumn">A</Col>
+                <Col id="levelcolumn">0</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">A-1</Col>
+                <Col id="levelcolumn">1</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">A-2</Col>
+                <Col id="levelcolumn">1</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">B</Col>
+                <Col id="levelcolumn">0</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">C</Col>
+                <Col id="levelcolumn">0</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Menu>
+        <Menu id="Menu01" taborder="7" left="27" top="212" width="685" height="25" onmenuclick="Menu01_onmenuclick" innerdataset="innerdataset" captioncolumn="captioncolumn" checkboxcolumn="checkboxcolumn" enablecolumn="enablecolumn" hotkeycolumn="hotkeycolumn" iconcolumn="iconcolumn" idcolumn="idcolumn" levelcolumn="levelcolumn" userdatacolumn="userdatacolumn">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="captioncolumn" size="256"/>
+              <Column id="checkboxcolumn" size="256"/>
+              <Column id="enablecolumn" size="256"/>
+              <Column id="hotkeycolumn" size="256"/>
+              <Column id="iconcolumn" size="256"/>
+              <Column id="idcolumn" size="256"/>
+              <Column id="levelcolumn" size="256"/>
+              <Column id="userdatacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="captioncolumn">Wines</Col>
+                <Col id="levelcolumn">0</Col>
+                <Col id="idcolumn">A</Col>
+                <Col id="userdatacolumn">19</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">White Wines</Col>
+                <Col id="levelcolumn">1</Col>
+                <Col id="idcolumn">A-1</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">Red Wines</Col>
+                <Col id="idcolumn">A-2</Col>
+                <Col id="levelcolumn">1</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">Sprites</Col>
+                <Col id="idcolumn">B</Col>
+                <Col id="levelcolumn">0</Col>
+                <Col id="userdatacolumn">19</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">Vodka</Col>
+                <Col id="levelcolumn">1</Col>
+                <Col id="idcolumn">B-1</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">Plain</Col>
+                <Col id="levelcolumn">2</Col>
+                <Col id="idcolumn">B-1-1</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">Flavoured</Col>
+                <Col id="levelcolumn">2</Col>
+                <Col id="idcolumn">B-1-2</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">Cognac</Col>
+                <Col id="levelcolumn">1</Col>
+                <Col id="idcolumn">B-2</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">Rum</Col>
+                <Col id="levelcolumn">1</Col>
+                <Col id="idcolumn">B-3</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">Teguila</Col>
+                <Col id="levelcolumn">1</Col>
+                <Col id="idcolumn">B-4</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">Soft Drink</Col>
+                <Col id="levelcolumn">0</Col>
+                <Col id="idcolumn">C</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">Coke</Col>
+                <Col id="levelcolumn">1</Col>
+                <Col id="idcolumn">C-1</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">Juice</Col>
+                <Col id="levelcolumn">1</Col>
+                <Col id="idcolumn">C-2</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">Age</Col>
+                <Col id="levelcolumn">0</Col>
+                <Col id="idcolumn">D</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">Under 19</Col>
+                <Col id="levelcolumn">1</Col>
+                <Col id="idcolumn">D-1</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">19+</Col>
+                <Col id="levelcolumn">1</Col>
+                <Col id="idcolumn">D-2</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Menu>
+        <PopupMenu id="PopupMenu00" left="35" top="315" width="220" height="100" innerdataset="innerdataset" captioncolumn="captioncolumn" checkboxcolumn="checkboxcolumn" enablecolumn="enablecolumn" hotkeycolumn="hotkeycolumn" iconcolumn="iconcolumn" idcolumn="idcolumn" levelcolumn="levelcolumn" userdatacolumn="userdatacolumn">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="captioncolumn" size="256"/>
+              <Column id="checkboxcolumn" size="256"/>
+              <Column id="enablecolumn" size="256"/>
+              <Column id="hotkeycolumn" size="256"/>
+              <Column id="iconcolumn" size="256"/>
+              <Column id="idcolumn" size="256"/>
+              <Column id="levelcolumn" size="256"/>
+              <Column id="userdatacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="captioncolumn">A</Col>
+                <Col id="hotkeycolumn">0</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">A-1</Col>
+                <Col id="hotkeycolumn">1</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">A-2</Col>
+                <Col id="hotkeycolumn">1</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">B</Col>
+                <Col id="hotkeycolumn">0</Col>
+              </Row>
+              <Row>
+                <Col id="captioncolumn">C</Col>
+                <Col id="hotkeycolumn">0</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </PopupMenu>
+        <Radio id="Radio00" taborder="8" left="322" top="318" width="110" height="250" onitemchanged="Radio00_onitemchanged" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">right top</Col>
+                <Col id="datacolumn">right top</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">right middle</Col>
+                <Col id="datacolumn">right middle</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">right bottom</Col>
+                <Col id="datacolumn">right bottom</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">left top</Col>
+                <Col id="datacolumn">left top</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">left middle</Col>
+                <Col id="datacolumn">left middle</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">left bottom</Col>
+                <Col id="datacolumn">left bottom</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Div id="Div00" taborder="9" text="Div00" left="462" top="313" width="270" height="240" onclick="Div00_onclick">
+          <Layouts>
+            <Layout/>
+          </Layouts>
+        </Div>
+        <PopupMenu id="popupmenuABC" left="35" top="443" width="50" height="60"/>
+        <Button id="Button00" taborder="10" text="Start" left="751" top="20" width="90" height="30" onclick="Button00_onclick"/>
+        <ProgressBar id="ProgressBar00" taborder="11" max="100" min="0" text="ProgressBar00" left="748" top="65" width="200" height="15" smooth="true"/>
+        <ProgressBar id="ProgressBar01" taborder="12" max="100" min="0" text="ProgressBar01" left="751" top="96" width="200" height="15" step="2" direction="backward"/>
+        <Button id="Button01" taborder="13" text="Reset" left="871" top="18" width="80" height="30" onclick="Button01_onclick"/>
+        <Sketch id="Sketch00" taborder="14" text="Sketch00" left="763" top="168" width="100" height="100"/>
+        <Static id="Static01" taborder="15" text="Color" left="888" top="171" width="80" height="20" onclick="Static01_onclick"/>
+        <Static id="Static01_00" taborder="16" text="Size" left="888" top="221" width="80" height="20" onclick="Static01_onclick"/>
+        <Combo id="Combo00" taborder="17" text="Combo00" left="990" top="165" width="120" height="30" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" onitemchanged="Combo00_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">Black</Col>
+                <Col id="datacolumn">Black</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">Blue</Col>
+                <Col id="datacolumn">Blue</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">Red</Col>
+                <Col id="datacolumn">Red</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">Yellow</Col>
+                <Col id="datacolumn">Yellow</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Radio id="Radio01" taborder="18" left="884" top="287" width="280" height="50" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" positionstep="0" columncount="2" onitemchanged="Radio01_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">none</Col>
+                <Col id="datacolumn">none</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">stroke</Col>
+                <Col id="datacolumn">stroke</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">text</Col>
+                <Col id="datacolumn">text</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">erase</Col>
+                <Col id="datacolumn">erase</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Spin id="Spin00" taborder="19" left="988" top="226" width="120" height="30" onchanged="Spin00_onchanged" min="-10000" max="10000" value="0" increment="1000" type="noneditable" displaycomma="true"/>
+        <Radio id="Radio02" taborder="20" left="857" top="400" width="280" height="50" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" columncount="3" index="0" text="Today" value="Today" onitemchanged="Radio02_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">Today</Col>
+                <Col id="datacolumn">Today</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">Browser</Col>
+                <Col id="datacolumn">Browser</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">OS</Col>
+                <Col id="datacolumn">OS</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Static id="staticExpr" taborder="21" text="Windows 10" left="857" top="375" width="140" height="30" expr="comp.parent.fn_dateToStr()"/>
+        <Radio id="radioWordwrap" taborder="22" left="844" top="483" width="280" height="50" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" onitemchanged="Radio03_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">none</Col>
+                <Col id="datacolumn">none</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">char</Col>
+                <Col id="datacolumn">char</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">english</Col>
+                <Col id="datacolumn">english</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <Static id="staticWordWrap" taborder="23" text="Static02" left="843" top="548" width="120" height="30"/>
+        <Static id="staticName" taborder="24" text="1. 이름" left="831" top="620" width="60" height="30" background="yellow"/>
+        <Edit id="Edit00" taborder="25" left="staticName:9" top="620" width="140" height="30" onchanged="Edit00_onchanged"/>
+        <Static id="staticWorkplace" taborder="26" text="2. 직장" left="831" top="660" width="60" height="30" background="yellow"/>
+        <Edit id="Edit00_00" taborder="27" left="staticWorkplace:9" top="660" width="140" height="30" onchanged="Edit00_onchanged"/>
+        <Radio id="Radio04" taborder="28" left="822" top="585" width="230" height="20" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" columncount="2" onitemchanged="Radio04_onitemchanged">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">KOR</Col>
+                <Col id="datacolumn">KOR</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">ENG</Col>
+                <Col id="datacolumn">ENG</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
+        <CheckBox id="CheckBox00" taborder="29" text="CheckBox00" left="1040" top="586" width="150" height="20" onchanged="CheckBox00_onchanged"/>
+        <Edit id="Edit01" taborder="30" left="38" top="544" width="140" height="20"/>
+        <Edit id="Edit02" taborder="31" left="37" top="577" width="140" height="20"/>
+        <Static id="Static02" taborder="32" text="Static02" left="34" top="618" width="120" height="60"/>
+        <Button id="Button02" taborder="33" text="Button02" left="211" top="580" width="79" height="35" onclick="Button02_onclick"/>
+        <Div id="divChart1" taborder="34" text="Div01" left="468" top="544" width="322" height="156">
+          <Layouts>
+            <Layout>
+              <Static id="stBar01" taborder="0" text="Static00" left="5" top="18" width="120" height="20" background="#a85b28"/>
+              <Static id="stBar02" taborder="1" text="Static00" left="5" top="58" width="120" height="20" background="#7e4a86"/>
+              <Static id="stBar03" taborder="2" text="Static00" left="5" top="99" width="120" height="20" background="#94ae22"/>
+              <Static id="stValue01" taborder="3" text="Static00" left="stBar01:10" top="18" width="40" height="20" background="#0fc1ac" onclick="Div01_stValue01_onclick"/>
+              <Static id="stValue02" taborder="4" text="Static00" left="stBar02:10" top="58" width="40" height="20" background="#0fc1ac"/>
+              <Static id="stValue03" taborder="5" text="Static00" left="stBar03:10" top="99" width="40" height="20" background="#0fc1ac"/>
+              <Button id="Button00" taborder="6" text="Start" left="10" top="127" width="120" height="20" onclick="Div01_Button00_onclick"/>
+            </Layout>
+          </Layouts>
+        </Div>
+        <Button id="Button03" taborder="35" text="Button03" left="265" top="625" width="120" height="50" onclick="Button03_onclick"/>
+        <Grid id="Grid00" taborder="36" left="1157" top="290" width="115" height="170" binddataset="ds_enter">
+          <Formats>
+            <Format id="default">
+              <Columns>
+                <Column size="80"/>
+              </Columns>
+              <Rows>
+                <Row band="head" size="24"/>
+                <Row size="24"/>
+              </Rows>
+              <Band id="head">
+                <Cell text="Column0"/>
+              </Band>
+              <Band id="body">
+                <Cell text="bind:Column0"/>
+              </Band>
+            </Format>
+          </Formats>
+        </Grid>
+        <Static id="Static03" taborder="37" text="Static03" left="1158" top="160" width="120" height="120" expr="comp.parent.setWordWrap(comp.text)"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.MaskEdit00_onchanged = function(obj:nexacro.MaskEdit,e:nexacro.ChangeEventInfo)
+{
+	
+};
+
+this.Menu01_onmenuclick = function(obj:nexacro.Menu,e:nexacro.MenuClickEventInfo)
+{
+	var d1ColumnRow = this.datasetMenu.findRow("idcolumn", "D-1");
+    var d2ColumnRow = this.datasetMenu.findRow("idcolumn", "D-2");
+    
+    if(e.id == "D-1") {
+        this.datasetMenu.setColumn(d1ColumnRow, "checkboxcolumn", true);
+        this.datasetMenu.setColumn(d2ColumnRow, "checkboxcolumn", false);
+        
+        var currentAgeColumnRow = -1;
+        do {
+            currentAgeColumnRow++;
+            currentAgeColumnRow = this.datasetMenu.findRow("userdatacolumn", "19", currentAgeColumnRow);
+            this.datasetMenu.setColumn(currentAgeColumnRow, "enablecolumn", false);
+        } while (currentAgeColumnRow != -1);
+    } else if(e.id == "D-2") {
+        this.datasetMenu.setColumn(d1ColumnRow, "checkboxcolumn", false);
+        this.datasetMenu.setColumn(d2ColumnRow, "checkboxcolumn", true);
+        
+        var currentAgeColumnRow = -1;
+        do {
+            currentAgeColumnRow++;
+            currentAgeColumnRow = this.datasetMenu.findRow("userdatacolumn", "19", currentAgeColumnRow);
+            this.datasetMenu.setColumn(currentAgeColumnRow, "enablecolumn", true);
+        } while (currentAgeColumnRow != -1);
+    }
+};
+
+
+this.Component_sample14_maskedit_onrbuttondown = function(obj:nexacro.Form,e:nexacro.MouseEventInfo)
+{
+	this.PopupMenu00.trackPopupByComponent(this, e.clientx, e.clienty);
+};
+
+var align;
+this.Radio00_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	align = obj.value;
+};
+
+this.Div00_onclick = function(obj:nexacro.Div,e:nexacro.ClickEventInfo)
+{
+	var targetX = obj.width;
+    var targetY = obj.height;
+    if(align) {
+        this.popupmenuABC.trackPopupByComponent(obj, targetX, targetY, align);
+    } else {
+        this.popupmenuABC.trackPopupByComponent(obj, targetX, targetY);
+    }
+};
+
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.setTimer(0, 100);	
+};
+
+this.Component_sample14_maskedit_ontimer = function(obj:nexacro.Form,e:nexacro.TimerEventInfo)
+{
+	//각 진행표시줄에 표시할 진행률을 계산합니다.
+    var varProgressValue00 = parseInt((this.ProgressBar00.pos / this.ProgressBar00.max) * 100);
+    var varProgressValue01 = parseInt((this.ProgressBar01.pos / this.ProgressBar01.max) * 100);
+	
+    //ID가 0인 타이머
+    if(e.timerid == 0)
+    {
+        //진행이 완료되면 타이머를 종료시킵니다.
+        if(this.ProgressBar00.pos == this.ProgressBar01.max && this.ProgressBar01.pos == this.ProgressBar01.max)
+        {
+            this.killTimer(0);
+        }
+        
+        //각 진행바를 step 속성값만큼 변경합니다.
+        this.ProgressBar00.stepIt();
+        this.ProgressBar00.set_text(varProgressValue00 + " %");
+        
+        this.ProgressBar01.stepIt();
+        this.ProgressBar01.set_text(varProgressValue01 + " %");
+    }
+	
+    if(e.timerid==1)
+    {
+        this.nTimerIdx++;
+        this.fn_Chart01();
+        this.divChart1.form.resetScroll();
+        if(this.nTimerIdx==this.nTimerMax)
+        {
+            this.nTimerIdx = 0;
+            this.killTimer(1);
+        }
+    }
+};
+
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.ProgressBar00.set_pos(0);
+    this.ProgressBar00.set_text("ProgressBar00");
+    
+    this.ProgressBar01.set_pos(0);
+    this.ProgressBar01.set_text("ProgressBar01");
+    
+    this.killTimer(0);
+};
+
+
+
+this.Combo00_onitemchanged = function(obj:nexacro.Combo,e:nexacro.ItemChangeEventInfo)
+{
+	this.Sketch00.setBrushColor(obj.value);
+};
+
+this.Spin00_onchanged = function(obj:nexacro.Spin,e:nexacro.ChangeEventInfo)
+{
+	this.Sketch00.setBrushSize(obj.value);
+};
+
+this.Radio01_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.Sketch00.set_editmode(obj.value);
+};
+this.fn_dateTostr = function()
+{
+    var objDate = new Date();
+    var sRtn =  objDate.getFullYear()+"/"
+	+ (objDate.getMonth()+1).toString().padLeft(2, "0")+"/"
+	+ objDate.getDate().toString().padLeft(2, "0");
+    return sRtn;
+};
+
+this.fn_checkBrowser = function()
+{
+    return system.navigatorname + " " + system.navigatorversion;
+}
+
+this.fn_checkOS = function()
+{
+    return system.osversion;
+}
+this.Radio02_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	var todayExpr = "comp.parent.fn_dateTostr()";
+    var browserExpr = "comp.parent.fn_checkBrowser()";
+    var osExpr = "comp.parent.fn_checkOS()";
+    if(obj.value == "Today")
+	this.staticExpr.set_expr(todayExpr);        
+    else if(obj.value == "Browser")
+	this.staticExpr.set_expr(browserExpr);
+    else if(obj.value == "OS")
+	this.staticExpr.set_expr(osExpr);  
+};
+
+this.Radio03_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.staticWordWrap.set_wordWrap(this.radioWordwrap.value);
+};
+
+this.Radio04_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	if(e.postvalue == "KOR")    {
+        this.staticName.set_text("1. 이름");
+        this.staticWorkplace.set_text("2. 직장");
+    } else if(e.postvalue == "ENG")    {
+        this.staticName.set_text("1. First name");
+        this.staticWorkplace.set_text("2. place of work");
+    }
+    this.resetScroll();
+};
+
+
+this.CheckBox00_onchanged = function(obj:nexacro.CheckBox,e:nexacro.CheckBoxChangedEventInfo)
+{
+	if(e.postvalue == true)    {
+        this.staticName.set_fittocontents('width');
+        this.staticWorkplace.set_fittocontents('width');
+    } else if(e.postvalue == false)    {
+        this.staticName.set_fittocontents('none');
+        this.staticWorkplace.set_fittocontents('none');
+    }
+    this.resetScroll();
+};
+
+this.Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Static02.set_text(this.Edit01.value
+        +String.fromCharCode(10)
+        +this.Edit02.value);
+};
+
+this.Div01_stValue01_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	
+};
+this.nTimerIdx = 0;
+this.nTimerMax = 20;
+this.Div01_Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.setTimer(1, 50);
+};
+this.BarChart_ontimer = function(obj:nexacro.Form,e:nexacro.TimerEventInfo)
+{
+    if(e.timerid==1)
+    {
+        this.nTimerIdx++;
+        this.fn_Chart01();
+        this.divChart1.form.resetScroll();
+        if(this.nTimerIdx==this.nTimerMax)
+        {
+            this.nTimerIdx = 0;
+            this.killTimer(1);
+        }
+    }
+};
+
+this.fn_Chart01 = function ()
+{
+    var i;
+    var nLeft;
+    var nTop;
+    var nWidth;
+    var nHeight;
+    var objBar;
+    var objValue;
+    var nValue;
+    
+    for(i=0;i<this.ds_Chart01.rowcount;i++)
+    {
+        objBar = this.divChart1.form.components["stBar0"+(i+1)];    
+        objValue = this.divChart1.form.components["stValue0"+(i+1)];
+
+        nValue = Math.round(this.ds_Chart01.getColumn(i, "Value")*5.4);
+        objValue.set_text(this.ds_Chart01.getColumn(i, "Value"));
+
+        nLeft = objBar.left;
+        nTop = objBar.top;
+        nWidth = this.fn_move(this.nTimerIdx, 0, nValue, this.nTimerMax);
+        nHeight = objBar.height;
+        
+        objBar.move(nLeft, nTop, nWidth, nHeight);
+    }
+};
+
+this.fn_move = function(t, b, c, d)
+{
+    t /= d/2;
+    if (t < 1) return Math.round(c/2*t*t + b);
+    t--;
+    return Math.round(-c/2 * (t*(t-2) - 1) + b);
+};
+
+this.preObj = "";
+this.Button03_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+var nTop = 100;
+    
+    for(var i = 0; i < this.ds_acordion.rowcount; i++)
+    {
+        var objStatic = new Static();  
+        objStatic.init("Static"+i, 30, 70, 300, 30);                
+        this.addChild("Static"+i, objStatic);     
+        objStatic.set_border("1px solid darkgray");
+        objStatic.set_padding("0px 0px 0px 5px");
+        objStatic.show(); 
+        
+        objStatic.addEventHandler("onclick", this.StaticAll_onclick, this);
+        objStatic.set_text(this.ds_acordion.getColumn(i, "Column0"));
+        
+        if(i != 0)
+        {
+            var imgID = "Static"+(i-1)+"_1";
+            objStatic.set_top(imgID+":-1");
+        }
+        
+        var objStatic1 = new Static();  
+        objStatic1.init("Static"+i + "_1", 30, nTop+60, 300, 0, null, null);                
+        this.addChild("Static"+i + "_1", objStatic1);     
+        objStatic1.set_border("1px solid darkred, 1px solid darkgray, 1px solid darkgray");
+        objStatic1.set_background("yellow");
+        objStatic1.set_wordWrap("char");
+        objStatic1.show();         
+        
+        objStatic1.set_text(this.ds_acordion.getColumn(i, "Column1"));
+        objStatic1.set_top(objStatic.id+":0px");    
+        nTop += 40;
+
+    }
+};
+this.StaticAll_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+    if(this.preObj != "")
+    {
+        var objID = this.preObj + "_1";
+        this.components[objID].set_fittocontents("none");        
+        this.components[objID].set_height(0);    
+    }
+        
+    if(obj.id == this.preObj)
+    {
+        this.preObj = "";
+        this.resetScroll();
+        return;
+    }
+    else 
+    {
+        var objID1 = obj.id + "_1";
+        this.components[objID1].set_fittocontents("height");
+        this.components[objID1].set_padding("10px 5px");    
+        this.resetScroll();
+    }
+    this.preObj = obj.id;
+};
+
+this.setWordWrap = function(sValue)
+{
+    return nexacro.replaceAll(sValue, ",", "\n").replace(/^\s+/gm,'');
+}]]></Script>
+    <Objects>
+      <Dataset id="ds_Chart01">
+        <ColumnInfo>
+          <Column id="Lavel" type="STRING" size="256"/>
+          <Column id="Value" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Lavel">item1</Col>
+            <Col id="Value">12</Col>
+          </Row>
+          <Row>
+            <Col id="Lavel">item2</Col>
+            <Col id="Value">22</Col>
+          </Row>
+          <Row>
+            <Col id="Lavel">item</Col>
+            <Col id="Value">43</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_acordion">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+          <Column id="Column1" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">Menu 1</Col>
+            <Col id="Column1">sakfjlkfjlksajfklsafsa</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">Menu 2</Col>
+            <Col id="Column1">fasfasfasfsafasfaf</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">Menu 3</Col>
+            <Col id="Column1">tertwtewtewtwe</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">Menu 4</Col>
+            <Col id="Column1">ytrurturturtutryu</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">Menu 5</Col>
+            <Col id="Column1">fgjgfhjgfhjgfhjghfjhgfj</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+      <Dataset id="ds_enter">
+        <ColumnInfo>
+          <Column id="Column0" type="STRING" size="256"/>
+        </ColumnInfo>
+        <Rows>
+          <Row>
+            <Col id="Column0">ABC,A,B,C,D,E,</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">asfasdf,asdfsafasdfasfasdfas,asf,asdf,s</Col>
+          </Row>
+          <Row>
+            <Col id="Column0">1,2,3,4,5</Col>
+          </Row>
+        </Rows>
+      </Dataset>
+    </Objects>
+    <Bind>
+      <BindItem id="item0" compid="Static03" propid="text" datasetid="ds_enter" columnid="Column0"/>
+    </Bind>
+  </Form>
+</FDL>

@@ -109,10 +109,10 @@
               <Band id="body" width="100%" height="121">
                 <Cell id="Cell01" left="165" top="5" width="180" height="24" text="bind:title" border="0px none" wordWrap="english"/>
                 <Cell id="Cell03" left="0" top="0" width="150" height="150" text="bind:cover" border="0px none" displaytype="imagecontrol" padding="0px"/>
-                <Cell id="Cell05" left="255" top="84" width="30" height="24" text="bind:amount" border="0px none" displaytype="currency"/>
+                <Cell id="Cell05" left="255" top="84" width="80" height="24" text="bind:amount" border="0px none" displaytype="currency"/>
                 <Cell id="Cell07" left="165" top="42" width="180" height="24" text="bind:price" border="0px none" locale="en_US" font="20px/normal &quot;Gulim&quot;"/>
                 <Cell id="Cell00" left="230" top="84" width="20" height="24" text="theme://images/btn_WF_Treecollapse.png" border="0px none" displaytype="imagecontrol"/>
-                <Cell id="Cell02" left="290" top="84" width="20" height="24" text="theme://images/btn_WF_Treecollapse.png" border="0px none" displaytype="imagecontrol"/>
+                <Cell id="Cell02" left="340" top="84" width="20" height="24" text="theme://images/btn_WF_Treecollapse.png" border="0px none" displaytype="imagecontrol"/>
               </Band>
             </Format>
           </Formats>
@@ -176,31 +176,31 @@
             <Col id="title">The Freewheel Box</Col>
             <Col id="cover">imagerc::Bob_Dylan_-_The_Freewheelin'_Bob_Dylan[1].jpg</Col>
             <Col id="price">7.98</Col>
-            <Col id="amount">0</Col>
+            <Col id="amount">1000</Col>
           </Row>
           <Row>
             <Col id="title">Hightway 61revisited</Col>
             <Col id="cover">imagerc::Bob_Dylan_-_Highway_61_Revisited[1].jpg</Col>
             <Col id="price">7.29</Col>
-            <Col id="amount">0</Col>
+            <Col id="amount">1200</Col>
           </Row>
           <Row>
             <Col id="title">Blood on the tracks</Col>
             <Col id="cover">imagerc::Bob_Dylan_-_Blood_on_the_Tracks[1].jpg</Col>
             <Col id="price">9.98</Col>
-            <Col id="amount">0</Col>
+            <Col id="amount">1300</Col>
           </Row>
           <Row>
             <Col id="title">Blonde on Blonde</Col>
             <Col id="cover">imagerc::320px-Bob_Dylan_1978[1].jpg</Col>
             <Col id="price">9.98</Col>
-            <Col id="amount">0</Col>
+            <Col id="amount">2000</Col>
           </Row>
           <Row>
             <Col id="title">Bringin it all back home</Col>
             <Col id="cover">imagerc::love_300x300.png</Col>
             <Col id="price">7.29</Col>
-            <Col id="amount">0</Col>
+            <Col id="amount">2500</Col>
           </Row>
         </Rows>
       </Dataset>
@@ -236,7 +236,8 @@ this.Radio01_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEven
 this.ListView02_oncellclick = function(obj:nexacro.ListView,e:nexacro.ListViewClickEventInfo)
 {
 	var cur_amount = this.dsListView.getColumn(e.row, "amount");
-	if(e.cellid == 'Cell04')
+	
+	if(e.cellid == 'Cell00')
 	{
 		if(cur_amount != 0)
 		{

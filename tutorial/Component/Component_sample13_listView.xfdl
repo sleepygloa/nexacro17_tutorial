@@ -53,7 +53,28 @@
           </Dataset>
         </Radio>
         <Spin id="Spin00" taborder="3" left="261" top="39" width="160" height="30" onchanged="Spin00_onchanged"/>
-        <Radio id="Radio01" taborder="4" left="673" top="12" width="280" height="50"/>
+        <Radio id="Radio01" taborder="4" left="673" top="12" width="280" height="50" onitemchanged="Radio01_onitemchanged" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn" columncount="3">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">180</Col>
+                <Col id="datacolumn">180</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">320</Col>
+                <Col id="datacolumn">320</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">640</Col>
+                <Col id="datacolumn">640</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Radio>
         <Div id="Div00" taborder="5" text="Div00" left="660" top="83" width="320" height="320">
           <Layouts>
             <Layout>
@@ -65,11 +86,37 @@
                       <Cell id="Cell03" left="Cell01:-5" top="3" width="160" height="54" text="bind:title" border="0px none" wordWrap="english"/>
                     </Band>
                   </Format>
+                  <Format id="foramt00">
+                    <Band id="body" width="50%" height="63">
+                      <Cell id="Cell01" left="5" top="5" width="150" height="150" text="bind:cover" displaytype="imagecontrol" border="0px none" padding="0px"/>
+                      <Cell id="Cell03" left="Cell01:-5" top="3" width="160" height="54" text="bind:title" border="0px none" wordWrap="english"/>
+                    </Band>
+                  </Format>
+                  <Format id="default_00">
+                    <Band id="body" width="100%" height="63">
+                      <Cell id="Cell01" left="5" top="5" width="150" height="150" text="bind:cover" displaytype="imagecontrol" border="0px none" padding="0px"/>
+                      <Cell id="Cell03" left="5" top="Cell01:-35" width="150" height="54" text="bind:title" border="0px none" wordWrap="english" background="darkgray" color="white" opacity="0.7"/>
+                    </Band>
+                  </Format>
                 </Formats>
               </ListView>
             </Layout>
           </Layouts>
         </Div>
+        <ListView id="ListView02" taborder="6" left="45" top="465" width="385" height="192" binddataset="dsListView" oncellclick="ListView02_oncellclick">
+          <Formats>
+            <Format id="default">
+              <Band id="body" width="100%" height="121">
+                <Cell id="Cell01" left="165" top="5" width="180" height="24" text="bind:title" border="0px none" wordWrap="english"/>
+                <Cell id="Cell03" left="0" top="0" width="150" height="150" text="bind:cover" border="0px none" displaytype="imagecontrol" padding="0px"/>
+                <Cell id="Cell05" left="255" top="84" width="30" height="24" text="bind:amount" border="0px none" displaytype="currency"/>
+                <Cell id="Cell07" left="165" top="42" width="180" height="24" text="bind:price" border="0px none" locale="en_US" font="20px/normal &quot;Gulim&quot;"/>
+                <Cell id="Cell00" left="230" top="84" width="20" height="24" text="theme://images/btn_WF_Treecollapse.png" border="0px none" displaytype="imagecontrol"/>
+                <Cell id="Cell02" left="290" top="84" width="20" height="24" text="theme://images/btn_WF_Treecollapse.png" border="0px none" displaytype="imagecontrol"/>
+              </Band>
+            </Format>
+          </Formats>
+        </ListView>
       </Layout>
     </Layouts>
     <Objects>
@@ -121,27 +168,39 @@
         <ColumnInfo>
           <Column id="title" type="STRING" size="256"/>
           <Column id="cover" type="STRING" size="256"/>
+          <Column id="price" type="FLOAT" size="256"/>
+          <Column id="amount" type="INT" size="256"/>
         </ColumnInfo>
         <Rows>
           <Row>
             <Col id="title">The Freewheel Box</Col>
             <Col id="cover">imagerc::Bob_Dylan_-_The_Freewheelin'_Bob_Dylan[1].jpg</Col>
+            <Col id="price">7.98</Col>
+            <Col id="amount">0</Col>
           </Row>
           <Row>
             <Col id="title">Hightway 61revisited</Col>
             <Col id="cover">imagerc::Bob_Dylan_-_Highway_61_Revisited[1].jpg</Col>
+            <Col id="price">7.29</Col>
+            <Col id="amount">0</Col>
           </Row>
           <Row>
             <Col id="title">Blood on the tracks</Col>
             <Col id="cover">imagerc::Bob_Dylan_-_Blood_on_the_Tracks[1].jpg</Col>
+            <Col id="price">9.98</Col>
+            <Col id="amount">0</Col>
           </Row>
           <Row>
             <Col id="title">Blonde on Blonde</Col>
             <Col id="cover">imagerc::320px-Bob_Dylan_1978[1].jpg</Col>
+            <Col id="price">9.98</Col>
+            <Col id="amount">0</Col>
           </Row>
           <Row>
             <Col id="title">Bringin it all back home</Col>
             <Col id="cover">imagerc::love_300x300.png</Col>
+            <Col id="price">7.29</Col>
+            <Col id="amount">0</Col>
           </Row>
         </Rows>
       </Dataset>
@@ -155,6 +214,39 @@ this.Radio00_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEven
 this.Spin00_onchanged = function(obj:nexacro.Spin,e:nexacro.ChangeEventInfo)
 {
 	this.ListView01.set_bandindentsize(e.postvalue);
+};
+
+this.Radio01_onitemchanged = function(obj:nexacro.Radio,e:nexacro.ItemChangeEventInfo)
+{
+	this.Div00.set_width(e.postvalue);
+    if(e.postvalue == 640)
+    {
+        this.Div00.form.ListView00.set_formatid("format00");
+    }
+    else if(e.postvalue == 180)
+    {
+        this.Div00.form.ListView00.set_formatid("format01");
+    }
+    else
+    {
+        this.Div00.form.ListView00.set_formatid("default");
+    }
+};
+
+this.ListView02_oncellclick = function(obj:nexacro.ListView,e:nexacro.ListViewClickEventInfo)
+{
+	var cur_amount = this.dsListView.getColumn(e.row, "amount");
+	if(e.cellid == 'Cell04')
+	{
+		if(cur_amount != 0)
+		{
+			this.dsListView.setColumn(e.row, "amount", --cur_amount);
+		}
+	}
+	else if(e.cellid == 'Cell02')
+	{
+		this.dsListView.setColumn(e.row, "amount", ++cur_amount);
+	}
 };
 ]]></Script>
   </Form>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="FindFunction" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Edit id="Edit00" taborder="0" left="41" top="29" width="349" height="106" oneditclick="Edit00_oneditclick"/>
+        <Button id="Button00" taborder="1" text="Find Function" left="403" top="28" width="154" height="102" onclick="Button00_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var strfn = this.Edit00.value.toString();
+    if(typeof(this[strfn])=='function')
+    {
+        this[strfn]();
+    }
+    else
+    {
+        this.Edit00.set_value(strfn+' is not Function. is '+typeof(this[strfn]));
+    }
+};
+this.fn_test = function()
+{
+    this.Edit00.set_value(this.Edit00.value.toString()+' is Function');
+}
+this.Edit00_oneditclick = function(obj:nexacro.Edit,e:nexacro.EditClickEventInfo)
+{
+	this.Edit00.set_value();
+};
+]]></Script>
+  </Form>
+</FDL>

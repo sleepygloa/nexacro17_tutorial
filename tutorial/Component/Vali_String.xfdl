@@ -1,0 +1,521 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Vali_String" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Static id="Static00" taborder="0" text="E-mail" left="22" top="63" width="60" height="30"/>
+        <Static id="Static01" taborder="1" text="result" left="21" top="111" width="60" height="40"/>
+        <Edit id="Edit00" taborder="2" left="104" top="68" width="140" height="30"/>
+        <Edit id="Edit01" taborder="3" left="106" top="117" width="140" height="30"/>
+        <Button id="Button00" taborder="4" text="check" left="265" top="67" width="100" height="80" onclick="Button00_onclick"/>
+        <Static id="Static02" taborder="5" text="이메일 검사" left="16" top="14" width="120" height="30"/>
+        <Static id="Static03" taborder="6" text="전각 문자 검사" left="15" top="194" width="120" height="40"/>
+        <Static id="Static04" taborder="7" text="Half width to Fullwidth" left="20" top="264" width="140" height="30"/>
+        <Static id="Static04_00" taborder="8" text="Full width to Half width" left="20" top="304" width="140" height="30"/>
+        <Edit id="Edit02" taborder="9" left="171" top="264" width="150" height="30"/>
+        <Edit id="Edit03" taborder="10" left="172" top="303" width="150" height="30"/>
+        <Edit id="Edit04" taborder="11" left="338" top="262" width="150" height="30" enable="false"/>
+        <Edit id="Edit05" taborder="12" left="337" top="302" width="150" height="30" onchanged="Edit05_onchanged" enable="false"/>
+        <Button id="Button01" taborder="13" text="change" left="503" top="255" width="70" height="80" onclick="Button01_onclick"/>
+        <Static id="Static05" taborder="14" text="지정길이만큼 다른 문자 채우기" left="22" top="378" width="200" height="20"/>
+        <Edit id="Edit06" taborder="15" left="14" top="418" width="140" height="30"/>
+        <Edit id="Edit07" taborder="16" left="14" top="458" width="140" height="30"/>
+        <Edit id="Edit08" taborder="17" left="14" top="498" width="140" height="30"/>
+        <Button id="Button02" taborder="18" text="change" left="283" top="409" width="50" height="50" onclick="Button02_onclick"/>
+        <Spin id="Spin00" taborder="19" left="168" top="420" width="100" height="40" value="20"/>
+        <Static id="Static05_00" taborder="20" text="전화 번호 등 하이픈 제거" left="22" top="548" width="200" height="20"/>
+        <Edit id="Edit09" taborder="21" left="24" top="591" width="180" height="40"/>
+        <Edit id="Edit10" taborder="22" left="24" top="641" width="180" height="40"/>
+        <Button id="Button03" taborder="23" text="제거" left="220" top="591" width="100" height="90" onclick="Button03_onclick"/>
+        <Static id="Static02_00" taborder="24" text="주민번호 검사 및 성별 반환" left="396" top="14" width="170" height="30"/>
+        <Edit id="Edit11" taborder="25" left="397" top="68" width="180" height="30" onchanged="Edit11_onchanged"/>
+        <Edit id="Edit12" taborder="26" left="397" top="108" width="180" height="30"/>
+        <Button id="Button04" taborder="27" text="검사" left="590" top="65" width="80" height="70" onclick="Button04_onclick"/>
+        <Static id="Static02_00_00" taborder="28" text="법인번호검사 및 성별 반환" left="406" top="144" width="170" height="30"/>
+        <Edit id="Edit13" taborder="29" left="397" top="178" width="180" height="30" onchanged="Edit11_onchanged"/>
+        <Button id="Button04_00" taborder="30" text="검사" left="590" top="175" width="80" height="70" onclick="Button04_00_onclick"/>
+        <Edit id="Edit14" taborder="31" left="397" top="218" width="180" height="30"/>
+        <Static id="Static02_00_00_00" taborder="32" text="Null 체크" left="406" top="374" width="170" height="30"/>
+        <Edit id="Edit15" taborder="33" left="397" top="418" width="180" height="30" onchanged="Edit11_onchanged"/>
+        <Edit id="Edit16" taborder="34" left="397" top="458" width="180" height="30"/>
+        <Button id="Button04_00_00" taborder="35" text="Null check" left="590" top="415" width="80" height="30" onclick="Button04_00_00_onclick"/>
+        <Button id="Button04_00_00_00" taborder="36" text="set NULL" left="590" top="455" width="80" height="30" onclick="Button04_00_00_00_onclick"/>
+        <Button id="Button04_00_00_00_00" taborder="37" text="set &quot;&quot;" left="680" top="455" width="80" height="30" onclick="Button04_00_00_00_00_onclick"/>
+        <Button id="Button04_00_00_00_00_00" taborder="38" text="set undefined" left="770" top="455" width="80" height="30" onclick="Button04_00_00_00_00_00_onclick"/>
+        <Static id="Static02_00_00_00_00" taborder="39" text="앞뒤 공백문자 제거" left="406" top="504" width="170" height="30"/>
+        <Edit id="Edit17" taborder="40" left="397" top="538" width="180" height="30"/>
+        <Edit id="Edit18" taborder="41" left="397" top="578" width="180" height="30"/>
+        <Button id="Button04_00_00_01" taborder="42" text="Trim" left="590" top="535" width="80" height="30" onclick="Button04_00_00_01_onclick"/>
+        <Static id="Static02_00_00_00_00_00" taborder="43" text="숫자 형식 검사" left="406" top="604" width="170" height="30"/>
+        <Edit id="Edit19" taborder="44" left="397" top="638" width="180" height="30"/>
+        <Edit id="Edit20" taborder="45" left="397" top="678" width="180" height="30"/>
+        <Button id="Button04_00_00_01_00" taborder="46" text="isNumber" left="590" top="635" width="80" height="30" onclick="Button04_00_00_01_00_onclick"/>
+        <Static id="Static02_00_00_00_00_00_00" taborder="47" text="영문 또는 숫자인지 확인" left="740" top="21" width="170" height="30"/>
+        <Edit id="Edit21" taborder="48" left="731" top="65" width="180" height="30"/>
+        <Edit id="Edit22" taborder="49" left="731" top="105" width="180" height="30"/>
+        <Button id="Button04_00_00_01_00_00" taborder="50" text="CHECK" left="924" top="62" width="80" height="30" onclick="Button04_00_00_01_00_00_onclick"/>
+        <Static id="Static02_00_00_00_00_00_00_00" taborder="51" text="날짜 시간 유효성 검사" left="740" top="151" width="170" height="30"/>
+        <Edit id="Edit23" taborder="52" left="731" top="195" width="180" height="30"/>
+        <Edit id="Edit24" taborder="53" left="731" top="235" width="180" height="30"/>
+        <Button id="Button04_00_00_01_00_00_00" taborder="54" text="isDate" left="924" top="192" width="80" height="30" onclick="Button04_00_00_01_00_00_00_onclick"/>
+        <Edit id="Edit25" taborder="55" left="731" top="275" width="180" height="30"/>
+        <Button id="Button04_00_00_01_00_00_00_00" taborder="56" text="isTime" left="924" top="232" width="80" height="30" onclick="Button04_00_00_01_00_00_00_00_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sRtn = this.fn_checkEmail(this.Edit00.value);
+    this.Edit01.set_value(sRtn);
+};
+this.fn_checkEmail = function(sValue)
+{
+    var vChk = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890-._@";
+    for (var i = 0 ; i<sValue.length ; i++) {
+        if (vChk.indexOf(sValue.charAt(i)) < 0)  {
+            trace(vChk.indexOf(sValue.charAt(i)));
+            return false;
+        }
+    }
+    return true;
+}
+
+this.Edit05_onchanged = function(obj:nexacro.Edit,e:nexacro.ChangeEventInfo)
+{
+	
+};
+
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Edit04.set_value(this.fn_fullToHalf(this.Edit02.value));
+    this.Edit05.set_value(this.fn_halfToFull(this.Edit03.value));
+};
+this.fn_fullToHalf = function(sFull)
+{
+    var sHalf = "";
+    var sChar = "";
+    
+    for (var i = 0; i < sFull.length; i++)    {
+        sChar = sFull.charCodeAt(i);
+        if (sChar == 12288)        {
+            sHalf += unescape("%20");
+        }
+        else if ((sChar >= 65281) && (sChar <= 65374))        {
+            sHalf += unescape("%" + (sChar-65248).toString(16));
+        } else {
+            sHalf += sFull.charAt(i);
+        }
+    }    
+    return  sHalf;
+}
+this.fn_halfToFull = function(sHalf)
+{
+    var sFull = "";
+    var sChar = "";
+    
+    for (var i = 0; i < sHalf.length; i++) {
+        if ((sHalf.charCodeAt(i) >= 32) && (sHalf.charCodeAt(i) <= 126)) {
+            if (sHalf.charCodeAt(i) == 32) {
+                sChar = unescape("%u"+(12288).toString(16));
+            } else {
+                sChar = sHalf.charCodeAt(i) + 65248;
+            }
+        } else {
+            sChar = sHalf.charCodeAt(i);
+        }    
+        if (sHalf.charCodeAt(i) == 32) {
+            sFull = sFull + (sChar);
+        }  else  { 
+            sFull = sFull + String.fromCharCode(sChar);
+        }
+    }
+    return sFull;
+}
+
+this.Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Edit07.set_value(this.Edit06.value.padLeft(this.Spin00.value, "*"));
+    this.Edit08.set_value(this.Edit06.value.padRight(this.Spin00.value, "*"));
+};
+
+this.Button03_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sRtn = this.Edit09.value;
+    var sRomoveHyphen = sRtn.toString().replace(/[-]/g,"");
+    this.Edit10.set_value(sRomoveHyphen);
+};
+
+this.Edit11_onchanged = function(obj:nexacro.Edit,e:nexacro.ChangeEventInfo)
+{
+	
+};
+
+this.Button04_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var sJuminNo = this.Edit11.value;
+    var returnValue = true;
+    
+    var arrChk  = [2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5];
+    var sFNum     = sJuminNo.substr(0,6).toString();
+    var sLNum     = sJuminNo.substr(6).toString();
+    var sYY     = sFNum.substr(0,2);
+    var sMM     = sFNum.substr(2,2);
+    var sDD     = sFNum.substr(4,2);
+    var sGenda     = sLNum.substr(0,1);
+    var nSum    = 0; 
+    var sCC     = "20";
+    
+    if (sYY < "00" || sYY > "99" || sMM < "01" || sMM > "12" || sDD < "01" || sDD > "31") 
+    {
+        returnValue = false;
+    }    
+    
+    if (sGenda < "1" || sGenda > "4") 
+    {
+        returnValue = false;
+    }      
+    
+    if (sGenda == "1" || sGenda == "2")
+    {
+        sCC = "19"; 
+    }
+    
+    if (this.fn_isYYYYMMDD(parseInt(sCC + sYY), parseInt(sMM), parseInt(sDD)) == false) 
+    {
+        returnValue = false;
+    }          
+    
+    for (var i = 0; i < 12 ; i++)
+    {
+        nSum += parseInt(sJuminNo.substr(i, 1)) * arrChk[i];
+        
+    }
+    
+    nSum = 11 - (nSum % 11);
+    nSum = nSum % 10;
+    
+    if (nSum != parseInt(sJuminNo.substr(12, 1)))
+    {
+        returnValue = false;
+    }
+    
+    var sRtn;
+    if(returnValue)
+    {
+        var vGender = sJuminNo.substr(6, 1);
+        if (vGender == '1' || vGender == '3' || vGender == '5' || vGender == '7') 
+        {
+            sRtn = "M";
+        } 
+        else if (vGender == '2' || vGender == '4' || vGender == '6' || vGender == '8') 
+        {
+            sRtn = "W";
+        } 
+        else 
+        {
+            sRtn = "X";
+        }
+    }    else    {
+        sRtn = "X";    
+    }
+
+    this.Edit12.set_value(sRtn);
+};
+
+this.fn_isYYYYMMDD = function(nYY, nMM, nDD) 
+{
+    switch (nMM) 
+    {
+        case 2:
+            if (nDD > 29) 
+            {
+                return false;
+            }
+            if (nDD == 29) 
+            {
+                if ((nYY % 4) == 0) 
+                {
+                    if ((nYY % 100) != 0 || (nYY % 400) == 0) 
+                    {
+                        return false;
+                    }
+                } 
+            }            
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            if (nDD == 31) 
+            {
+                return false;
+            }
+            break;
+    }
+    if(nMM > 12) return false;
+
+    return true;
+};
+
+this.Button04_00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var arrChk = [1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2];
+    var Sum = 0; 
+    var sComp = this.Edit13.value;
+    
+    for (var i = 0; i < 12; i++) 
+    {
+        Sum += arrChk[i] * sComp.charAt(i);
+        
+    }
+
+    Sum = Sum % 10;
+    trace("substring : " + sComp.substring(12, 13));
+    Sum = 10 - Sum; 
+
+    if (Sum > 5 )
+    { 
+        Sum = 0;
+    }
+    if (Sum == sComp.substring(12, 13)) 
+    {
+        this.Edit14.set_value(true);
+    }    else    {
+        this.Edit14.set_value(false);
+    }
+};
+
+this.Button04_00_nclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	
+};
+
+this.Button04_00_00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Edit16.set_value(this.fn_checkNull(this.Edit15.value));
+};
+this.fn_checkNull = function(sValue)
+{
+    if (new String(sValue).valueOf() == "undefined")
+    {
+        return true;
+    }
+    
+    if (sValue == null) 
+    {
+        return true;
+    }
+    
+    var sChkStr = new String(sValue);
+    
+    if (sChkStr == null)
+    {
+        return true;
+    }
+    
+    if (sChkStr.toString().length == 0 ) 
+    {    
+        return true;
+    }
+    
+    return false;
+};
+this.Button04_00_00_00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Edit15.set_value(null);
+};
+
+this.Button04_00_00_00_00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Edit15.set_value("");
+};
+
+this.Button04_00_00_00_00_00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Edit15.set_value(undefined);
+    trace(this.Edit15.hasOwnProperty('value'));
+};
+
+this.Button04_00_00_01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Edit18.set_value("*"+this.fn_trim(this.Edit17.value)+"*");
+};
+this.fn_trim = function(sValue)
+{
+    if (sValue == null)
+    {
+        return "";
+    }
+    if (new String(sValue).valueOf() == "undefined")
+    {
+        return "";
+    }
+    if (new String(sValue) == null)
+    {
+        return "";
+    }
+
+    var retVal = (new String(sValue)).replace(/^\s+|\s+$/g, '');
+    return retVal;
+}
+
+this.Button04_00_00_01_00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var strchecknumber = this.fn_checkNumber(this.Edit19.value);
+    var strisNumeric = nexacro.isNumeric(this.Edit19.value);
+    this.Edit20.set_value(strchecknumber+', '+strisNumeric);
+};
+this.fn_checkNumber = function(sNum)
+{
+    var sChar;
+    var nCnt = 0;
+    var bRtn;
+    
+    for (var i = 0; i < sNum.length; i++) 
+    {
+        sChar = sNum.charAt(i);
+        
+        if (i == 0 && (sChar == "+" || sChar == "-" )) 
+        {
+            bRtn = true;
+        } 
+        else if (sChar >= "0" && sChar <= "9") 
+        {
+            bRtn = true;
+        } 
+        else if (sChar == ".") 
+        {
+            nCnt++;
+            if (nCnt > 1)    
+            {
+                bRtn = false;
+                break;
+            }
+        } 
+        else 
+        {
+            bRtn = false;
+            break;
+        }
+    }
+    
+    return bRtn;
+}
+
+this.Button04_00_00_01_00_00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var bRtn = this.fn_checkAlpaNum(this.Edit21.value);    
+    this.Edit22.set_value(bRtn);
+};
+this.fn_checkAlpaNum = function(sString) 
+{
+    var sVal = "";
+    var bVal = false;
+    
+    for (var i = 0; i < sString.length; i++) 
+    {
+        var sVal = sString.charCodeAt(i);
+        if ((sVal >= 48 && sVal <=57) || (sVal >=65 && sVal <= 90) || (sVal >= 97 && sVal <= 122)) 
+        {
+            bVal = true;    
+        }
+        else
+        {
+            bVal = false;
+            break;
+        }
+    }
+    return bVal;
+}
+
+this.Button04_00_00_01_00_00_00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var bRtn = this.fn_checkDate(this.Edit23.value);    
+    this.Edit25.set_value(bRtn);
+};
+this.fn_checkDate = function(sDate) 
+{
+    var nYear  = Number(sDate.toString().substr(0,4));
+    var nMonth = Number(sDate.toString().substr(5,2));
+    var nDate  = Number(sDate.toString().substr(8,2));
+    
+    if ( nMonth > 12 || nMonth < 1)
+    {
+        return false;
+    }
+    
+    switch (nMonth) 
+    {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            if (nDate > 31 || nDate < 1)
+            {
+                return false;
+            }
+            break;
+        case 4: 
+        case 6: 
+        case 9: 
+        case 11:  
+            if (nDate > 30 || nDate < 1)
+            {
+                return false;
+            }                               
+            break;
+        case 2:   
+            if (((nYear % 4 == 0) && (nYear % 100 != 0)) || (nYear % 400 == 0))
+            {
+                if (nDate > 29 || nDate < 1)
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                if (nDate > 28 || nDate < 1)
+                {
+                    return false;
+                }
+            }                              
+            break;            
+        default:
+            break;
+    }    
+    return true;
+}
+
+this.Button04_00_00_01_00_00_00_00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var bRtn = this.fn_checkTime(this.Edit24.value);    
+    this.Edit25.set_value(bRtn);
+};
+this.fn_checkTime = function(sTime) 
+{
+    var nHH = Number(sTime.toString().substr(0,2));
+    var nMM = Number(sTime.toString().substr(3,2));
+    var nSS = Number(sTime.toString().substr(6,2));
+    
+    if (nHH > 24 || nHH < 0)
+    {
+        return false;
+    }    
+    
+    if (nMM > 59 || nMM < 0)
+    {
+        return false;
+    }
+    
+    if (nSS > 59 || nSS < 0)
+    {
+        return false;
+    }  
+    return true;
+}
+]]></Script>
+  </Form>
+</FDL>

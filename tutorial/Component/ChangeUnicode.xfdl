@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="ChangeUnicode" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Edit id="Edit00" taborder="0" left="21" top="33" width="184" height="92"/>
+        <Edit id="Edit01" taborder="1" left="210" top="33" width="184" height="92" enable="false"/>
+        <Edit id="Edit02" taborder="2" left="400" top="33" width="184" height="92"/>
+        <Button id="Button00" taborder="3" text="change" left="19" top="135" width="180" height="80" onclick="Button00_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Edit01.set_value(escape(this.Edit00.value));
+    this.Edit02.set_value(unescape(this.Edit01.value));
+};
+]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="CalPatio" width="1280" height="720" titletext="New Form">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Edit id="Edit00" taborder="0" left="24" top="33" width="140" height="20"/>
+        <Static id="Static00" taborder="1" text="is what percent of" left="177" top="35" width="120" height="20"/>
+        <Edit id="Edit01" taborder="2" left="314" top="32" width="140" height="20"/>
+        <Static id="Static01" taborder="3" text="?" left="472" top="34" width="30" height="10"/>
+        <Button id="Button00" taborder="4" text="check" left="26" top="77" width="120" height="20" onclick="Button00_onclick"/>
+        <Static id="Static02" taborder="5" text="FractionDigit" left="165" top="76" width="80" height="20"/>
+        <Edit id="Edit03" taborder="6" left="265" top="72" width="90" height="20"/>
+        <Edit id="Edit02" taborder="7" left="32" top="116" width="110" height="20"/>
+        <Static id="Static03" taborder="8" text="%" left="162" top="112" width="60" height="20"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var nRtn = this.fn_percent(this.Edit00.value, this.Edit01.value, this.Edit03.value);
+    this.Edit02.set_value(nRtn);
+};
+this.fn_percent = function(nTop, nBottom , nFractionDigit)
+{
+    var nRtn;
+    if (nBottom == 0)
+    {
+        nBottom = 1;
+    }
+    
+    if (nFractionDigit == null || nFractionDigit == "" || nFractionDigit == "undefined")
+    {
+        nRtn = Math.round(nTop/nBottom*100);
+    } else {
+        nRtn = nexacro.round(nTop/nBottom*100, Number(nFractionDigit));
+    }
+    
+    return nRtn;
+}
+]]></Script>
+  </Form>
+</FDL>

@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.0">
+  <Form id="Component_sample17_func1" width="1280" height="720" titletext="New Form" ontimer="Component_sample17_func1_ontimer">
+    <Layouts>
+      <Layout height="720" mobileorientation="landscape" width="1280">
+        <Static id="Static00" taborder="0" text="Array" left="19" top="16" width="160" height="30"/>
+        <Edit id="Edit00" taborder="1" left="21" top="62" width="140" height="20"/>
+        <Edit id="Edit01" taborder="2" left="21" top="92" width="140" height="20"/>
+        <Button id="Button00" taborder="3" text="3자 자르기" left="183" top="63" width="120" height="30" onclick="Button00_onclick"/>
+        <Button id="Button01" taborder="4" text="중복 요소 제거" left="182" top="103" width="120" height="30" onclick="Button01_onclick"/>
+        <Button id="Button02" taborder="5" text="정렬" left="183" top="146" width="120" height="30" onclick="Button02_onclick"/>
+        <Edit id="Edit02" taborder="6" left="25" top="129" width="140" height="20"/>
+        <TextArea id="TextArea00" taborder="7" left="31" top="253" width="270" height="157"/>
+        <Button id="Button03" taborder="8" text="배열만들기" left="185" top="196" width="120" height="30" onclick="Button03_onclick"/>
+        <Static id="Static01" taborder="9" text="Date" left="322" top="17" width="120" height="30"/>
+        <Combo id="Combo00" taborder="10" text="Combo00" left="323" top="61" width="130" height="30" innerdataset="innerdataset" codecolumn="codecolumn" datacolumn="datacolumn">
+          <Dataset id="innerdataset">
+            <ColumnInfo>
+              <Column id="codecolumn" size="256"/>
+              <Column id="datacolumn" size="256"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="codecolumn">1</Col>
+                <Col id="datacolumn">1</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">5</Col>
+                <Col id="datacolumn">5</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">10</Col>
+                <Col id="datacolumn">10</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">15</Col>
+                <Col id="datacolumn">15</Col>
+              </Row>
+              <Row>
+                <Col id="codecolumn">30</Col>
+                <Col id="datacolumn">30</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+        </Combo>
+        <Button id="Button04" taborder="11" text="timer start" left="469" top="64" width="90" height="30" onclick="Button04_onclick"/>
+        <Static id="Static02" taborder="12" text="Static02" left="327" top="112" width="230" height="60"/>
+        <Button id="Button05" taborder="13" text="getDataInfo" left="471" top="218" width="90" height="30" onclick="Button05_onclick"/>
+        <TextArea id="TextArea01" taborder="14" left="324" top="255" width="240" height="70"/>
+        <MaskEdit id="MaskEdit00" taborder="15" left="326" top="224" width="130" height="30"/>
+        <Static id="Static03" taborder="16" text="Decode, if" left="569" top="20" width="130" height="20" onclick="Static03_onclick"/>
+        <Edit id="Edit03" taborder="17" left="575" top="63" width="80" height="40"/>
+        <Edit id="Edit04" taborder="18" left="670" top="67" width="70" height="40" enable="false"/>
+        <Edit id="Edit05" taborder="19" left="579" top="117" width="73" height="36"/>
+        <Edit id="Edit06" taborder="20" left="675" top="122" width="60" height="30" enable="false"/>
+        <Button id="Button06" taborder="21" text="decode" left="763" top="66" width="60" height="40" onclick="Button06_onclick"/>
+        <Button id="Button07" taborder="22" text="if" left="761" top="114" width="60" height="40" onclick="Button07_onclick"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var arrArray = new Array();
+    var sString = this.Edit00.value;
+    var nSize = 3;
+    for (var i = 0; i < sString.length; i+=nSize)
+    {        
+        arrArray.push(sString.substr(i, nSize)); 
+    }
+    this.Edit01.set_value(arrArray);
+};
+
+this.Button01_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var aRtn = this.fn_distinct(this.Edit00.value);
+    this.Edit01.set_value(aRtn);
+};
+this.fn_distinct = function(sParam)
+{
+    var aData = new Array();
+    aData = sParam.split(",");
+    
+    var aRtn = new Array();
+    var bFlag;
+    var vDist;
+    
+    for (var i = 0; i < aData.length; i++)
+    {
+        vDist = aData[i];
+        bFlag = false;
+        for (var j = 0; j < aRtn.length; j++)
+        {
+            if (aRtn[j] == vDist)
+            {
+                bFlag = true;
+                break;
+            }
+        }
+        if (bFlag == false)
+        {
+            aRtn[aRtn.length] = vDist;            
+        }
+    }
+    return aRtn;  
+}
+
+this.Button02_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var arrNo = this.Edit00.value.split(",");
+    this.fn_arrayNoSort(arrNo);    
+	this.fn_arrayStringSort(arrNo);
+};
+this.fn_arrayStringSort = function(arrNo)
+{
+    this.Edit01.set_value(arrNo.sort());
+};
+
+this.fn_arrayNoSort = function(arrNo)
+{
+    this.Edit02.set_value(arrNo.sort(function(a, b){return a-b}));
+};
+this.Button03_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var arrValue = [];
+    var nLen1 = this.Edit00.value;
+    var nLen2 = this.Edit01.value;
+    for (var i = 0; i < nLen1; i++)
+    {
+        arrValue[i] = new Array();
+        for (var j = 0; j < nLen2; j++)
+        {
+            arrValue[i][j] = " [" + i + "][" + j + "]";
+        }
+    }
+    var sRtn = "";
+    for (var i = 0; i < nLen1; i++)
+    {
+        sRtn += arrValue[i] + "\n";
+    }    
+    this.TextArea00.set_value(sRtn);
+};
+
+this.session_Endtime = null;
+this.curTime = null;
+this.Button04_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	var holding_time = this.Combo00.value*60*1000;
+    this.session_time = new Date().valueOf();
+    this.session_Endtime = new Date(this.session_time + holding_time);  
+    var millis = this.session_Endtime- this.session_time;
+    var t = this.millisToTime(millis);
+    this.Static02.set_text("It will be logout after " + t[1]+"Minute and "+t[2]+ " Seconds automatically.");     
+    this.setTimer(100,1000);
+};
+this.millisToTime =  function (millis)
+{
+    //Hour
+    var hours = Math.floor(millis/(1000*60*60), 0);
+    //Minute
+    var minutes = Math.floor(millis/(1000*60) % 60, 0);
+    //Seconds
+    var seconds = Math.floor((millis/1000) % 60, 0);
+    return [hours,minutes,seconds];
+};
+this.Component_sample17_func1_ontimer = function(obj:nexacro.Form,e:nexacro.TimerEventInfo)
+{
+	if(e.timerid == 100)
+    {
+        this.session_time = new Date().valueOf();
+        var millis = this.session_Endtime- this.session_time;
+        var t = this.millisToTime(millis);
+        if(t[2] <= 0 )
+        {
+            this.Static02.set_text("Session is terminated, it is logout automatically. ");
+            return;
+        }
+        this.Static02.set_text("It will be logout after " + t[1]+" Minute and "+t[2]+ " Seconds automatically.");
+    }
+};
+
+this.Button05_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.TextArea01.set_value("lastDay: "+this.fn_lastDay(this.MaskEdit00.value)+"\n"
+        +"korean week: "+this.fn_hanGulWeek(this.MaskEdit00.value));
+};
+
+this.fn_lastDay = function(sDate) 
+{
+    var dDate = "";
+    
+    if (sDate == null || sDate == "" || sDate == "undefined")  
+    {
+        dDate = (new Date()).addMonth(1);
+        dDate.addDate((new Date(dDate)).getDate()*-1);
+    }
+    else 
+    {
+        dDate = new Date(parseInt(sDate.substr(0,4)), parseInt(sDate.substr(4,2)), 1);
+        dDate.addDate(-1);    
+    }
+    
+    var sRtn =  dDate.getFullYear()
+    + (dDate.getMonth()+1).toString().padLeft(2, "0")
+    + dDate.getDate().toString().padLeft(2, "0");  
+    
+    return sRtn;
+};
+this.fn_hanGulWeek = function(sDate) 
+{
+    var dDate    = new Date(parseInt(sDate.substr(0,4))
+                          , parseInt(sDate.substr(4,2))-1
+                          , parseInt(sDate.substr(6,2)));
+    var sDay     = dDate.getDay();
+    var arrweek  = new Array("일", "월", "화", "수", "목", "금", "토");        
+    var sRtn     = arrweek[sDay];
+
+    return sRtn;
+};
+this.Static03_onclick = function(obj:nexacro.Static,e:nexacro.ClickEventInfo)
+{
+	
+};
+
+this.Button07_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.Edit06.set_value(this.fn_iif(this.Edit05.value, 'Yes', 'No'));
+};
+
+this.Button06_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+ this.Edit04.set_value(this.fn_decode(this.Edit03.value, '0', 'SUN', '1', 'MON', '2', 'TUE', '3', 'WED', '4', 'THU', '5', 'FRI', '6', 'SAT', 'OTHERS'));
+};
+this.fn_decode = function()
+{
+    var sRtnValue = null;
+    var arrArgument = this.fn_decode.arguments;
+    var sValue = arrArgument[0];
+    var bIsDefault = false;
+    var nCount = 0;
+    
+    if ((arrArgument.length % 2) == 0) 
+    {
+        nCount = arrArgument.length - 1;
+        bIsDefault = true;
+    } 
+    else 
+    {
+        nCount = arrArgument.length;
+        bIsDefault = false;
+    }
+    
+    for (var i = 1; i < nCount; i+=2) 
+    {
+        if(sValue == arrArgument[i]) 
+        {
+            sRtnValue = arrArgument[i+1];
+            i = nCount;
+        }
+    }
+    
+    if (sRtnValue == null && bIsDefault==true) 
+    {
+        sRtnValue = arrArgument[arrArgument.length-1];
+    }
+    
+    return sRtnValue;
+};
+this.fn_iif = function()
+{
+    var arrArgument = this.fn_iif.arguments;
+    
+    if (arrArgument[0]) 
+    {
+        return arrArgument[1];
+    } 
+    else 
+    {
+        return arrArgument[2];
+    }
+};
+]]></Script>
+  </Form>
+</FDL>
